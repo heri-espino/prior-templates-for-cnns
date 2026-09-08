@@ -1,9 +1,7 @@
 # Next actions
 
-Wait for the owner to provide completed study03 outputs; no active process is managed by this repo. Import using docs/IMPORT_RESULTS.md. Verify design/source hashes and planned/completed counts before interpreting outcomes.
+Study03 is complete and analyzed. Read papers/retention_release_draft.md and analysis/retention_release_001/audit.json. Raw results remain unchanged. Analysis is exploratory; marginal paired t intervals are not multiplicity-adjusted or preregistered.
 
-Analyze paired blocks: early validation learning area, steps-to95% with non-attainment, late loss slopes and final accuracy. Compare release versus constant retention after epoch10 and against template_init/random_unitnorm. Plot saved concept/causal trajectories alongside alignment. Do not choose schedules or checkpoints by test outcomes. Results are descriptive unless a prospective inference plan was fixed; do not invent one retroactively.
+Next research: prospectively replicate release-versus-constant architecture interaction on two_concepts; choose practical margins and multiplicity plan before new outcomes. Separate channel ranking/distributed coding and readout effects. Use stored checkpoints/probe arrays for clearly labeled exploratory diagnostics; do not choose a schedule on these test curves and claim independent validation.
 
-If code changes are needed while the owner runs: preserve their experiment version and add a new version. Do not invalidate or overwrite active outputs.
-
-Research still unresolved: practical alignment→causal benefit, broader architectures/tasks, readout dependence, local primitive concepts, statistical precision, and novelty. No publication claim yet.
+Operational: analysis/retention_release_001/analyze.py regenerates tables and four figures; narrative draft needs manual scientific review after any result change. No training is running under this task. Imported history/hash verification passed, but new analysis did not independently rerun all model forwards.

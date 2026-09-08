@@ -1,0 +1,11 @@
+{
+  "runs": 200,
+  "epoch_records": 40000,
+  "checkpoint_evaluations": 1800,
+  "raw_tables_match": true,
+  "pre_release_histories_identical": true,
+  "undefined_fidelity": 0,
+  "selected_refit_failures": 0,
+  "minimum_patch_denominator": 0.08164696395397186,
+  "scope": "Raw JSON/CSV consistency and stored patch identities; does not independently rerun model forwards."
+}

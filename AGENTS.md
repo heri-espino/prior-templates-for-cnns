@@ -3,7 +3,7 @@
 Read `.ai_handoff/START_HERE.md` first. Read only the topic-specific handoff needed for the current request; do not ingest raw result tables or the import manifest for general context.
 
 - Preserve studies 01 and 02 as historical evidence. Do not edit frozen protocols, source, data, checkpoints or reported outcomes. Create a new study/version for scientific changes.
-- The owner is running study 03 externally. Do not move, overwrite, restart or assume access to that process. Its full outputs are not yet in this repository.
+- Study 03 is complete and imported under results/retention_release_001. Preserve this evidence unchanged. Derived analysis lives under analysis/retention_release_001 and the updated draft under papers/.
 - Keep reported empirical outcomes separate from planned tests and exploratory analyses. All four study-02 primary tests are inconclusive after Holm correction.
 - Never infer human interpretability from alignment alone. Keep actual metric names and accuracy alongside patching fidelity.
 - Do not commit environments, credentials, temporary files or unreviewed active-run outputs. Do not load untrusted PyTorch checkpoint files; resume files use Python deserialization.

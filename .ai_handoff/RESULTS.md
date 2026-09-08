@@ -18,3 +18,11 @@ Learning curves: 400 × 40 =16,000 epoch records. Early mean validation accuracy
 Audit: 400 checkpoints, 60 splits, 20,480 unique images; source/protocol unchanged. Background check initially missed faint antialiasing support; exact-render support corrected the audit without changing data/training.
 
 Authoritative evidence: `studies/cnn_causal_milestone/REPORT.md`, `audit.json`, `analysis/primary_contrasts.csv`, `LEARNING_DYNAMICS.md`.
+
+## Study03 (completed, exploratory)
+
+200 runs, 40,000 epochs, 1,800 checkpoint evaluations. Template_init − random_unitnorm early mean accuracy: single_shape/TwoLayerCNN +3.34pp [1.25,5.42]; two_concepts/TinyCNN −6.84pp [−10.26,−3.43]. Other intervals include zero.
+
+At epoch200 on two_concepts/TinyCNN, template_init and random_unitnorm both99.30% test accuracy. Constant retention98.01%; release99.22% (paired gain1.21pp [.71,1.71]); alignment .947→.580; U .657→.718 (Δ .061 [.027,.095]). Deeper two_concepts: accuracy99.14→99.53%; U .061→.003 (Δ−.058 [−.094,−.021]). All intervals marginal/exploratory; no corrected confirmatory inference.
+
+Relative U and counterfactual correctness differ: shallow compositional selected patch accuracy constant93.61% vs release90.64%, despite increased U. Do not summarize as uniformly improved causal interventions. All200 runs attained95% validation at least once. All1800 selected head fits terminated successfully. Artifact validation is not full forward recomputation.

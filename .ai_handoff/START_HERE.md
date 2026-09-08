@@ -4,7 +4,7 @@ Owner: heri-espino. Objective: test when template priors help learning and when 
 
 1. Study 01: 28-run pilot, historical flaws documented. Do not use its numbers as clean confirmatory evidence.
 2. Study 02: 400 completed runs across 2 tasks × 2 architectures × 10 blocks × 10 conditions. Independent streams, sample-weighted metrics and corrected bank. Final audit passed. Strong alignment manipulation; all four primary U tests inconclusive after Holm correction.
-3. Study 03: owner is currently running the standalone retention-release package. Repository includes identical runner/core sources, not that active run's results. Main design: 200 epochs × 200 models, 5 conditions including normalization-matched random and λ released from epoch 10 to 80.
+3. Study 03: complete and imported at results/retention_release_001 (200 models × 200 epochs). All 12,129 manifest hashes verified. New exploratory analysis checks 40,000 epoch rows and 1,800 checkpoint evaluations against raw JSON; paper: papers/retention_release_draft.md. Template_init catches normalized random at99.30% on two_concepts/TinyCNN. Release improves compositional accuracy over constant retention, but ΔU is +.061 shallow and −.058 deeper. No universal early benefit or proven plateau.
 
 Read next only as needed:
 - `RESULTS.md`: key numerical findings and interpretation guardrails.
