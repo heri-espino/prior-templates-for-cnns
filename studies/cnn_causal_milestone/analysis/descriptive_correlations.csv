@@ -1,0 +1,13 @@
+task,architecture,target,spearman_rho,note
+single_shape,TinyCNN,semantic_auc,-0.07514672151119352,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+single_shape,TinyCNN,causal_usefulness,-0.032329239860811466,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+single_shape,TinyCNN,id_acc,-0.024464940811933296,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+single_shape,TwoLayerCNN,semantic_auc,0.26287844489978673,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+single_shape,TwoLayerCNN,causal_usefulness,0.20318491993487525,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+single_shape,TwoLayerCNN,id_acc,-0.073878033491642,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+two_concepts,TinyCNN,semantic_auc,-0.22046386408987584,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+two_concepts,TinyCNN,causal_usefulness,0.3273207959983847,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+two_concepts,TinyCNN,id_acc,-0.13349871760990795,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+two_concepts,TwoLayerCNN,semantic_auc,0.0008164859092052663,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+two_concepts,TwoLayerCNN,causal_usefulness,-0.06395606169679192,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."
+two_concepts,TwoLayerCNN,id_acc,-0.2157743554001584,"Descriptive, pooled treatments within setting; no independent-observation p-value reported."

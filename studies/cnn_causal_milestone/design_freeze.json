@@ -1,0 +1,14 @@
+{
+  "frozen_utc": "2026-09-06T11:19:46.740281+00:00",
+  "protocol_sha256": "703e42f5104137c57b0cbf75a734d2c2975a8af455550278ef370e449f5bd806",
+  "study_source_sha256": "9c6f20615d78e35a160a4317fe5993e4e92248539bc0fce328448995f57e4474",
+  "python": "3.9.6 (default, Apr 17 2026, 18:15:52) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "torch": "2.8.0",
+  "numpy": "2.0.2",
+  "platform": "macOS-26.4-arm64-arm-64bit",
+  "planned_runs": 400,
+  "smoke_blocks_excluded": [
+    100000
+  ],
+  "note": "Protocol and main source frozen before main-run outcomes. Smoke executed two epochs only and inspected execution timing/checks, not predictive outcomes."
+}

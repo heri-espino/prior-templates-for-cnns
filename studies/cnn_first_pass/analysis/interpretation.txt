@@ -1,0 +1,31 @@
+### 5.1 What changed, and what did not
+
+The strongest finding is **retained kernel alignment at high observed ID accuracy**, not an accuracy breakthrough. `template_init` exceeds `random` by only 0.13 percentage points in mean ID accuracy, with SD 0.49 points for the paired difference. Its alignment advantage is much larger: +0.491 ± 0.031. Both models can solve this ID task almost perfectly while occupying very different positions relative to the template bank. These measurements do not establish statistical equivalence of accuracy, but show no large observed ID penalty for template initialization in this setting.
+
+The centering/unit-norm control is informative. `random_unitnorm` reaches 99.53% ID accuracy and alignment 0.271, compared with 99.83% and 0.789 for `template_init`. Thus, matching the bank's normalization does not reproduce its alignment advantage. This supports an effect of the structured initial bank beyond normalization alone, while leaving its rank and spectral properties as unresolved explanations. The mechanisms consistent with the implementation are straightforward: initialization starts kernels on the bank and training moves them away; freezing prevents that movement completely. We did not measure a separate force that keeps trainable kernels aligned.
+
+### 5.2 Freezing exposes a trade-off under this budget, not a proven capacity limit
+
+`frozen_templates` retains alignment 1 by construction but reaches only 58.03% mean ID accuracy, compared with 99.83% for trainable templates. It nevertheless outperforms `frozen_random_unitnorm` by 27.60 ± 11.03 percentage points. The fixed template representation is useful relative to the matched fixed random representation, yet updating the convolution is much more effective under the tested schedule.
+
+This does not prove that a frozen-template linear head has an intrinsic 58% ceiling. In the v3 seed-0 run it reaches 80.2% ID accuracy, with both more examples and more optimizer steps. A separately converged head optimization is needed to distinguish representational limitations from optimization and finite-data effects. Likewise, the low-data trajectory summaries offer only modest evidence of faster learning from templates: mean AUC50 is higher, but median t98 differs by just one epoch (52 versus 53), and these metrics use the original unequal batch weighting.
+
+### 5.3 OOD behavior is mixed and class-specific
+
+Low-data `template_init` improves mean rotation accuracy by 3.10 ± 4.17 percentage points and thickness accuracy by 7.47 ± 13.93 points relative to `random`. The variation in the paired thickness effect is larger than the mean effect. In v3 seed 0, template initialization improves thickness accuracy (78.8% versus 61.4%) but slightly decreases rotation accuracy (59.0% versus 59.7%). There is no demonstrated uniform OOD advantage.
+
+The per-class measurements localize the failures. In low-data rotation OOD, both trainable regimes retain approximately 100% circle recall while line recall falls to approximately 20% (`random`) or 24% (`template_init`). This is consistent with the rotation-invariant circle geometry and the narrow training angle range, though a matched-factor experiment is needed for a causal explanation. Thickness OOD is particularly damaging to circle classification: mean recall is approximately 7% for `random` and 28% for `template_init`; template initialization also helps square recall but reduces line and triangle recall in this comparison. These are not uniform improvements across all concepts.
+
+Near-perfect `ood_occ` accuracy for trainable models should be interpreted in the context of the renderer: it raises the probability of a randomly placed erasing rectangle, not a controlled amount of foreground removal. This particular split is not a demanding demonstration of occlusion robustness.
+
+### 5.4 Alignment does not imply superior causal interpretability
+
+The repository's mean single-channel positive-shift score is lower for `template_init` than `random` (0.749 versus 0.776), despite much higher alignment. Mean specificity is also lower (0.838 versus 0.908). Neither raw magnitude nor positive-shift frequency defines interpretability quality, but these results clearly do not support the claim that alignment automatically improves the existing probes.
+
+The supplemental controls make the distinction sharper. At k=8, validation-ranked patching gives positive shifts on 88.93% of pairs for `template_init`, while random-ranked channels give 98.58%. Yet the targeted patched prediction equals the source label on only 50.52% of pairs. For `random`, the corresponding targeted positive-shift and source-prediction values are 91.72% and 50.13%. A frequently positive margin shift is therefore not a successful semantic transfer in the ordinary classification sense.
+
+The ranking rule selects large correct-class contributions, not the largest source-versus-target contrasts. That difference is one plausible reason random selections can outperform the ranking on positive-shift frequency; it is a hypothesis to test, not an established explanation. Targeted selection can still improve actual source-prediction transfer relative to random selection, as the curves show. The controls expose dependence on the outcome definition rather than proving that every targeted intervention is useless.
+
+### 5.5 What this first pass contributes
+
+This study supplies a reproducible baseline, exposes implementation and measurement issues, and narrows the next research question: **can a well-specified, nonredundant prior preserve independently measured semantic and causal structure while retaining predictive performance?** The current archive measures kernel-bank resemblance and exact interventions at a linear head. It does not yet supply the independent semantic annotations, matched generative interventions, or validated prior-strength sweep needed to answer that stronger question.

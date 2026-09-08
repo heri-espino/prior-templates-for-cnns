@@ -1,0 +1,55 @@
+{
+  "corner_matches": [
+    {
+      "corner": "corner_00",
+      "edge": "edge_02",
+      "signed_cosine": 0.9999998807907104
+    },
+    {
+      "corner": "corner_01",
+      "edge": "edge_04",
+      "signed_cosine": 1.0000001192092896
+    },
+    {
+      "corner": "corner_02",
+      "edge": "edge_06",
+      "signed_cosine": 0.9999999403953552
+    },
+    {
+      "corner": "corner_03",
+      "edge": "edge_00",
+      "signed_cosine": -1.000000238418579
+    }
+  ],
+  "paired_initialization_checks": [
+    {
+      "seed": 0,
+      "heads_identical": true,
+      "post_construction_rng_identical": true
+    },
+    {
+      "seed": 1,
+      "heads_identical": true,
+      "post_construction_rng_identical": true
+    },
+    {
+      "seed": 2,
+      "heads_identical": true,
+      "post_construction_rng_identical": true
+    },
+    {
+      "seed": 3,
+      "heads_identical": true,
+      "post_construction_rng_identical": true
+    },
+    {
+      "seed": 4,
+      "heads_identical": true,
+      "post_construction_rng_identical": true
+    }
+  ],
+  "cross_seed_overlap": {
+    "seed0_val_prefix_equals_seed1_train": true,
+    "exact_images": 200
+  }
+}

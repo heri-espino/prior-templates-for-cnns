@@ -1,0 +1,101 @@
+{
+  "task": "single_shape",
+  "architecture": "TinyCNN",
+  "block": 4,
+  "condition": "frozen_random_unitnorm",
+  "original_U": 0.290679606441082,
+  "refit_U": 0.5748552347836272,
+  "delta_U": 0.28417562834254523,
+  "original_cf_accuracy": 0.3880208432674408,
+  "refit_cf_accuracy": 0.69140625,
+  "original_acc": 0.578125,
+  "refit_acc": 0.9375,
+  "selected_refit_converged": true,
+  "patching": {
+    "denominator": 1200.6956787109375,
+    "pair_count": 768,
+    "both_correct_count": 672,
+    "noop": {
+      "fidelity": 0.0,
+      "cf_accuracy": 0.02083333395421505,
+      "agreement": 0.0416666679084301,
+      "cf_accuracy_both_correct": 0.0
+    },
+    "full": {
+      "fidelity": 1.0,
+      "cf_accuracy": 0.9375,
+      "agreement": 1.0,
+      "cf_accuracy_both_correct": 1.0
+    },
+    "selected": {
+      "1": {
+        "fidelity": 0.2779671087084422,
+        "cf_accuracy": 0.2526041567325592,
+        "agreement": 0.2708333432674408,
+        "cf_accuracy_both_correct": 0.2395833283662796
+      },
+      "4": {
+        "fidelity": 0.7735494020546154,
+        "cf_accuracy": 0.69140625,
+        "agreement": 0.6966145634651184,
+        "cf_accuracy_both_correct": 0.6934523582458496
+      },
+      "8": {
+        "fidelity": 0.8414247355582737,
+        "cf_accuracy": 0.7760416865348816,
+        "agreement": 0.7786458134651184,
+        "cf_accuracy_both_correct": 0.793154776096344
+      }
+    },
+    "random": [
+      {
+        "fidelity": 0.3397948719304269,
+        "cf_accuracy": 0.2747395932674408,
+        "agreement": 0.296875,
+        "cf_accuracy_both_correct": 0.2648809552192688
+      },
+      {
+        "fidelity": 0.17074604474802457,
+        "cf_accuracy": 0.11328125,
+        "agreement": 0.12890625,
+        "cf_accuracy_both_correct": 0.0982142835855484
+      },
+      {
+        "fidelity": 0.24545711668823178,
+        "cf_accuracy": 0.24609375,
+        "agreement": 0.2552083432674408,
+        "cf_accuracy_both_correct": 0.2261904776096344
+      },
+      {
+        "fidelity": 0.13208112281098427,
+        "cf_accuracy": 0.1041666641831398,
+        "agreement": 0.1276041716337204,
+        "cf_accuracy_both_correct": 0.092261902987957
+      },
+      {
+        "fidelity": 0.2158393790058437,
+        "cf_accuracy": 0.1796875,
+        "agreement": 0.1953125,
+        "cf_accuracy_both_correct": 0.1681547611951828
+      },
+      {
+        "fidelity": 0.14056273732096436,
+        "cf_accuracy": 0.1184895858168602,
+        "agreement": 0.1393229216337204,
+        "cf_accuracy_both_correct": 0.1071428582072258
+      },
+      {
+        "fidelity": 0.09720266133962252,
+        "cf_accuracy": 0.0651041641831398,
+        "agreement": 0.0950520858168602,
+        "cf_accuracy_both_correct": 0.0416666679084301
+      },
+      {
+        "fidelity": 0.24786940432380766,
+        "cf_accuracy": 0.2161458283662796,
+        "agreement": 0.2434895783662796,
+        "cf_accuracy_both_correct": 0.1964285671710968
+      }
+    ]
+  }
+}

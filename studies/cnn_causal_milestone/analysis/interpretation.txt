@@ -1,0 +1,23 @@
+### Alignment was manipulated successfully; its causal benefit remains unresolved
+
+The retention intervention produced a strong alignment increase in every setting. The primary U changes were +0.0345 and −0.0092 for single_shape with TinyCNN and TwoLayerCNN, respectively, and +0.0252 and −0.0074 for two_concepts. All four decisions are inconclusive under the prospective Holm-adjusted rule. The marginal interval for single_shape / TinyCNN excludes zero, but its adjusted p-value is 0.1633. It would be incorrect either to call that comparison a confirmed benefit or to describe all four marginal intervals as containing zero. The study establishes a substantial appearance change without establishing a reliable improvement in the selected-channel causal metric. It does not establish equivalence.
+
+### Localization, identity selectivity and patching answer different questions
+
+Stronger retention improves mean foreground localization relative to template_init in all four settings, whereas single-unit identity AUROC falls in three. For example, two_concepts / TinyCNN moves from approximately 0.977 to 0.909 AUROC while alignment increases from 0.657 to 0.946. A kernel can preserve useful spatial structure without making the validation-selected unit more discriminative for an object identity. Renderer masks avoid scoring resemblance to the template itself, but foreground overlap still cannot certify recovery of a particular local primitive.
+
+Spectrum controls offer an additional constraint on the explanation: high predictive accuracy does not require high alignment to the corrected bank. On single_shape, spectrum_init reaches mean accuracy 100% in both architectures despite substantially lower alignment than strong template retention. This is descriptive evidence within the tested tasks. Phase scrambling preserves other structure, and these controls cannot establish that semantic geometry is the only relevant difference.
+
+### Frozen performance is partly an optimization problem
+
+For frozen_templates / TinyCNN, refitting only the classifier raises single_shape accuracy from 83.40% to 99.77%, with the convolutional features unchanged. The original training budget therefore substantially understates what this representation supports. On two_concepts, the same diagnostic improves accuracy from 52.30% to 81.80%. The remaining gap does not prove an information-theoretic limitation: readout class, regularization and optimization still matter. Across all conditions, 398 of 400 selected refits report successful solver termination; the other two remain documented rather than being silently treated as converged.
+
+### Causal fidelity depends on the model being explained
+
+A particularly instructive case is frozen_templates / TinyCNN on two_concepts: original U is approximately 0.679 despite only 52.30% accuracy. The metric rewards reproducing that model's counterfactual response, including erroneous responses. In the exploratory head-only supplement, accuracy improves to 81.80% while U falls to approximately 0.525. Features and channel rankings remain unchanged. Conversely, other fixed-feature refits increase U. Thus readout and probability behavior materially affect the operational causal score. These post hoc diagnostics motivate a controlled follow-up and do not replace the prospective tests.
+
+### Completed audit and scope of the conclusion
+
+The final audit covers all 400 checkpoints and 60 main dataset splits, containing 20,480 unique images. It verifies matched backgrounds, sample-weighted accuracy, frozen weights and full/no-op patch identities. Source/protocol hashes and the original first-pass report remain unchanged. An additional background audit initially used thresholded masks that omitted faint antialiasing halos. The check was corrected to reconstruct exact clean rendered support from metadata; it then passed without changing data, models or training. This was an audit-definition correction, not a result repair.
+
+The strongest current claim is that appearance, independently measured concept properties and patching usefulness cannot be substituted for one another in this experiment. Whether retention produces a practically meaningful causal benefit remains statistically unresolved.

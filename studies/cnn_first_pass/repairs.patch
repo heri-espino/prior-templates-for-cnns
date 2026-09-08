@@ -1,0 +1,186 @@
+--- original/src/train.py
++++ src/train.py
+@@ -128,94 +128,95 @@
+     ood_rot_acc = evaluate(model, loaders["ood_rot"], device)
+     ood_thick_acc = evaluate(model, loaders["ood_thick"], device)
+     ood_occ_acc = evaluate(model, loaders["ood_occ"], device)
+-# MI probes
+-# Alignment is cheap; compute it even when run_probes=0 so we can compare regimes.
+-align = compute_alignment(model.conv.weight, templates)
+-
+-cond_abl = None
+-patch1 = None
+-patchk = None
+-if args.run_probes == 1:
+-    cond_abl = class_conditional_ablation(
+-        model, loaders["test"], device,
+-        num_classes=mcfg.num_classes,
+-        max_items=args.max_probe_items,
++    # MI probes
++    # Alignment is cheap; compute it even when run_probes=0 so we can compare regimes.
++    align = compute_alignment(model.conv.weight, templates)
++
++    cond_abl = None
++    patch1 = None
++    patchk = None
++    if args.run_probes == 1:
++        cond_abl = class_conditional_ablation(
++            model, loaders["test"], device,
++            num_classes=mcfg.num_classes,
++            max_items=args.max_probe_items,
++        )
++        patch1 = single_channel_patching(
++            model, loaders["test"], device,
++            num_classes=mcfg.num_classes,
++            max_items=args.max_probe_items,
++            num_pairs=args.num_pairs,
++            seed=args.seed,
++        )
++        patchk = topk_patching(
++            model, loaders["test"], device,
++            delta_cond=cond_abl.delta_cond,
++            num_classes=mcfg.num_classes,
++            max_items=args.max_probe_items,
++            num_pairs=args.num_pairs,
++            seed=args.seed,
++        )
++
++    # Drift is always defined (needed even in low-data sweeps with run_probes=0)
++    drift = compute_drift(W_init, model.conv.weight)
++
++    # Save kernels + weights (always)
++    save_kernels_grid(
++        model.conv.weight.detach().cpu().numpy(),
++        run_dir/"kernels_final.png",
++        title=f"{args.regime} kernels (final)",
+     )
+-    patch1 = single_channel_patching(
+-        model, loaders["test"], device,
+-        num_classes=mcfg.num_classes,
+-        max_items=args.max_probe_items,
+-        num_pairs=args.num_pairs,
+-        seed=args.seed,
+-    )
+-    patchk = topk_patching(
+-        model, loaders["test"], device,
+-        num_classes=mcfg.num_classes,
+-        max_items=args.max_probe_items,
+-        num_pairs=args.num_pairs,
+-        seed=args.seed,
+-    )
+-
+-# Drift is always defined (needed even in low-data sweeps with run_probes=0)
+-drift = compute_drift(W_init, model.conv.weight)
+-
+-# Save kernels + weights (always)
+-save_kernels_grid(
+-    model.conv.weight.detach().cpu().numpy(),
+-    run_dir/"kernels_final.png",
+-    title=f"{args.regime} kernels (final)",
+-)
+-np.save(run_dir/"conv_W_init.npy", W_init.detach().cpu().numpy())
+-np.save(run_dir/"conv_W_final.npy", model.conv.weight.detach().cpu().numpy())
+-
+-metrics = {
+-    "id_acc": id_acc,
+-    "ood_rot_acc": ood_rot_acc,
+-    "ood_thick_acc": ood_thick_acc,
+-    "ood_occ_acc": ood_occ_acc,
+-    "alignment": align.summary,
+-    "conditional_ablation": (cond_abl.summary if cond_abl is not None else {"mean_specificity": float("nan")}),
+-    "patching_single": (patch1.summary if patch1 is not None else {"mean_success": float("nan"), "max_success": float("nan"), "mean_shift": float("nan")}),
+-    "patching_topk": (patchk.summary if patchk is not None else {"success@maxk": float("nan"), "mean_success": float("nan"), "mean_shift": float("nan"), "num_pairs": 0}),
+-    "topk_ks": (patchk.ks if patchk is not None else []),
+-    "run_probes": int(args.run_probes),
+-}
+-save_json(run_dir/"metrics.json", metrics)
+-save_json(run_dir/"drift.json", drift.summary)
+-
+-# raw arrays
+-np.save(run_dir/"alignment_matrix.npy", align.A)
+-np.save(run_dir/"alignment_best_template.npy", align.best_template)
+-np.save(run_dir/"alignment_best_score.npy", align.best_score)
+-
+-if cond_abl is not None:
+-    np.save(run_dir/"delta_cond.npy", cond_abl.delta_cond)
+-    np.save(run_dir/"specificity.npy", cond_abl.specificity)
+-    np.save(run_dir/"mean_z_by_class.npy", cond_abl.mean_z_by_class)
+-else:
+-    np.save(run_dir/"delta_cond.npy", np.zeros((0,), dtype=np.float32))
+-    np.save(run_dir/"specificity.npy", np.zeros((0,), dtype=np.float32))
+-    np.save(run_dir/"mean_z_by_class.npy", np.zeros((0,), dtype=np.float32))
+-
+-if patch1 is not None:
+-    np.save(run_dir/"patch_single_success.npy", patch1.success_rate)
+-    np.save(run_dir/"patch_single_shift.npy", patch1.mean_margin_shift)
+-else:
+-    np.save(run_dir/"patch_single_success.npy", np.zeros((0,), dtype=np.float32))
+-    np.save(run_dir/"patch_single_shift.npy", np.zeros((0,), dtype=np.float32))
+-
+-if patchk is not None:
+-    np.save(run_dir/"patch_topk_success.npy", patchk.success_rate)
+-    np.save(run_dir/"patch_topk_shift.npy", patchk.mean_margin_shift)
+-else:
+-    np.save(run_dir/"patch_topk_success.npy", np.zeros((0,), dtype=np.float32))
+-    np.save(run_dir/"patch_topk_shift.npy", np.zeros((0,), dtype=np.float32))
+-
+-np.save(run_dir/"drift_cosine.npy", drift.cosine)
+-np.save(run_dir/"drift_l2.npy", drift.l2)
+-
+-torch.save(model.state_dict(), run_dir/"model.pt")
+-
+-print(json.dumps({"run_dir": str(run_dir), **metrics, "drift": drift.summary}, indent=2))
++    np.save(run_dir/"conv_W_init.npy", W_init.detach().cpu().numpy())
++    np.save(run_dir/"conv_W_final.npy", model.conv.weight.detach().cpu().numpy())
++
++    metrics = {
++        "id_acc": id_acc,
++        "ood_rot_acc": ood_rot_acc,
++        "ood_thick_acc": ood_thick_acc,
++        "ood_occ_acc": ood_occ_acc,
++        "alignment": align.summary,
++        "conditional_ablation": (cond_abl.summary if cond_abl is not None else {"mean_specificity": float("nan")}),
++        "patching_single": (patch1.summary if patch1 is not None else {"mean_success": float("nan"), "max_success": float("nan"), "mean_shift": float("nan")}),
++        "patching_topk": (patchk.summary if patchk is not None else {"success@maxk": float("nan"), "mean_success": float("nan"), "mean_shift": float("nan"), "num_pairs": 0}),
++        "topk_ks": (patchk.ks if patchk is not None else []),
++        "run_probes": int(args.run_probes),
++    }
++    save_json(run_dir/"metrics.json", metrics)
++    save_json(run_dir/"drift.json", drift.summary)
++
++    # raw arrays
++    np.save(run_dir/"alignment_matrix.npy", align.A)
++    np.save(run_dir/"alignment_best_template.npy", align.best_template)
++    np.save(run_dir/"alignment_best_score.npy", align.best_score)
++
++    if cond_abl is not None:
++        np.save(run_dir/"delta_cond.npy", cond_abl.delta_cond)
++        np.save(run_dir/"specificity.npy", cond_abl.specificity)
++        np.save(run_dir/"mean_z_by_class.npy", cond_abl.mean_z_by_class)
++    else:
++        np.save(run_dir/"delta_cond.npy", np.zeros((0,), dtype=np.float32))
++        np.save(run_dir/"specificity.npy", np.zeros((0,), dtype=np.float32))
++        np.save(run_dir/"mean_z_by_class.npy", np.zeros((0,), dtype=np.float32))
++
++    if patch1 is not None:
++        np.save(run_dir/"patch_single_success.npy", patch1.success_rate)
++        np.save(run_dir/"patch_single_shift.npy", patch1.mean_margin_shift)
++    else:
++        np.save(run_dir/"patch_single_success.npy", np.zeros((0,), dtype=np.float32))
++        np.save(run_dir/"patch_single_shift.npy", np.zeros((0,), dtype=np.float32))
++
++    if patchk is not None:
++        np.save(run_dir/"patch_topk_success.npy", patchk.success_rate)
++        np.save(run_dir/"patch_topk_shift.npy", patchk.mean_margin_shift)
++    else:
++        np.save(run_dir/"patch_topk_success.npy", np.zeros((0,), dtype=np.float32))
++        np.save(run_dir/"patch_topk_shift.npy", np.zeros((0,), dtype=np.float32))
++
++    np.save(run_dir/"drift_cosine.npy", drift.cosine)
++    np.save(run_dir/"drift_l2.npy", drift.l2)
++
++    torch.save(model.state_dict(), run_dir/"model.pt")
++
++    print(json.dumps({"run_dir": str(run_dir), **metrics, "drift": drift.summary}, indent=2))
+ if __name__ == "__main__":
+     main()

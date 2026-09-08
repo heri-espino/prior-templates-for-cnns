@@ -1,0 +1,68 @@
+{
+  "args": {
+    "batch_size": 128,
+    "channels": 16,
+    "device": "cpu",
+    "epochs": 100,
+    "image_size": 64,
+    "kernel_size": 9,
+    "lr": 0.001,
+    "max_probe_items": 2000,
+    "num_pairs": 1200,
+    "outdir": "runs/v4_lowdata/random/seed01",
+    "regime": "random",
+    "run_probes": 1,
+    "seed": 1,
+    "template_channels": 16,
+    "test_size": 600,
+    "train_size": 200,
+    "val_size": 400
+  },
+  "model": {
+    "channels": 16,
+    "image_size": 64,
+    "kernel_size": 9,
+    "num_classes": 4,
+    "regime": "random",
+    "template_channels": 16
+  },
+  "split_names": [
+    "train",
+    "val",
+    "test",
+    "ood_rot",
+    "ood_thick",
+    "ood_occ"
+  ],
+  "template_names": [
+    "edge_00",
+    "edge_01",
+    "edge_02",
+    "edge_03",
+    "edge_04",
+    "edge_05",
+    "edge_06",
+    "edge_07",
+    "corner_00",
+    "corner_01",
+    "corner_02",
+    "corner_03",
+    "ring_00",
+    "ring_01",
+    "ring_02",
+    "ring_03"
+  ],
+  "template_spec": {
+    "k": 9,
+    "n_corners": 4,
+    "n_edges": 8,
+    "n_rings": 4,
+    "ring_radii": [
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "sigma": 2.0
+  }
+}

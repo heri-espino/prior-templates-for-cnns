@@ -1,0 +1,4492 @@
+{
+  "utc": "2026-09-06T21:14:29.044769+00:00",
+  "run_count": 400,
+  "dataset_count": 60,
+  "unique_images": 20480,
+  "source_and_protocol_unchanged": true,
+  "first_pass_report_unchanged": true,
+  "dataset_checks": [
+    {
+      "task": "single_shape",
+      "block": 0,
+      "split": "train",
+      "n": 512,
+      "sha256": "3c6088a35c7e009e40310b289fde5769ff64411be2ab514b863dd4e73483e758",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 0,
+      "split": "val",
+      "n": 256,
+      "sha256": "d0c783a666b3237331b0359a0dbe6675346c7ee7bb85873c1bd43362b66f7c0e",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 0,
+      "split": "test",
+      "n": 256,
+      "sha256": "82a2f997c9f5348f9b3e6561bb622b4aef150ee2f1c3bb615ceaeb25e87682fa",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 1,
+      "split": "train",
+      "n": 512,
+      "sha256": "31b4a3363efb888af9dc7adc1f992aa0e699a9ae90d7b263665636d8cc70238b",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 1,
+      "split": "val",
+      "n": 256,
+      "sha256": "3139cda77289621a67b6d42e3496839b870c9425b005f7677c89b02631457a03",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 1,
+      "split": "test",
+      "n": 256,
+      "sha256": "a36c56799553a25c1ac0b4b1b83c6cc51eb5fa17f712f6453a4cc54c74760afe",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 2,
+      "split": "train",
+      "n": 512,
+      "sha256": "f349685ebf98484813380d1ef00c0ebb3b7a860f06591c623b2b92030c9118e9",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 2,
+      "split": "val",
+      "n": 256,
+      "sha256": "f577763aae776933d485529eb7c4dc501abafc102544285faa9771007b6f58b8",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 2,
+      "split": "test",
+      "n": 256,
+      "sha256": "776661031ed77f32b808ce672d2062d677c87c64ff835f86823ca9dc4ed057d5",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 3,
+      "split": "train",
+      "n": 512,
+      "sha256": "cee61c2ebfccc210c99db279dc5dd5b889d218a26f9d35bfa89f3bded7fa16cf",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 3,
+      "split": "val",
+      "n": 256,
+      "sha256": "053779a01102e32dc8dc5efda2dbe7336a13bece03cf226ec2e54db70e259fa5",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 3,
+      "split": "test",
+      "n": 256,
+      "sha256": "40b6f6003f6e20a4eb5a6150beaeaf42a291af4bd5aabac5b0185b69267d16c7",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 4,
+      "split": "train",
+      "n": 512,
+      "sha256": "58ff4ca752c189c6ce647457813adc907b57f98e764a29074d45d9a004764c27",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 4,
+      "split": "val",
+      "n": 256,
+      "sha256": "da7f57cd98f486c7851d9780a4a73e68a4924cdf71c0afa5ec75ec8c572475ce",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 4,
+      "split": "test",
+      "n": 256,
+      "sha256": "b20d45740ee92ea97f3fdbab07c9898ad04733a017f1f0efb58ee30f8a263edc",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 5,
+      "split": "train",
+      "n": 512,
+      "sha256": "57fe6e67499e508293ce47917415436b9ea5af02aa5e6d0d3b6687871337ebf7",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 5,
+      "split": "val",
+      "n": 256,
+      "sha256": "8acc465750ddc2aff8ee75112206a14efa7fca7053516134810aaaab20b93da1",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 5,
+      "split": "test",
+      "n": 256,
+      "sha256": "f290b1b39a8d43643118e8af82a249b6e84cc7ce5a0d5c9d1bb2c812be66acec",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 6,
+      "split": "train",
+      "n": 512,
+      "sha256": "afee122b2f5846f0a230c7ecc986cbc6b9ab98940fb9a89c17bc18a8eb86aaee",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 6,
+      "split": "val",
+      "n": 256,
+      "sha256": "b09bbcfeb136e687c93002c766ce1c96166ac792a19801d67fba69a6d70d8066",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 6,
+      "split": "test",
+      "n": 256,
+      "sha256": "b1ac55a1911f7ec4357711363b22594625396706973d94e731d367f6d9537b73",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 7,
+      "split": "train",
+      "n": 512,
+      "sha256": "d38f4b7ccb02fd8632ba3a73e750d9e4e46f20e150a654131055f4d22ce8cdf5",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 7,
+      "split": "val",
+      "n": 256,
+      "sha256": "7d801ffec9720eb9e12470a4ab8a6cb10ec0b9303aac6e948ec4e36516c472b0",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 7,
+      "split": "test",
+      "n": 256,
+      "sha256": "f58115bea1f8e48695a787169f67d19d4d090aee4a1679e1cab6bba8dbe3c773",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 8,
+      "split": "train",
+      "n": 512,
+      "sha256": "bb42015354344a150daab6294422256c84951f51a99ee6d32fb500db44170e69",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 8,
+      "split": "val",
+      "n": 256,
+      "sha256": "29ce71a4cbb98a9d32263128a1d7440972705734d85a58d52f97bdf134aa9306",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 8,
+      "split": "test",
+      "n": 256,
+      "sha256": "aeeab137208ea8b6278220bf217af825895a429058a0cee67f960423ad5e0b10",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 9,
+      "split": "train",
+      "n": 512,
+      "sha256": "09882c3b09e6724c34e5dfcdb491be80534d6f845bef94ca04c0a04a7d1dbee8",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 9,
+      "split": "val",
+      "n": 256,
+      "sha256": "99b71f6f84789005ea5dc624643bc24fb55d95593f26836d551eec95e51a6402",
+      "matched_background_verified": true
+    },
+    {
+      "task": "single_shape",
+      "block": 9,
+      "split": "test",
+      "n": 256,
+      "sha256": "19631e77894b9ad97061d3bd2cd3c163151347705607a451f8489c6f436350d7",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 0,
+      "split": "train",
+      "n": 512,
+      "sha256": "93afb2f79a6e7e40713de2c7d36b6d051004a1fa15f08bee49706f80b89c30e1",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 0,
+      "split": "val",
+      "n": 256,
+      "sha256": "c7abe4085444b4945d6bab166d9f48dd1420471a5a439cac84eaff467aa0f72c",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 0,
+      "split": "test",
+      "n": 256,
+      "sha256": "3917281cff2c051e20f08be24d0216749e1ba7b1cdab8e9025d21e054c49b225",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 1,
+      "split": "train",
+      "n": 512,
+      "sha256": "36f8e7ca1007fb79580a20e3bb8637b9da9db316863b781609a9c1b517da7b16",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 1,
+      "split": "val",
+      "n": 256,
+      "sha256": "d0921b3c914613357fcd13b014aa442d526c03258622e05a9b09d97b145cb6e1",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 1,
+      "split": "test",
+      "n": 256,
+      "sha256": "ca611575d8d72ac93c9f2db77b03d696d072b5403cf97081916636e752ca50f9",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 2,
+      "split": "train",
+      "n": 512,
+      "sha256": "dd56aa1437061a06b04bd3214eccc1dcd0b590a0259afae401555fae9ad5dee5",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 2,
+      "split": "val",
+      "n": 256,
+      "sha256": "3315a05f52fd2e768bc24ac5e933a1c4ca4eec537f1bc23106db2c7aa506344a",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 2,
+      "split": "test",
+      "n": 256,
+      "sha256": "42dbb1faa69c94a691f6906732a01a9d5c4c7fa75ca4b02b995dbb42e06abc38",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 3,
+      "split": "train",
+      "n": 512,
+      "sha256": "f381c14b266b97af5e00ae770ea23decfe0d2ed544ad9de26edd9834279f65b7",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 3,
+      "split": "val",
+      "n": 256,
+      "sha256": "f8720840497a4053e11e11d8aebf566e6dfebe7ff010954a76393b5bbc59f686",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 3,
+      "split": "test",
+      "n": 256,
+      "sha256": "6b286f9354909a8e7fa8a9322dc3c3648b25d2445b7272aeee7d1dad0ffaa50b",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 4,
+      "split": "train",
+      "n": 512,
+      "sha256": "2fc148cd7017d89d4ea5e5a2aeddfbe9eee3d7f4e2d35be108f8dfce4662195f",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 4,
+      "split": "val",
+      "n": 256,
+      "sha256": "bae8fcb3e557eebe84230cda7a12858d815cb8c89fdbe7904046fefae02aed35",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 4,
+      "split": "test",
+      "n": 256,
+      "sha256": "5f93bc3824cf396556b075bbf461c4451eda4a5f1d9513c80f30dff708e6e192",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 5,
+      "split": "train",
+      "n": 512,
+      "sha256": "11c5d6b1b1644be25852691c988d8ae0f5b3b74b3644e96c09b604687ae1aa16",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 5,
+      "split": "val",
+      "n": 256,
+      "sha256": "261156133bee11946ab341c74bbc1a1f17baa1cdc1b8f2189c7803bcf7d49a2b",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 5,
+      "split": "test",
+      "n": 256,
+      "sha256": "b68edec543096bd7e2c5a6e0eb1062820ad6fcc5077c4321f4b5efa5f9ff7b17",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 6,
+      "split": "train",
+      "n": 512,
+      "sha256": "1c63203da3e4ec6c143c8b10334410c4bde9e2c05b35e1947b973ce7733bc420",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 6,
+      "split": "val",
+      "n": 256,
+      "sha256": "b4be38a1133db1c5ff26c39591965600d72261673428f0e0351e4d83c083eff6",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 6,
+      "split": "test",
+      "n": 256,
+      "sha256": "fd866015cd201b65206f81d25d268ecde770594ba13ac81561196d19e8596be8",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 7,
+      "split": "train",
+      "n": 512,
+      "sha256": "639421e09a557b0fd4215c940c3731b4bb96256dcc8fb62ed7fa55523c1e40ba",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 7,
+      "split": "val",
+      "n": 256,
+      "sha256": "d57e1678a1fa66b3bc6ee1e23a2ae070a3a477d13bce150865ca6085e20a9e0d",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 7,
+      "split": "test",
+      "n": 256,
+      "sha256": "d9959de1af52670bc849e991b7025d2ad884b71a497182e56afce9cb9efdf210",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 8,
+      "split": "train",
+      "n": 512,
+      "sha256": "73a648ab7bce7e5785ae7b2996d665c18132d26cf10f2fd2d425e01430467fb9",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 8,
+      "split": "val",
+      "n": 256,
+      "sha256": "9624493e3ff90aeb8f4732b2635e251eabde40937ed256919fac27eab14dfb98",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 8,
+      "split": "test",
+      "n": 256,
+      "sha256": "e0e5ac21bb71bc7035d9019ffd280dc76187727f1087b9602757587e899defa8",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 9,
+      "split": "train",
+      "n": 512,
+      "sha256": "36652be20e6ccd196a261da388bca98abfea126bd1015cd43ffb36c921f16030",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 9,
+      "split": "val",
+      "n": 256,
+      "sha256": "c07b9bf74b659d9efad359385c1f3b9cae3b97189bba5e860d001bb1cb439a74",
+      "matched_background_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "block": 9,
+      "split": "test",
+      "n": 256,
+      "sha256": "fc5fef7dea5fcfffcb5e2ca2c4e88aa7af596d3cd12416a54895acec0b6a2df6",
+      "matched_background_verified": true
+    }
+  ],
+  "run_checks": [
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "single_shape",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_spectrum",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "frozen_templates",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "spectrum_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_0.1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TinyCNN",
+      "condition": "template_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 0,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 1,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 2,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 3,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 4,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 5,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 6,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 7,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 8,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_spectrum",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "frozen_templates",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "random_unitnorm",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "spectrum_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_init",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_0.1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    },
+    {
+      "task": "two_concepts",
+      "architecture": "TwoLayerCNN",
+      "condition": "template_retention_1",
+      "block": 9,
+      "checkpoint_accuracy_verified": true,
+      "alignment_verified": true,
+      "patch_identities_verified": true,
+      "head_predictions_verified": true
+    }
+  ]
+}

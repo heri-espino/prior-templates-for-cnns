@@ -1,0 +1,90 @@
+{
+  "template_rank_tol_1e-6": 10,
+  "singular_values": [
+    2.121103785268552,
+    2.069516450724663,
+    2.0695164507246613,
+    1.2033754758110142,
+    0.9396994849959626,
+    0.5332791582748041,
+    0.5332791582748039,
+    0.16057789929001398,
+    0.09077132686591494,
+    0.034299717288731636,
+    2.312853992757278e-08,
+    2.3128539855974654e-08,
+    1.5407710920374157e-08,
+    1.5407710892742863e-08,
+    1.0656367801149861e-08,
+    1.0656367765684964e-08
+  ],
+  "max_corner_edge_abs_cosine": 0.3624811814801455,
+  "spectrum_controls": [
+    {
+      "block": 0,
+      "alignment": 0.3662199392604094,
+      "gram_max_error": 3.777655688264048e-08,
+      "power_max_error": 5.7220458984375e-06
+    },
+    {
+      "block": 1,
+      "alignment": 0.6616983235049809,
+      "gram_max_error": 5.5112215457953084e-08,
+      "power_max_error": 9.5367431640625e-06
+    },
+    {
+      "block": 2,
+      "alignment": 0.39520919398472154,
+      "gram_max_error": 5.135163183567215e-08,
+      "power_max_error": 9.5367431640625e-06
+    },
+    {
+      "block": 3,
+      "alignment": 0.3983914422045509,
+      "gram_max_error": 5.011880332972396e-08,
+      "power_max_error": 5.7220458984375e-06
+    },
+    {
+      "block": 4,
+      "alignment": 0.41667566245573784,
+      "gram_max_error": 4.4483744021661664e-08,
+      "power_max_error": 5.7220458984375e-06
+    },
+    {
+      "block": 5,
+      "alignment": 0.3781134861721553,
+      "gram_max_error": 4.5716947116858364e-08,
+      "power_max_error": 5.7220458984375e-06
+    },
+    {
+      "block": 6,
+      "alignment": 0.4476232675561216,
+      "gram_max_error": 4.3148526418512745e-08,
+      "power_max_error": 9.5367431640625e-06
+    },
+    {
+      "block": 7,
+      "alignment": 0.3254928783485188,
+      "gram_max_error": 3.964091066510633e-08,
+      "power_max_error": 9.5367431640625e-06
+    },
+    {
+      "block": 8,
+      "alignment": 0.36976878796472057,
+      "gram_max_error": 3.6874793662988736e-08,
+      "power_max_error": 5.7220458984375e-06
+    },
+    {
+      "block": 9,
+      "alignment": 0.4022641070367632,
+      "gram_max_error": 4.637083650393947e-08,
+      "power_max_error": 9.5367431640625e-06
+    }
+  ],
+  "stream_ids_unique": true,
+  "factorial_pairs_change_one_concept": true,
+  "deterministic_renderer": true,
+  "head_initialization_matched": true,
+  "retention_gradient_verified": true,
+  "sample_weighting_verified": true
+}

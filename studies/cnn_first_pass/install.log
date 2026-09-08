@@ -1,0 +1,58 @@
+Collecting torch
+  Downloading torch-2.8.0-cp39-none-macosx_11_0_arm64.whl (73.6 MB)
+Collecting numpy
+  Downloading numpy-2.0.2-cp39-cp39-macosx_14_0_arm64.whl (5.3 MB)
+Collecting matplotlib
+  Downloading matplotlib-3.9.4-cp39-cp39-macosx_11_0_arm64.whl (7.8 MB)
+Collecting tqdm
+  Downloading tqdm-4.70.0-py3-none-any.whl (80 kB)
+Collecting pillow
+  Downloading pillow-11.3.0-cp39-cp39-macosx_11_0_arm64.whl (4.7 MB)
+Collecting pandas
+  Downloading pandas-2.3.3-cp39-cp39-macosx_11_0_arm64.whl (10.8 MB)
+Collecting scipy
+  Downloading scipy-1.13.1-cp39-cp39-macosx_12_0_arm64.whl (30.3 MB)
+Collecting filelock
+  Downloading filelock-3.19.1-py3-none-any.whl (15 kB)
+Collecting networkx
+  Downloading networkx-3.2.1-py3-none-any.whl (1.6 MB)
+Collecting fsspec
+  Downloading fsspec-2025.10.0-py3-none-any.whl (200 kB)
+Collecting jinja2
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Collecting sympy>=1.13.3
+  Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Collecting typing-extensions>=4.10.0
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Collecting python-dateutil>=2.7
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.60.2-cp39-cp39-macosx_10_9_universal2.whl (2.9 MB)
+Collecting importlib-resources>=3.2.0
+  Downloading importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Collecting packaging>=20.0
+  Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Collecting kiwisolver>=1.3.1
+  Downloading kiwisolver-1.4.7-cp39-cp39-macosx_11_0_arm64.whl (64 kB)
+Collecting pyparsing>=2.3.1
+  Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.3.0-cp39-cp39-macosx_11_0_arm64.whl (249 kB)
+Collecting cycler>=0.10
+  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting tzdata>=2022.7
+  Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+Collecting pytz>=2020.1
+  Downloading pytz-2026.3.post1-py2.py3-none-any.whl (508 kB)
+Collecting zipp>=3.1.0
+  Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Collecting six>=1.5
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting mpmath<1.4,>=1.1.0
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+Collecting MarkupSafe>=2.0
+  Downloading markupsafe-3.0.3-cp39-cp39-macosx_11_0_arm64.whl (12 kB)
+Installing collected packages: zipp, six, numpy, mpmath, MarkupSafe, tzdata, typing-extensions, sympy, pytz, python-dateutil, pyparsing, pillow, packaging, networkx, kiwisolver, jinja2, importlib-resources, fsspec, fonttools, filelock, cycler, contourpy, tqdm, torch, scipy, pandas, matplotlib
+Successfully installed MarkupSafe-3.0.3 contourpy-1.3.0 cycler-0.12.1 filelock-3.19.1 fonttools-4.60.2 fsspec-2025.10.0 importlib-resources-6.5.2 jinja2-3.1.6 kiwisolver-1.4.7 matplotlib-3.9.4 mpmath-1.3.0 networkx-3.2.1 numpy-2.0.2 packaging-26.3 pandas-2.3.3 pillow-11.3.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pytz-2026.3.post1 scipy-1.13.1 six-1.17.0 sympy-1.14.0 torch-2.8.0 tqdm-4.70.0 typing-extensions-4.16.0 tzdata-2026.3 zipp-3.23.1
+WARNING: You are using pip version 21.2.4; however, version 26.0.1 is available.
+You should consider upgrading via the '/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/.venv/bin/python3 -m pip install --upgrade pip' command.

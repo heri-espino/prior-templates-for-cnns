@@ -1,0 +1,11 @@
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/scripts/aggregate_runs_v4_lowdata.py:17: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  return float(np.trapz(y[m], x[m]))
+{
+  "runs": 15,
+  "regimes": [
+    "frozen_templates",
+    "random",
+    "template_init"
+  ],
+  "outdir": "analysis/repository_v4"
+}

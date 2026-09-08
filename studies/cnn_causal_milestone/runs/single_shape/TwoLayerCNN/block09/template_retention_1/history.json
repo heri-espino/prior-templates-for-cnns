@@ -1,0 +1,322 @@
+[
+  {
+    "epoch": 1,
+    "train_ce": 1.322082668542862,
+    "retention_penalty": 0.0015589329123031348,
+    "train_acc": 0.25,
+    "val_ce": 1.2409425973892212,
+    "val_acc": 0.359375
+  },
+  {
+    "epoch": 2,
+    "train_ce": 1.1966353356838226,
+    "retention_penalty": 0.008762287092395127,
+    "train_acc": 0.740234375,
+    "val_ce": 1.1344752311706543,
+    "val_acc": 0.89453125
+  },
+  {
+    "epoch": 3,
+    "train_ce": 1.0826408863067627,
+    "retention_penalty": 0.01931381318718195,
+    "train_acc": 0.79296875,
+    "val_ce": 1.0136303901672363,
+    "val_acc": 0.8828125
+  },
+  {
+    "epoch": 4,
+    "train_ce": 0.9524233937263489,
+    "retention_penalty": 0.032590337097644806,
+    "train_acc": 0.916015625,
+    "val_ce": 0.879197359085083,
+    "val_acc": 0.94140625
+  },
+  {
+    "epoch": 5,
+    "train_ce": 0.8060892075300217,
+    "retention_penalty": 0.04901799187064171,
+    "train_acc": 0.97265625,
+    "val_ce": 0.7360221743583679,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 6,
+    "train_ce": 0.6670797616243362,
+    "retention_penalty": 0.06742267776280642,
+    "train_acc": 0.998046875,
+    "val_ce": 0.6007900834083557,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 7,
+    "train_ce": 0.539853498339653,
+    "retention_penalty": 0.08476952090859413,
+    "train_acc": 0.994140625,
+    "val_ce": 0.4876399636268616,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 8,
+    "train_ce": 0.42374269664287567,
+    "retention_penalty": 0.09765891917049885,
+    "train_acc": 1.0,
+    "val_ce": 0.3902949094772339,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 9,
+    "train_ce": 0.3434956669807434,
+    "retention_penalty": 0.10444377176463604,
+    "train_acc": 1.0,
+    "val_ce": 0.31323865056037903,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 10,
+    "train_ce": 0.27149172872304916,
+    "retention_penalty": 0.10543056949973106,
+    "train_acc": 1.0,
+    "val_ce": 0.25903722643852234,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 11,
+    "train_ce": 0.22368479520082474,
+    "retention_penalty": 0.10095112025737762,
+    "train_acc": 1.0,
+    "val_ce": 0.21632888913154602,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 12,
+    "train_ce": 0.18796393275260925,
+    "retention_penalty": 0.09235113114118576,
+    "train_acc": 1.0,
+    "val_ce": 0.18463458120822906,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 13,
+    "train_ce": 0.16030345484614372,
+    "retention_penalty": 0.08229892328381538,
+    "train_acc": 1.0,
+    "val_ce": 0.16186951100826263,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 14,
+    "train_ce": 0.14021460711956024,
+    "retention_penalty": 0.0716937966644764,
+    "train_acc": 1.0,
+    "val_ce": 0.14481142163276672,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 15,
+    "train_ce": 0.12622720934450626,
+    "retention_penalty": 0.06216928083449602,
+    "train_acc": 1.0,
+    "val_ce": 0.12975141406059265,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 16,
+    "train_ce": 0.11220516636967659,
+    "retention_penalty": 0.05480519775301218,
+    "train_acc": 1.0,
+    "val_ce": 0.11713430285453796,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 17,
+    "train_ce": 0.1013029832392931,
+    "retention_penalty": 0.048824493773281574,
+    "train_acc": 1.0,
+    "val_ce": 0.10621681064367294,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 18,
+    "train_ce": 0.09295034781098366,
+    "retention_penalty": 0.04401542525738478,
+    "train_acc": 1.0,
+    "val_ce": 0.0976562574505806,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 19,
+    "train_ce": 0.08513899706304073,
+    "retention_penalty": 0.04049345199018717,
+    "train_acc": 1.0,
+    "val_ce": 0.08981958776712418,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 20,
+    "train_ce": 0.07565584406256676,
+    "retention_penalty": 0.037317208014428616,
+    "train_acc": 1.0,
+    "val_ce": 0.08444172888994217,
+    "val_acc": 0.99609375
+  },
+  {
+    "epoch": 21,
+    "train_ce": 0.06981683149933815,
+    "retention_penalty": 0.034644692204892635,
+    "train_acc": 1.0,
+    "val_ce": 0.07543924450874329,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 22,
+    "train_ce": 0.06450625695288181,
+    "retention_penalty": 0.03224213095381856,
+    "train_acc": 1.0,
+    "val_ce": 0.07101329416036606,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 23,
+    "train_ce": 0.05957321170717478,
+    "retention_penalty": 0.029205537401139736,
+    "train_acc": 1.0,
+    "val_ce": 0.06811095774173737,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 24,
+    "train_ce": 0.056894891895353794,
+    "retention_penalty": 0.026734780985862017,
+    "train_acc": 1.0,
+    "val_ce": 0.06275183707475662,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 25,
+    "train_ce": 0.052429758943617344,
+    "retention_penalty": 0.025172879919409752,
+    "train_acc": 1.0,
+    "val_ce": 0.05897897481918335,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 26,
+    "train_ce": 0.049307980574667454,
+    "retention_penalty": 0.023526123724877834,
+    "train_acc": 1.0,
+    "val_ce": 0.0559980645775795,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 27,
+    "train_ce": 0.04638602212071419,
+    "retention_penalty": 0.022074669133871794,
+    "train_acc": 1.0,
+    "val_ce": 0.05289126932621002,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 28,
+    "train_ce": 0.0438571572303772,
+    "retention_penalty": 0.02077940246090293,
+    "train_acc": 1.0,
+    "val_ce": 0.050486352294683456,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 29,
+    "train_ce": 0.041358741000294685,
+    "retention_penalty": 0.019582815002650023,
+    "train_acc": 1.0,
+    "val_ce": 0.04772481322288513,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 30,
+    "train_ce": 0.0392040079459548,
+    "retention_penalty": 0.01842893660068512,
+    "train_acc": 1.0,
+    "val_ce": 0.0460459440946579,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 31,
+    "train_ce": 0.037467728834599257,
+    "retention_penalty": 0.017327242996543646,
+    "train_acc": 1.0,
+    "val_ce": 0.04385615140199661,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 32,
+    "train_ce": 0.035550542175769806,
+    "retention_penalty": 0.016382474917918444,
+    "train_acc": 1.0,
+    "val_ce": 0.041820235550403595,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 33,
+    "train_ce": 0.03394749527797103,
+    "retention_penalty": 0.015476233325898647,
+    "train_acc": 1.0,
+    "val_ce": 0.0401548333466053,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 34,
+    "train_ce": 0.032447525300085545,
+    "retention_penalty": 0.014659440144896507,
+    "train_acc": 1.0,
+    "val_ce": 0.03861573711037636,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 35,
+    "train_ce": 0.030999917071312666,
+    "retention_penalty": 0.013963849283754826,
+    "train_acc": 1.0,
+    "val_ce": 0.03702865540981293,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 36,
+    "train_ce": 0.02986290492117405,
+    "retention_penalty": 0.013238805113360286,
+    "train_acc": 1.0,
+    "val_ce": 0.03557569533586502,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 37,
+    "train_ce": 0.028511775191873312,
+    "retention_penalty": 0.012581562623381615,
+    "train_acc": 1.0,
+    "val_ce": 0.034339018166065216,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 38,
+    "train_ce": 0.027455993462353945,
+    "retention_penalty": 0.012013077503070235,
+    "train_acc": 1.0,
+    "val_ce": 0.03310101106762886,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 39,
+    "train_ce": 0.026270925533026457,
+    "retention_penalty": 0.011475987266749144,
+    "train_acc": 1.0,
+    "val_ce": 0.03196118772029877,
+    "val_acc": 1.0
+  },
+  {
+    "epoch": 40,
+    "train_ce": 0.02538263238966465,
+    "retention_penalty": 0.010881903814151883,
+    "train_acc": 1.0,
+    "val_ce": 0.03110363334417343,
+    "val_acc": 1.0
+  }
+]

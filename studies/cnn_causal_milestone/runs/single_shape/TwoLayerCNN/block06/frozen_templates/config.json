@@ -1,0 +1,20 @@
+{
+  "task": "single_shape",
+  "architecture": "TwoLayerCNN",
+  "block": 6,
+  "condition": "frozen_templates",
+  "epochs": 40,
+  "lr": 0.003,
+  "batch_size": 128,
+  "lambda_retention": 0.0,
+  "image_size": 32,
+  "channels": 16,
+  "kernel_size": 9,
+  "model_seed": 3895994073,
+  "shuffle_seed": 3759218392,
+  "data_hashes": {
+    "train": "afee122b2f5846f0a230c7ecc986cbc6b9ab98940fb9a89c17bc18a8eb86aaee",
+    "val": "b09bbcfeb136e687c93002c766ce1c96166ac792a19801d67fba69a6d70d8066",
+    "test": "b1ac55a1911f7ec4357711363b22594625396706973d94e731d367f6d9537b73"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "task": "two_concepts",
+  "architecture": "TinyCNN",
+  "block": 3,
+  "condition": "template_retention_0.1",
+  "epochs": 40,
+  "lr": 0.003,
+  "batch_size": 128,
+  "lambda_retention": 0.1,
+  "image_size": 32,
+  "channels": 16,
+  "kernel_size": 9,
+  "model_seed": 410337106,
+  "shuffle_seed": 746085840,
+  "data_hashes": {
+    "train": "f381c14b266b97af5e00ae770ea23decfe0d2ed544ad9de26edd9834279f65b7",
+    "val": "f8720840497a4053e11e11d8aebf566e6dfebe7ff010954a76393b5bbc59f686",
+    "test": "6b286f9354909a8e7fa8a9322dc3c3648b25d2445b7272aeee7d1dad0ffaa50b"
+  }
+}

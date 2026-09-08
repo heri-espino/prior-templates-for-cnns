@@ -1,0 +1,5 @@
+Matplotlib is building the font cache; this may take a moment.
+Traceback (most recent call last):
+  File "/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/original/train.py", line 133, in <module>
+    align = compute_alignment(model.conv.weight, templates)
+NameError: name 'model' is not defined

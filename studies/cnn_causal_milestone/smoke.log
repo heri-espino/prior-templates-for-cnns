@@ -1,0 +1,26 @@
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:122: RuntimeWarning: divide by zero encountered in matmul
+  w=w.reshape(17,K);l=X@w;lp=l-logsumexp(l,axis=1,keepdims=True);prob=np.exp(lp);prob[np.arange(len(Y)),Y]-=1
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:122: RuntimeWarning: overflow encountered in matmul
+  w=w.reshape(17,K);l=X@w;lp=l-logsumexp(l,axis=1,keepdims=True);prob=np.exp(lp);prob[np.arange(len(Y)),Y]-=1
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:122: RuntimeWarning: invalid value encountered in matmul
+  w=w.reshape(17,K);l=X@w;lp=l-logsumexp(l,axis=1,keepdims=True);prob=np.exp(lp);prob[np.arange(len(Y)),Y]-=1
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:124: RuntimeWarning: divide by zero encountered in matmul
+  val=-lp[np.arange(len(Y)),Y].mean()+alpha*.5*(penalty*penalty).sum();grad=X.T@prob/len(Y)+alpha*penalty
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:124: RuntimeWarning: overflow encountered in matmul
+  val=-lp[np.arange(len(Y)),Y].mean()+alpha*.5*(penalty*penalty).sum();grad=X.T@prob/len(Y)+alpha*penalty
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:124: RuntimeWarning: invalid value encountered in matmul
+  val=-lp[np.arange(len(Y)),Y].mean()+alpha*.5*(penalty*penalty).sum();grad=X.T@prob/len(Y)+alpha*penalty
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:127: RuntimeWarning: divide by zero encountered in matmul
+  W=res.x.reshape(17,K);lv=XV@W;lv=lv-logsumexp(lv,axis=1,keepdims=True)
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:127: RuntimeWarning: overflow encountered in matmul
+  W=res.x.reshape(17,K);lv=XV@W;lv=lv-logsumexp(lv,axis=1,keepdims=True)
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:127: RuntimeWarning: invalid value encountered in matmul
+  W=res.x.reshape(17,K);lv=XV@W;lv=lv-logsumexp(lv,axis=1,keepdims=True)
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:128: RuntimeWarning: divide by zero encountered in matmul
+  fits.append(dict(alpha=alpha,success=bool(res.success),message=str(res.message),iterations=int(res.nit),gradient_max=float(np.max(np.abs(res.jac))),train_acc=float(((X@W).argmax(1)==Y).mean()),val_ce=float(-lv[np.arange(len(QY['val'])),QY['val']].mean()),val_acc=float((lv.argmax(1)==QY['val']).mean()),test_acc=float(((XT@W).argmax(1)==QY['test']).mean()),weights=W.tolist(),mean=mu.tolist(),sd=sd.tolist()))
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:128: RuntimeWarning: overflow encountered in matmul
+  fits.append(dict(alpha=alpha,success=bool(res.success),message=str(res.message),iterations=int(res.nit),gradient_max=float(np.max(np.abs(res.jac))),train_acc=float(((X@W).argmax(1)==Y).mean()),val_ce=float(-lv[np.arange(len(QY['val'])),QY['val']].mean()),val_acc=float((lv.argmax(1)==QY['val']).mean()),test_acc=float(((XT@W).argmax(1)==QY['test']).mean()),weights=W.tolist(),mean=mu.tolist(),sd=sd.tolist()))
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_causal_milestone/study.py:128: RuntimeWarning: invalid value encountered in matmul
+  fits.append(dict(alpha=alpha,success=bool(res.success),message=str(res.message),iterations=int(res.nit),gradient_max=float(np.max(np.abs(res.jac))),train_acc=float(((X@W).argmax(1)==Y).mean()),val_ce=float(-lv[np.arange(len(QY['val'])),QY['val']].mean()),val_acc=float((lv.argmax(1)==QY['val']).mean()),test_acc=float(((XT@W).argmax(1)==QY['test']).mean()),weights=W.tolist(),mean=mu.tolist(),sd=sd.tolist()))
+{"architecture": "TinyCNN", "seconds": 0.8785920143127441, "execution_complete": true}
+{"architecture": "TwoLayerCNN", "seconds": 1.1666297912597656, "execution_complete": true}

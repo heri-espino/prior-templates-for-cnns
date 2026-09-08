@@ -1,0 +1,20 @@
+{
+  "task": "single_shape",
+  "architecture": "TinyCNN",
+  "block": 5,
+  "condition": "random_unitnorm",
+  "epochs": 40,
+  "lr": 0.003,
+  "batch_size": 128,
+  "lambda_retention": 0.0,
+  "image_size": 32,
+  "channels": 16,
+  "kernel_size": 9,
+  "model_seed": 2175184963,
+  "shuffle_seed": 2293720801,
+  "data_hashes": {
+    "train": "57fe6e67499e508293ce47917415436b9ea5af02aa5e6d0d3b6687871337ebf7",
+    "val": "8acc465750ddc2aff8ee75112206a14efa7fca7053516134810aaaab20b93da1",
+    "test": "f290b1b39a8d43643118e8af82a249b6e84cc7ce5a0d5c9d1bb2c812be66acec"
+  }
+}

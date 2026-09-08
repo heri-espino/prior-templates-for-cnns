@@ -1,0 +1,47 @@
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/src/interpret/alignment.py:23: RuntimeWarning: divide by zero encountered in matmul
+  return (F / Fn) @ (T / Tn).T
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/src/interpret/alignment.py:23: RuntimeWarning: overflow encountered in matmul
+  return (F / Fn) @ (T / Tn).T
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/src/interpret/alignment.py:23: RuntimeWarning: invalid value encountered in matmul
+  return (F / Fn) @ (T / Tn).T
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/analyze.py:63: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  sub=r.train_log[r.train_log.epoch<=E];row[f'auc_{E}']=float(np.trapz(sub.val_acc,sub.epoch))
+ANALYZED v4_lowdata frozen_templates 0
+ANALYZED v4_lowdata random 0
+ANALYZED v4_lowdata template_init 0
+ANALYZED v4_lowdata frozen_templates 1
+ANALYZED v4_lowdata random 1
+ANALYZED v4_lowdata template_init 1
+ANALYZED v4_lowdata frozen_templates 2
+ANALYZED v4_lowdata random 2
+ANALYZED v4_lowdata template_init 2
+ANALYZED v4_lowdata frozen_templates 3
+ANALYZED v4_lowdata random 3
+ANALYZED v4_lowdata template_init 3
+ANALYZED v4_lowdata frozen_templates 4
+ANALYZED v4_lowdata random 4
+ANALYZED v4_lowdata template_init 4
+ANALYZED controls frozen_random_unitnorm 0
+ANALYZED controls random_unitnorm 0
+ANALYZED controls frozen_random_unitnorm 1
+ANALYZED controls random_unitnorm 1
+ANALYZED controls frozen_random_unitnorm 2
+ANALYZED controls random_unitnorm 2
+ANALYZED controls frozen_random_unitnorm 3
+ANALYZED controls random_unitnorm 3
+ANALYZED controls frozen_random_unitnorm 4
+ANALYZED controls random_unitnorm 4
+DONE 25
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/src/interpret/alignment.py:23: RuntimeWarning: divide by zero encountered in matmul
+  return (F / Fn) @ (T / Tn).T
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/src/interpret/alignment.py:23: RuntimeWarning: overflow encountered in matmul
+  return (F / Fn) @ (T / Tn).T
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/src/interpret/alignment.py:23: RuntimeWarning: invalid value encountered in matmul
+  return (F / Fn) @ (T / Tn).T
+/Users/heri/.codex/.chatgpt-projects/g-p-6a1189204f508191951e4ad6adfa63a7/cnn_first_pass/analyze.py:63: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  sub=r.train_log[r.train_log.epoch<=E];row[f'auc_{E}']=float(np.trapz(sub.val_acc,sub.epoch))
+ANALYZED v3_seed0 frozen_templates 0
+ANALYZED v3_seed0 random 0
+ANALYZED v3_seed0 template_init 0
+DONE 28
+DONE 28

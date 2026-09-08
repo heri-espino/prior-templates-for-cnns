@@ -1,0 +1,400 @@
+START 0 single_shape TinyCNN random
+DONE 0 single_shape TinyCNN random 3.36
+START 0 single_shape TinyCNN random_unitnorm
+DONE 0 single_shape TinyCNN random_unitnorm 3.22
+START 0 single_shape TinyCNN frozen_random_unitnorm
+DONE 0 single_shape TinyCNN frozen_random_unitnorm 1.98
+START 0 single_shape TinyCNN template_init
+DONE 0 single_shape TinyCNN template_init 4.83
+START 0 single_shape TinyCNN template_retention_0.1
+DONE 0 single_shape TinyCNN template_retention_0.1 5.03
+START 0 single_shape TinyCNN template_retention_1
+DONE 0 single_shape TinyCNN template_retention_1 5.07
+START 0 single_shape TinyCNN frozen_templates
+DONE 0 single_shape TinyCNN frozen_templates 2.2
+START 0 single_shape TinyCNN spectrum_init
+DONE 0 single_shape TinyCNN spectrum_init 5.29
+START 0 single_shape TinyCNN spectrum_retention_1
+DONE 0 single_shape TinyCNN spectrum_retention_1 5.46
+START 0 single_shape TinyCNN frozen_spectrum
+DONE 0 single_shape TinyCNN frozen_spectrum 2.29
+START 0 single_shape TwoLayerCNN random
+DONE 0 single_shape TwoLayerCNN random 18.34
+START 0 single_shape TwoLayerCNN random_unitnorm
+DONE 0 single_shape TwoLayerCNN random_unitnorm 18.8
+START 0 single_shape TwoLayerCNN frozen_random_unitnorm
+DONE 0 single_shape TwoLayerCNN frozen_random_unitnorm 13.52
+START 0 single_shape TwoLayerCNN template_init
+DONE 0 single_shape TwoLayerCNN template_init 21.93
+START 0 single_shape TwoLayerCNN template_retention_0.1
+DONE 0 single_shape TwoLayerCNN template_retention_0.1 20.93
+START 0 single_shape TwoLayerCNN template_retention_1
+DONE 0 single_shape TwoLayerCNN template_retention_1 19.07
+START 0 single_shape TwoLayerCNN frozen_templates
+DONE 0 single_shape TwoLayerCNN frozen_templates 10.99
+START 0 single_shape TwoLayerCNN spectrum_init
+DONE 0 single_shape TwoLayerCNN spectrum_init 18.59
+START 0 single_shape TwoLayerCNN spectrum_retention_1
+DONE 0 single_shape TwoLayerCNN spectrum_retention_1 19.65
+START 0 single_shape TwoLayerCNN frozen_spectrum
+DONE 0 single_shape TwoLayerCNN frozen_spectrum 11.23
+START 0 two_concepts TinyCNN random
+DONE 0 two_concepts TinyCNN random 6.35
+START 0 two_concepts TinyCNN random_unitnorm
+DONE 0 two_concepts TinyCNN random_unitnorm 6.62
+START 0 two_concepts TinyCNN frozen_random_unitnorm
+DONE 0 two_concepts TinyCNN frozen_random_unitnorm 2.75
+START 0 two_concepts TinyCNN template_init
+DONE 0 two_concepts TinyCNN template_init 7.01
+START 0 two_concepts TinyCNN template_retention_0.1
+DONE 0 two_concepts TinyCNN template_retention_0.1 7.13
+START 0 two_concepts TinyCNN template_retention_1
+DONE 0 two_concepts TinyCNN template_retention_1 6.23
+START 0 two_concepts TinyCNN frozen_templates
+DONE 0 two_concepts TinyCNN frozen_templates 3.65
+START 0 two_concepts TinyCNN spectrum_init
+DONE 0 two_concepts TinyCNN spectrum_init 5.54
+START 0 two_concepts TinyCNN spectrum_retention_1
+DONE 0 two_concepts TinyCNN spectrum_retention_1 5.53
+START 0 two_concepts TinyCNN frozen_spectrum
+DONE 0 two_concepts TinyCNN frozen_spectrum 2.5
+START 0 two_concepts TwoLayerCNN random
+DONE 0 two_concepts TwoLayerCNN random 18.6
+START 0 two_concepts TwoLayerCNN random_unitnorm
+DONE 0 two_concepts TwoLayerCNN random_unitnorm 18.22
+START 0 two_concepts TwoLayerCNN frozen_random_unitnorm
+DONE 0 two_concepts TwoLayerCNN frozen_random_unitnorm 11.2
+START 0 two_concepts TwoLayerCNN template_init
+DONE 0 two_concepts TwoLayerCNN template_init 19.68
+START 0 two_concepts TwoLayerCNN template_retention_0.1
+DONE 0 two_concepts TwoLayerCNN template_retention_0.1 17.89
+START 0 two_concepts TwoLayerCNN template_retention_1
+DONE 0 two_concepts TwoLayerCNN template_retention_1 17.41
+START 0 two_concepts TwoLayerCNN frozen_templates
+DONE 0 two_concepts TwoLayerCNN frozen_templates 12.12
+START 0 two_concepts TwoLayerCNN spectrum_init
+DONE 0 two_concepts TwoLayerCNN spectrum_init 18.84
+START 0 two_concepts TwoLayerCNN spectrum_retention_1
+DONE 0 two_concepts TwoLayerCNN spectrum_retention_1 18.38
+START 0 two_concepts TwoLayerCNN frozen_spectrum
+DONE 0 two_concepts TwoLayerCNN frozen_spectrum 11.12
+START 2 single_shape TinyCNN random
+DONE 2 single_shape TinyCNN random 6.05
+START 2 single_shape TinyCNN random_unitnorm
+DONE 2 single_shape TinyCNN random_unitnorm 5.93
+START 2 single_shape TinyCNN frozen_random_unitnorm
+DONE 2 single_shape TinyCNN frozen_random_unitnorm 2.47
+START 2 single_shape TinyCNN template_init
+DONE 2 single_shape TinyCNN template_init 5.97
+START 2 single_shape TinyCNN template_retention_0.1
+DONE 2 single_shape TinyCNN template_retention_0.1 422.16
+START 2 single_shape TinyCNN template_retention_1
+DONE 2 single_shape TinyCNN template_retention_1 5.11
+START 2 single_shape TinyCNN frozen_templates
+DONE 2 single_shape TinyCNN frozen_templates 48.73
+START 2 single_shape TinyCNN spectrum_init
+DONE 2 single_shape TinyCNN spectrum_init 6.85
+START 2 single_shape TinyCNN spectrum_retention_1
+DONE 2 single_shape TinyCNN spectrum_retention_1 5.5
+START 2 single_shape TinyCNN frozen_spectrum
+DONE 2 single_shape TinyCNN frozen_spectrum 2.42
+START 2 single_shape TwoLayerCNN random
+DONE 2 single_shape TwoLayerCNN random 18.23
+START 2 single_shape TwoLayerCNN random_unitnorm
+DONE 2 single_shape TwoLayerCNN random_unitnorm 17.56
+START 2 single_shape TwoLayerCNN frozen_random_unitnorm
+DONE 2 single_shape TwoLayerCNN frozen_random_unitnorm 11.23
+START 2 single_shape TwoLayerCNN template_init
+DONE 2 single_shape TwoLayerCNN template_init 19.79
+START 2 single_shape TwoLayerCNN template_retention_0.1
+DONE 2 single_shape TwoLayerCNN template_retention_0.1 18.57
+START 2 single_shape TwoLayerCNN template_retention_1
+DONE 2 single_shape TwoLayerCNN template_retention_1 18.55
+START 2 single_shape TwoLayerCNN frozen_templates
+DONE 2 single_shape TwoLayerCNN frozen_templates 11.48
+START 2 single_shape TwoLayerCNN spectrum_init
+DONE 2 single_shape TwoLayerCNN spectrum_init 19.11
+START 2 single_shape TwoLayerCNN spectrum_retention_1
+DONE 2 single_shape TwoLayerCNN spectrum_retention_1 19.23
+START 2 single_shape TwoLayerCNN frozen_spectrum
+DONE 2 single_shape TwoLayerCNN frozen_spectrum 11.9
+START 2 two_concepts TinyCNN random
+DONE 2 two_concepts TinyCNN random 5.8
+START 2 two_concepts TinyCNN random_unitnorm
+DONE 2 two_concepts TinyCNN random_unitnorm 5.89
+START 2 two_concepts TinyCNN frozen_random_unitnorm
+DONE 2 two_concepts TinyCNN frozen_random_unitnorm 2.45
+START 2 two_concepts TinyCNN template_init
+DONE 2 two_concepts TinyCNN template_init 5.71
+START 2 two_concepts TinyCNN template_retention_0.1
+DONE 2 two_concepts TinyCNN template_retention_0.1 6.22
+START 2 two_concepts TinyCNN template_retention_1
+DONE 2 two_concepts TinyCNN template_retention_1 5.64
+START 2 two_concepts TinyCNN frozen_templates
+DONE 2 two_concepts TinyCNN frozen_templates 2.25
+START 2 two_concepts TinyCNN spectrum_init
+DONE 2 two_concepts TinyCNN spectrum_init 5.31
+START 2 two_concepts TinyCNN spectrum_retention_1
+DONE 2 two_concepts TinyCNN spectrum_retention_1 7.32
+START 2 two_concepts TinyCNN frozen_spectrum
+DONE 2 two_concepts TinyCNN frozen_spectrum 2.46
+START 2 two_concepts TwoLayerCNN random
+DONE 2 two_concepts TwoLayerCNN random 18.1
+START 2 two_concepts TwoLayerCNN random_unitnorm
+DONE 2 two_concepts TwoLayerCNN random_unitnorm 18.06
+START 2 two_concepts TwoLayerCNN frozen_random_unitnorm
+DONE 2 two_concepts TwoLayerCNN frozen_random_unitnorm 10.92
+START 2 two_concepts TwoLayerCNN template_init
+DONE 2 two_concepts TwoLayerCNN template_init 21.37
+START 2 two_concepts TwoLayerCNN template_retention_0.1
+DONE 2 two_concepts TwoLayerCNN template_retention_0.1 19.34
+START 2 two_concepts TwoLayerCNN template_retention_1
+DONE 2 two_concepts TwoLayerCNN template_retention_1 19.43
+START 2 two_concepts TwoLayerCNN frozen_templates
+DONE 2 two_concepts TwoLayerCNN frozen_templates 11.51
+START 2 two_concepts TwoLayerCNN spectrum_init
+DONE 2 two_concepts TwoLayerCNN spectrum_init 24.44
+START 2 two_concepts TwoLayerCNN spectrum_retention_1
+DONE 2 two_concepts TwoLayerCNN spectrum_retention_1 20.52
+START 2 two_concepts TwoLayerCNN frozen_spectrum
+DONE 2 two_concepts TwoLayerCNN frozen_spectrum 11.88
+START 4 single_shape TinyCNN random
+DONE 4 single_shape TinyCNN random 6.42
+START 4 single_shape TinyCNN random_unitnorm
+DONE 4 single_shape TinyCNN random_unitnorm 6.36
+START 4 single_shape TinyCNN frozen_random_unitnorm
+DONE 4 single_shape TinyCNN frozen_random_unitnorm 2.83
+START 4 single_shape TinyCNN template_init
+DONE 4 single_shape TinyCNN template_init 6.06
+START 4 single_shape TinyCNN template_retention_0.1
+DONE 4 single_shape TinyCNN template_retention_0.1 6.34
+START 4 single_shape TinyCNN template_retention_1
+DONE 4 single_shape TinyCNN template_retention_1 6.32
+START 4 single_shape TinyCNN frozen_templates
+DONE 4 single_shape TinyCNN frozen_templates 3.26
+START 4 single_shape TinyCNN spectrum_init
+DONE 4 single_shape TinyCNN spectrum_init 6.3
+START 4 single_shape TinyCNN spectrum_retention_1
+DONE 4 single_shape TinyCNN spectrum_retention_1 5.71
+START 4 single_shape TinyCNN frozen_spectrum
+DONE 4 single_shape TinyCNN frozen_spectrum 2.49
+START 4 single_shape TwoLayerCNN random
+DONE 4 single_shape TwoLayerCNN random 18.75
+START 4 single_shape TwoLayerCNN random_unitnorm
+DONE 4 single_shape TwoLayerCNN random_unitnorm 18.3
+START 4 single_shape TwoLayerCNN frozen_random_unitnorm
+DONE 4 single_shape TwoLayerCNN frozen_random_unitnorm 12.08
+START 4 single_shape TwoLayerCNN template_init
+DONE 4 single_shape TwoLayerCNN template_init 21.37
+START 4 single_shape TwoLayerCNN template_retention_0.1
+DONE 4 single_shape TwoLayerCNN template_retention_0.1 20.78
+START 4 single_shape TwoLayerCNN template_retention_1
+DONE 4 single_shape TwoLayerCNN template_retention_1 21.13
+START 4 single_shape TwoLayerCNN frozen_templates
+DONE 4 single_shape TwoLayerCNN frozen_templates 13.63
+START 4 single_shape TwoLayerCNN spectrum_init
+DONE 4 single_shape TwoLayerCNN spectrum_init 22.41
+START 4 single_shape TwoLayerCNN spectrum_retention_1
+DONE 4 single_shape TwoLayerCNN spectrum_retention_1 20.14
+START 4 single_shape TwoLayerCNN frozen_spectrum
+DONE 4 single_shape TwoLayerCNN frozen_spectrum 11.67
+START 4 two_concepts TinyCNN random
+DONE 4 two_concepts TinyCNN random 5.94
+START 4 two_concepts TinyCNN random_unitnorm
+DONE 4 two_concepts TinyCNN random_unitnorm 5.93
+START 4 two_concepts TinyCNN frozen_random_unitnorm
+DONE 4 two_concepts TinyCNN frozen_random_unitnorm 2.98
+START 4 two_concepts TinyCNN template_init
+DONE 4 two_concepts TinyCNN template_init 5.85
+START 4 two_concepts TinyCNN template_retention_0.1
+DONE 4 two_concepts TinyCNN template_retention_0.1 5.59
+START 4 two_concepts TinyCNN template_retention_1
+DONE 4 two_concepts TinyCNN template_retention_1 5.91
+START 4 two_concepts TinyCNN frozen_templates
+DONE 4 two_concepts TinyCNN frozen_templates 2.33
+START 4 two_concepts TinyCNN spectrum_init
+DONE 4 two_concepts TinyCNN spectrum_init 5.83
+START 4 two_concepts TinyCNN spectrum_retention_1
+DONE 4 two_concepts TinyCNN spectrum_retention_1 6.03
+START 4 two_concepts TinyCNN frozen_spectrum
+DONE 4 two_concepts TinyCNN frozen_spectrum 2.61
+START 4 two_concepts TwoLayerCNN random
+DONE 4 two_concepts TwoLayerCNN random 18.48
+START 4 two_concepts TwoLayerCNN random_unitnorm
+DONE 4 two_concepts TwoLayerCNN random_unitnorm 20.18
+START 4 two_concepts TwoLayerCNN frozen_random_unitnorm
+DONE 4 two_concepts TwoLayerCNN frozen_random_unitnorm 15.26
+START 4 two_concepts TwoLayerCNN template_init
+DONE 4 two_concepts TwoLayerCNN template_init 21.78
+START 4 two_concepts TwoLayerCNN template_retention_0.1
+DONE 4 two_concepts TwoLayerCNN template_retention_0.1 21.26
+START 4 two_concepts TwoLayerCNN template_retention_1
+DONE 4 two_concepts TwoLayerCNN template_retention_1 19.48
+START 4 two_concepts TwoLayerCNN frozen_templates
+DONE 4 two_concepts TwoLayerCNN frozen_templates 12.13
+START 4 two_concepts TwoLayerCNN spectrum_init
+DONE 4 two_concepts TwoLayerCNN spectrum_init 22.21
+START 4 two_concepts TwoLayerCNN spectrum_retention_1
+DONE 4 two_concepts TwoLayerCNN spectrum_retention_1 21.44
+START 4 two_concepts TwoLayerCNN frozen_spectrum
+DONE 4 two_concepts TwoLayerCNN frozen_spectrum 12.26
+START 6 single_shape TinyCNN random
+DONE 6 single_shape TinyCNN random 5.85
+START 6 single_shape TinyCNN random_unitnorm
+DONE 6 single_shape TinyCNN random_unitnorm 5.8
+START 6 single_shape TinyCNN frozen_random_unitnorm
+DONE 6 single_shape TinyCNN frozen_random_unitnorm 3.7
+START 6 single_shape TinyCNN template_init
+DONE 6 single_shape TinyCNN template_init 6.49
+START 6 single_shape TinyCNN template_retention_0.1
+DONE 6 single_shape TinyCNN template_retention_0.1 6.0
+START 6 single_shape TinyCNN template_retention_1
+DONE 6 single_shape TinyCNN template_retention_1 7.28
+START 6 single_shape TinyCNN frozen_templates
+DONE 6 single_shape TinyCNN frozen_templates 2.46
+START 6 single_shape TinyCNN spectrum_init
+DONE 6 single_shape TinyCNN spectrum_init 6.45
+START 6 single_shape TinyCNN spectrum_retention_1
+DONE 6 single_shape TinyCNN spectrum_retention_1 6.3
+START 6 single_shape TinyCNN frozen_spectrum
+DONE 6 single_shape TinyCNN frozen_spectrum 2.6
+START 6 single_shape TwoLayerCNN random
+DONE 6 single_shape TwoLayerCNN random 21.04
+START 6 single_shape TwoLayerCNN random_unitnorm
+DONE 6 single_shape TwoLayerCNN random_unitnorm 25.57
+START 6 single_shape TwoLayerCNN frozen_random_unitnorm
+DONE 6 single_shape TwoLayerCNN frozen_random_unitnorm 12.95
+START 6 single_shape TwoLayerCNN template_init
+DONE 6 single_shape TwoLayerCNN template_init 24.25
+START 6 single_shape TwoLayerCNN template_retention_0.1
+DONE 6 single_shape TwoLayerCNN template_retention_0.1 23.14
+START 6 single_shape TwoLayerCNN template_retention_1
+DONE 6 single_shape TwoLayerCNN template_retention_1 21.59
+START 6 single_shape TwoLayerCNN frozen_templates
+DONE 6 single_shape TwoLayerCNN frozen_templates 12.27
+START 6 single_shape TwoLayerCNN spectrum_init
+DONE 6 single_shape TwoLayerCNN spectrum_init 22.81
+START 6 single_shape TwoLayerCNN spectrum_retention_1
+DONE 6 single_shape TwoLayerCNN spectrum_retention_1 21.7
+START 6 single_shape TwoLayerCNN frozen_spectrum
+DONE 6 single_shape TwoLayerCNN frozen_spectrum 15.76
+START 6 two_concepts TinyCNN random
+DONE 6 two_concepts TinyCNN random 9.48
+START 6 two_concepts TinyCNN random_unitnorm
+DONE 6 two_concepts TinyCNN random_unitnorm 8.17
+START 6 two_concepts TinyCNN frozen_random_unitnorm
+DONE 6 two_concepts TinyCNN frozen_random_unitnorm 4.02
+START 6 two_concepts TinyCNN template_init
+DONE 6 two_concepts TinyCNN template_init 9.61
+START 6 two_concepts TinyCNN template_retention_0.1
+DONE 6 two_concepts TinyCNN template_retention_0.1 9.26
+START 6 two_concepts TinyCNN template_retention_1
+DONE 6 two_concepts TinyCNN template_retention_1 11.85
+START 6 two_concepts TinyCNN frozen_templates
+DONE 6 two_concepts TinyCNN frozen_templates 3.79
+START 6 two_concepts TinyCNN spectrum_init
+DONE 6 two_concepts TinyCNN spectrum_init 8.56
+START 6 two_concepts TinyCNN spectrum_retention_1
+DONE 6 two_concepts TinyCNN spectrum_retention_1 9.79
+START 6 two_concepts TinyCNN frozen_spectrum
+DONE 6 two_concepts TinyCNN frozen_spectrum 4.09
+START 6 two_concepts TwoLayerCNN random
+DONE 6 two_concepts TwoLayerCNN random 30.6
+START 6 two_concepts TwoLayerCNN random_unitnorm
+DONE 6 two_concepts TwoLayerCNN random_unitnorm 29.4
+START 6 two_concepts TwoLayerCNN frozen_random_unitnorm
+DONE 6 two_concepts TwoLayerCNN frozen_random_unitnorm 16.55
+START 6 two_concepts TwoLayerCNN template_init
+DONE 6 two_concepts TwoLayerCNN template_init 24.03
+START 6 two_concepts TwoLayerCNN template_retention_0.1
+DONE 6 two_concepts TwoLayerCNN template_retention_0.1 18.78
+START 6 two_concepts TwoLayerCNN template_retention_1
+DONE 6 two_concepts TwoLayerCNN template_retention_1 19.27
+START 6 two_concepts TwoLayerCNN frozen_templates
+DONE 6 two_concepts TwoLayerCNN frozen_templates 14.79
+START 6 two_concepts TwoLayerCNN spectrum_init
+DONE 6 two_concepts TwoLayerCNN spectrum_init 22.1
+START 6 two_concepts TwoLayerCNN spectrum_retention_1
+DONE 6 two_concepts TwoLayerCNN spectrum_retention_1 19.9
+START 6 two_concepts TwoLayerCNN frozen_spectrum
+DONE 6 two_concepts TwoLayerCNN frozen_spectrum 11.73
+START 8 single_shape TinyCNN random
+DONE 8 single_shape TinyCNN random 6.58
+START 8 single_shape TinyCNN random_unitnorm
+DONE 8 single_shape TinyCNN random_unitnorm 6.27
+START 8 single_shape TinyCNN frozen_random_unitnorm
+DONE 8 single_shape TinyCNN frozen_random_unitnorm 3.08
+START 8 single_shape TinyCNN template_init
+DONE 8 single_shape TinyCNN template_init 6.02
+START 8 single_shape TinyCNN template_retention_0.1
+DONE 8 single_shape TinyCNN template_retention_0.1 306.36
+START 8 single_shape TinyCNN template_retention_1
+DONE 8 single_shape TinyCNN template_retention_1 9.77
+START 8 single_shape TinyCNN frozen_templates
+DONE 8 single_shape TinyCNN frozen_templates 2.98
+START 8 single_shape TinyCNN spectrum_init
+DONE 8 single_shape TinyCNN spectrum_init 7.43
+START 8 single_shape TinyCNN spectrum_retention_1
+DONE 8 single_shape TinyCNN spectrum_retention_1 6.93
+START 8 single_shape TinyCNN frozen_spectrum
+DONE 8 single_shape TinyCNN frozen_spectrum 3.07
+START 8 single_shape TwoLayerCNN random
+DONE 8 single_shape TwoLayerCNN random 625.92
+START 8 single_shape TwoLayerCNN random_unitnorm
+DONE 8 single_shape TwoLayerCNN random_unitnorm 22.6
+START 8 single_shape TwoLayerCNN frozen_random_unitnorm
+DONE 8 single_shape TwoLayerCNN frozen_random_unitnorm 618.2
+START 8 single_shape TwoLayerCNN template_init
+DONE 8 single_shape TwoLayerCNN template_init 26.75
+START 8 single_shape TwoLayerCNN template_retention_0.1
+DONE 8 single_shape TwoLayerCNN template_retention_0.1 629.48
+START 8 single_shape TwoLayerCNN template_retention_1
+DONE 8 single_shape TwoLayerCNN template_retention_1 25.29
+START 8 single_shape TwoLayerCNN frozen_templates
+DONE 8 single_shape TwoLayerCNN frozen_templates 615.01
+START 8 single_shape TwoLayerCNN spectrum_init
+DONE 8 single_shape TwoLayerCNN spectrum_init 22.71
+START 8 single_shape TwoLayerCNN spectrum_retention_1
+DONE 8 single_shape TwoLayerCNN spectrum_retention_1 116.45
+START 8 single_shape TwoLayerCNN frozen_spectrum
+DONE 8 single_shape TwoLayerCNN frozen_spectrum 14.34
+START 8 two_concepts TinyCNN random
+DONE 8 two_concepts TinyCNN random 9.11
+START 8 two_concepts TinyCNN random_unitnorm
+DONE 8 two_concepts TinyCNN random_unitnorm 6.9
+START 8 two_concepts TinyCNN frozen_random_unitnorm
+DONE 8 two_concepts TinyCNN frozen_random_unitnorm 2.56
+START 8 two_concepts TinyCNN template_init
+DONE 8 two_concepts TinyCNN template_init 6.36
+START 8 two_concepts TinyCNN template_retention_0.1
+DONE 8 two_concepts TinyCNN template_retention_0.1 5.68
+START 8 two_concepts TinyCNN template_retention_1
+DONE 8 two_concepts TinyCNN template_retention_1 5.56
+START 8 two_concepts TinyCNN frozen_templates
+DONE 8 two_concepts TinyCNN frozen_templates 2.26
+START 8 two_concepts TinyCNN spectrum_init
+DONE 8 two_concepts TinyCNN spectrum_init 5.68
+START 8 two_concepts TinyCNN spectrum_retention_1
+DONE 8 two_concepts TinyCNN spectrum_retention_1 5.68
+START 8 two_concepts TinyCNN frozen_spectrum
+DONE 8 two_concepts TinyCNN frozen_spectrum 2.39
+START 8 two_concepts TwoLayerCNN random
+DONE 8 two_concepts TwoLayerCNN random 18.77
+START 8 two_concepts TwoLayerCNN random_unitnorm
+DONE 8 two_concepts TwoLayerCNN random_unitnorm 19.17
+START 8 two_concepts TwoLayerCNN frozen_random_unitnorm
+DONE 8 two_concepts TwoLayerCNN frozen_random_unitnorm 10.94
+START 8 two_concepts TwoLayerCNN template_init
+DONE 8 two_concepts TwoLayerCNN template_init 18.09
+START 8 two_concepts TwoLayerCNN template_retention_0.1
+DONE 8 two_concepts TwoLayerCNN template_retention_0.1 17.63
+START 8 two_concepts TwoLayerCNN template_retention_1
+DONE 8 two_concepts TwoLayerCNN template_retention_1 17.59
+START 8 two_concepts TwoLayerCNN frozen_templates
+DONE 8 two_concepts TwoLayerCNN frozen_templates 611.15
+START 8 two_concepts TwoLayerCNN spectrum_init
+DONE 8 two_concepts TwoLayerCNN spectrum_init 23.75
+START 8 two_concepts TwoLayerCNN spectrum_retention_1
+DONE 8 two_concepts TwoLayerCNN spectrum_retention_1 20.88
+START 8 two_concepts TwoLayerCNN frozen_spectrum
+DONE 8 two_concepts TwoLayerCNN frozen_spectrum 613.94

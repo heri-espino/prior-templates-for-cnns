@@ -1,0 +1,20 @@
+{
+  "task": "two_concepts",
+  "architecture": "TwoLayerCNN",
+  "block": 8,
+  "condition": "spectrum_retention_1",
+  "epochs": 40,
+  "lr": 0.003,
+  "batch_size": 128,
+  "lambda_retention": 1.0,
+  "image_size": 32,
+  "channels": 16,
+  "kernel_size": 9,
+  "model_seed": 754614351,
+  "shuffle_seed": 286286314,
+  "data_hashes": {
+    "train": "73a648ab7bce7e5785ae7b2996d665c18132d26cf10f2fd2d425e01430467fb9",
+    "val": "9624493e3ff90aeb8f4732b2635e251eabde40937ed256919fac27eab14dfb98",
+    "test": "e0e5ac21bb71bc7035d9019ffd280dc76187727f1087b9602757587e899defa8"
+  }
+}

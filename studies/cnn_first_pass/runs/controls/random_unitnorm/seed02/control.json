@@ -1,0 +1,5 @@
+{
+  "control": "random_unitnorm",
+  "base_regime": "random",
+  "description": "Center each random kernel and normalize to unit L2; optionally zero all convolution gradients. Classifier initialization is unchanged."
+}
