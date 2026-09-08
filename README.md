@@ -2,7 +2,9 @@
 
 Research on when template-initialized convolutional filters improve learning, and whether template alignment corresponds to independently measured concepts and causal usefulness.
 
-**Current status:** the 400-run alignment study is complete. Stronger retention increases alignment, but all four primary causal-usefulness comparisons remain inconclusive after multiple-comparison correction. The retention-release follow-up is complete (200 runs × 200 epochs) and analyzed in the [updated paper draft](papers/retention_release_draft.md).
+**One paper:** [Main manuscript](papers/main.md) · [Complete tables](papers/supplementary_results.md) · [Literature comparison](papers/literature_comparison.md) · [Revision status](papers/MANUSCRIPT_STATUS.md).
+
+**Current status:** the 400-run alignment study is complete. Stronger retention increases alignment, but all four primary causal-usefulness comparisons remain inconclusive after multiple-comparison correction. The retention-release follow-up is complete (200 runs × 200 epochs) and analyzed in the [updated paper draft](papers/main.md).
 
 ## Start here
 
@@ -10,7 +12,7 @@ Research on when template-initialized convolutional filters improve learning, an
 |---|---|---|---|
 | 01 — First pass | What does the original project do? | 28 runs; historical pilot with known limitations | [Report](studies/cnn_first_pass/REPORT.md) |
 | 02 — Alignment and causal usefulness | Does stronger template retention improve independent concept/patching measurements? | 400 runs + 200 exploratory head evaluations; audited | [Report](studies/cnn_causal_milestone/REPORT.md) · [Short findings](studies/cnn_causal_milestone/FINDINGS.md) |
-| 03 — Retention release | Do templates help early learning, then constrain adaptation? | 200 completed runs; exploratory analysis | [Paper draft](papers/retention_release_draft.md) · [Instructions](studies/cnn_release_experiment/README.md) |
+| 03 — Retention release | Do templates help early learning, then constrain adaptation? | 200 completed runs; exploratory analysis | [Paper draft](papers/main.md) · [Instructions](studies/cnn_release_experiment/README.md) |
 
 The [learning-dynamics follow-up](studies/cnn_causal_milestone/LEARNING_DYNAMICS.md) examines all 16,000 saved epoch records from study 02. Template initialization has an early descriptive advantage in some settings, not all. Forty epochs did not establish a genuine plateau.
 

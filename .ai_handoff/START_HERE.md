@@ -15,3 +15,5 @@ Read next only as needed:
 The top-level README links the reports. `import_manifest.json` is machine-readable provenance, not reading material; `python3 scripts/verify_import.py` checks it. Source folders outside this checkout were copied, not moved. No remote experiment monitoring is configured.
 
 GPU robustness is complete and reviewed: all80 evaluations uploaded. See analysis/patch_robustness_gpu_001/REPORT.md. Budget/ranking dependence prevents broadly confirming the original architecture claim; new-task replication deferred. Reproduce review: bash review_robustness.sh.
+
+Canonical manuscript: papers/main.md (one paper across stages A/B/C), with full supplementary tables and corpus-grounded literature_comparison.md. Old retention_release_draft.md redirects. Final independent reproducibility review deferred by owner; do not claim it completed. Literature added at ca45a5e,39 parsed papers with PDFs.

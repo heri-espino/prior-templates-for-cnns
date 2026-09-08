@@ -1,0 +1,17 @@
+# Main manuscript status
+
+Current paper: [main.md](main.md). Complete numerical tables: [supplementary_results.md](supplementary_results.md). Literature evidence: [literature_comparison.md](literature_comparison.md).
+
+## Completed in this revision
+
+1. Integrated the 400-run alignment experiment, 200-run retention-release experiment and 80-checkpoint GPU robustness analysis as sequential evidence in one paper. Robustness is in the abstract, methods, results, figure, discussion and conclusion, not an appended correction.
+2. Compared the specific contribution with the closest structured-filter, concept and activation-patching work in the provided corpus. Original PDFs were consulted where extraction/metadata was incomplete. The paper states the novelty boundary and avoids an unsupported first-of-its-kind claim.
+3. Distinguished four locally prospective Holm-adjusted tests from later exploratory comparisons. The manuscript/supplement retain all tasks, conditions, rankings and channel sizes. Plots label SD bands versus marginal paired intervals; no exploratory interval is promoted to a corrected confirmation.
+
+## Explicitly deferred by the owner
+
+The final independent reproducibility review is **not complete or claimed complete**. It should recompute a representative subset, investigate discrepancies, and reconcile submission code/artifacts. Preliminary work from an interrupted earlier pass is not a submission sign-off and is excluded from this manuscript revision.
+
+## Remaining submission preparation
+
+Choose venue and author information; finish venue-specific reference metadata/formatting; complete the deferred review and human scientific review. The present manuscript has a focused comparison against reviewed sources, not an exhaustive proof of priority. No additional training is scheduled by this revision.
