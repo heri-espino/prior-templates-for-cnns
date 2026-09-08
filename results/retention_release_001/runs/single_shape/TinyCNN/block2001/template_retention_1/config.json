@@ -1,0 +1,49 @@
+{
+  "task": "single_shape",
+  "architecture": "TinyCNN",
+  "block": 2001,
+  "condition": "template_retention_1",
+  "data_hashes": {
+    "train": "af55ef5799e8cff3245cdb9de4392328d534a0ec12902f450b94af4c1f263204",
+    "val": "4198d665e781d44a6c5284793d0ab44b746eb24c81cb652dd7d16e052bfc7658",
+    "test": "2e7617093a4801f36393929ddedfa47e35d0bee3f4674ebd7e8f19c111827cf1"
+  },
+  "epochs": 200,
+  "blocks": 10,
+  "start_block": 2000,
+  "tasks": [
+    "single_shape",
+    "two_concepts"
+  ],
+  "architectures": [
+    "TinyCNN",
+    "TwoLayerCNN"
+  ],
+  "conditions": [
+    "random",
+    "random_unitnorm",
+    "template_init",
+    "template_retention_1",
+    "template_release"
+  ],
+  "release_start": 10,
+  "release_end": 80,
+  "checkpoints": [
+    1,
+    5,
+    10,
+    20,
+    40,
+    80,
+    120,
+    160,
+    200
+  ],
+  "source_hashes": {
+    "core.py": "9d1fb3e8f96124632bc97df5d4525cbc3174df9fe2b97c546d3b5a48a46fe9e2",
+    "experiment.py": "a4000fa37850193cb2cead55e4f78320af0b65ba2d2057ced868129025be466f"
+  },
+  "master_seed": 2026090617,
+  "lr": 0.003,
+  "batch_size": 128
+}

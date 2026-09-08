@@ -1,0 +1,87 @@
+{
+  "denominator": 1010.5296020507812,
+  "pair_count": 512,
+  "both_correct_count": 506,
+  "noop": {
+    "fidelity": 0.0,
+    "cf_accuracy": 0.00390625,
+    "agreement": 0.0078125,
+    "cf_accuracy_both_correct": 0.0
+  },
+  "full": {
+    "fidelity": 1.0,
+    "cf_accuracy": 0.9921875,
+    "agreement": 1.0,
+    "cf_accuracy_both_correct": 1.0
+  },
+  "selected": {
+    "1": {
+      "fidelity": 0.004047409246763722,
+      "cf_accuracy": 0.00390625,
+      "agreement": 0.0078125,
+      "cf_accuracy_both_correct": 0.0
+    },
+    "4": {
+      "fidelity": 0.2373248552216629,
+      "cf_accuracy": 0.15234375,
+      "agreement": 0.15625,
+      "cf_accuracy_both_correct": 0.15019762516021729
+    },
+    "8": {
+      "fidelity": 0.70441726964675,
+      "cf_accuracy": 0.58984375,
+      "agreement": 0.59765625,
+      "cf_accuracy_both_correct": 0.5928853750228882
+    }
+  },
+  "random": [
+    {
+      "fidelity": 0.17867006689873244,
+      "cf_accuracy": 0.1171875,
+      "agreement": 0.12109375,
+      "cf_accuracy_both_correct": 0.1146245077252388
+    },
+    {
+      "fidelity": 0.09316524725580866,
+      "cf_accuracy": 0.02734375,
+      "agreement": 0.03125,
+      "cf_accuracy_both_correct": 0.023715414106845856
+    },
+    {
+      "fidelity": 0.062074589721980766,
+      "cf_accuracy": 0.015625,
+      "agreement": 0.01953125,
+      "cf_accuracy_both_correct": 0.011857707053422928
+    },
+    {
+      "fidelity": 0.09295995045334715,
+      "cf_accuracy": 0.046875,
+      "agreement": 0.05078125,
+      "cf_accuracy_both_correct": 0.043478261679410934
+    },
+    {
+      "fidelity": 0.10498041345290199,
+      "cf_accuracy": 0.044921875,
+      "agreement": 0.048828125,
+      "cf_accuracy_both_correct": 0.0415019765496254
+    },
+    {
+      "fidelity": 0.07653010593955234,
+      "cf_accuracy": 0.025390625,
+      "agreement": 0.029296875,
+      "cf_accuracy_both_correct": 0.021739130839705467
+    },
+    {
+      "fidelity": 0.20909729987291414,
+      "cf_accuracy": 0.11328125,
+      "agreement": 0.1171875,
+      "cf_accuracy_both_correct": 0.11067193746566772
+    },
+    {
+      "fidelity": 0.07390558050343554,
+      "cf_accuracy": 0.0234375,
+      "agreement": 0.02734375,
+      "cf_accuracy_both_correct": 0.01976284570991993
+    }
+  ]
+}
