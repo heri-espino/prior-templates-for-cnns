@@ -285,7 +285,7 @@ The [supplement](supplementary_results.md) contains all condition means and the 
 
 ## References
 
-References identify the versions in the supplied corpus; filenames are retrieval keys, not proof of publication year or venue. Final venue-specific bibliography formatting remains editorial work.
+The reusable [BibTeX bibliography](../literature/references.bib) and [citation-key map](citation_keys.md) support later LaTeX conversion. References identify versions in the supplied corpus; filenames are retrieval keys, not proof of publication year or venue. See the [bibliography review](../literature/BIBLIOGRAPHY_REVIEW.md) for verified publication metadata and version differences. Final venue-specific formatting remains editorial work.
 
 <a id="ref-1"></a>
 

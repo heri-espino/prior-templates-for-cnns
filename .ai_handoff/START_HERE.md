@@ -17,3 +17,5 @@ The top-level README links the reports. `import_manifest.json` is machine-readab
 GPU robustness is complete and reviewed: all80 evaluations uploaded. See analysis/patch_robustness_gpu_001/REPORT.md. Budget/ranking dependence prevents broadly confirming the original architecture claim; new-task replication deferred. Reproduce review: bash review_robustness.sh.
 
 Canonical manuscript: papers/main.md (one paper across stages A/B/C), with full supplementary tables and corpus-grounded literature_comparison.md. Old retention_release_draft.md redirects. Final independent reproducibility review deferred by owner; do not claim it completed. Literature added at ca45a5e,39 parsed papers with PDFs.
+
+Bibliography: literature/references.bib covers 39 local papers + PCFNet; papers/citation_keys.md maps the 20 manuscript citations. Read literature/BIBLIOGRAPHY_REVIEW.md for verified metadata/version differences and 3 targeted candidate additions (2 TMLR, 1 COLM), separately in candidates.bib. No new experimental validation or automatic manuscript citation expansion.

@@ -20,7 +20,7 @@ It does **not** claim invention of structured initialization, trainable Gabor pa
 | Gaudio et al. / ExplainFix [6] | Abstract; §§2–3; §4.1 and §4.2 | Fixed spatial filters, steering, pruning and computational benefits are established. We test a different intervention/retention question; our code has no evidence of superior training speed versus ExplainFix. |
 | Gavrikov & Keuper [7] | Abstract; Introduction; pointwise-combination motivation | Trainable linear combinations of random filters can be expressive. This motivates keeping downstream optimization distinct from the initial bank's appearance. |
 | Chowers & Weiss [8] | Abstract; Introduction; energy-profile explanation | First-layer spectral patterns can reflect input statistics even without meaningful labels. Our spectrum controls narrow this confound but do not establish that semantic geometry alone causes any effect. |
-| Jorgenson et al. [9] | Abstract; static/dynamic-access framing; §5.1; PDF first page | Global data properties can leave filter-weight signatures. This is not object-level causal usefulness. The PDF confirms title/authors; the supplied filename alone does not verify venue/year. |
+| Jorgenson et al. [9] | Abstract; static/dynamic-access framing; §5.1; PDF first page | Global data properties can leave filter-weight signatures. This is not object-level causal usefulness. The subsequent bibliography review confirms PMLR 321:166–175 (2026), TAG-DS 2025 proceedings; see ../literature/BIBLIOGRAPHY_REVIEW.md. |
 
 ## Concept and intervention precedents
 
