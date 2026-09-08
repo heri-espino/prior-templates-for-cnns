@@ -14,4 +14,4 @@ Read next only as needed:
 
 The top-level README links the reports. `import_manifest.json` is machine-readable provenance, not reading material; `python3 scripts/verify_import.py` checks it. Source folders outside this checkout were copied, not moved. No remote experiment monitoring is configured.
 
-Current next run: studies/cnn_patch_robustness; root run_gpu.sh check/smoke/main. CUDA-required inference on80 existing epoch200 checkpoints, three validation rankings × k1,2,4,8. Separate outputs/patch_robustness (ignored). No new training; new-task confirmation remains conditional. GPU hardware not available locally; CPU reference/real-checkpoint smoke passed.
+GPU robustness is complete and reviewed: all80 evaluations uploaded. See analysis/patch_robustness_gpu_001/REPORT.md. Budget/ranking dependence prevents broadly confirming the original architecture claim; new-task replication deferred. Reproduce review: bash review_robustness.sh.

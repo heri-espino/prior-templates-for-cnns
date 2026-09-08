@@ -14,9 +14,9 @@ Research on when template-initialized convolutional filters improve learning, an
 
 The [learning-dynamics follow-up](studies/cnn_causal_milestone/LEARNING_DYNAMICS.md) examines all 16,000 saved epoch records from study 02. Template initialization has an early descriptive advantage in some settings, not all. Forty epochs did not establish a genuine plateau.
 
-## Next experiment: GPU patching robustness
+## Completed GPU patching robustness
 
-The next evaluation reuses saved final models and tests three validation-only channel rankings at four patch sizes. It requires CUDA by default, saves separate outputs and resumes per checkpoint.
+All 80 GPU evaluations are uploaded. The [robustness review](analysis/patch_robustness_gpu_001/REPORT.md) finds that the causal-usefulness conclusion depends on patch budget and selection. Reproduce the analysis with `bash review_robustness.sh`. The runner below remains available for reproduction.
 
 ```sh
 bash run_gpu.sh check

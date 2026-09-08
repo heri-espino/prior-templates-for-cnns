@@ -167,3 +167,7 @@ Template initialization does not uniformly accelerate learning, and a short-budg
 - [Runner and evaluation code](../studies/cnn_release_experiment/README.md).
 - [Analysis script](../analysis/retention_release_001/analyze.py), [consistency audit](../analysis/retention_release_001/audit.json), [per-run endpoints](../analysis/retention_release_001/endpoints.csv), [means/SDs](../analysis/retention_release_001/summary.csv), and [paired marginal intervals](../analysis/retention_release_001/paired_contrasts.csv).
 - From the repository root, run `python analysis/retention_release_001/analyze.py` in an environment with the study dependencies. It reads imported evidence and writes separate derived outputs, leaving the upload unchanged. Narrative text is reviewed prose and is not automatically rewritten by the plotting script.
+
+## Follow-up note: GPU measurement robustness
+
+The subsequent [80-checkpoint robustness analysis](../analysis/patch_robustness_gpu_001/REPORT.md) reproduces original k4 GPU/CPU scores closely but reveals intervention-budget sensitivity. On two_concepts/TinyCNN, release minus constant retention is positive for k4/8 and negative for k1/2 under all three validation-only rankings. Deeper outcomes also vary with selection/budget. Therefore, the architecture-specific conclusion in this draft must remain scoped to the original k4 measurement. Confirmation of a broad causal claim is deferred; a new replication would need a prospectively specified budget-dependence question. These additional results use existing test data and are exploratory.
