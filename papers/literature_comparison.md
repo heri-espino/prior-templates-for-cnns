@@ -43,3 +43,7 @@ All local references resolve from the [main manuscript bibliography](main.md#ref
 ## Research positioning
 
 The most defensible claim is a controlled empirical characterization at the intersection of two established lines of work. The first-stage four corrected tests are inconclusive; the later release and ranking/size results are exploratory. The complete negative, positive and uncertain contrasts are retained. This is a candidate contribution, not a certificate of global novelty or publication acceptance.
+
+## Additional full-text comparison
+
+References 21–23 (Miller, Nicolson, Sharma) are integrated in the main paper. See [technical reading notes](../literature/TECHNICAL_COMPARISON.md) for inspected sections, protocol/estimand differences and remaining controls. The new sources constrain novelty; they do not validate our numerical outcomes.

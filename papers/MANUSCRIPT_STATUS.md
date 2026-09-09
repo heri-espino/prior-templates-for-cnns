@@ -15,3 +15,5 @@ The final independent reproducibility review is **not complete or claimed comple
 ## Remaining submission preparation
 
 Choose venue and author information; finish venue-specific reference metadata/formatting; complete the deferred review and human scientific review. The present manuscript has a focused comparison against reviewed sources, not an exhaustive proof of priority. No additional training is scheduled by this revision.
+
+Bibliography follow-up: integrated three technically reviewed additions, with final-version corrections and explicit reading limits in literature/TECHNICAL_COMPARISON.md. This does not complete the deferred experimental review.

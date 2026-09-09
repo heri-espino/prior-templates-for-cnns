@@ -34,6 +34,10 @@ Network Dissection quantifies unit–concept correspondence [10](#ref-10), and B
 
 CaCE distinguishes the effect of changing a concept from observational correlation [15](#ref-15). Our renderer directly constructs matched concept changes, but U is not CaCE: it measures how well internal patches reproduce this particular model's probability response relative to random patches. Zhang and Nanda demonstrate that corruption, output metric and joint patching choices can change localization results in language models; their sliding-window analysis already highlights dependence on intervention granularity [16](#ref-16). Heimersheim and Nanda distinguish exploratory localization, verification, and the evidence supplied by different patching procedures [17](#ref-17). Our measurements should be read with those distinctions, not as identifying a complete circuit or proving necessity.
 
+Miller et al. show that circuit faithfulness depends on ablation choices, including which components receive replacement activations and whether the circuit or its complement is intervened on [21](#ref-21). Our channel-map replacement changes all downstream uses of the selected activations; it does not isolate a circuit by ablating its complement. Stage C varies channel count at fixed channel granularity, and U is not their circuit-faithfulness score.
+
+Nicolson et al. demonstrate layer inconsistency, concept entanglement and spatial dependence in CAV/TCAV analyses, including controlled shape–colour associations in Elements [22](#ref-22). Our renderer-based channel AUROC and foreground IoU are different measurements; independent annotations do not by themselves establish functional use. Sharma and Le compare demographic encoding with SAE-feature patching, ablation and steering in language models [23](#ref-23). Their comparison includes per-pair versus aggregate selection, multiple intervention sizes and variance-matched controls. We therefore claim neither the general encoding–influence distinction nor intervention-size sensitivity as new. Our training manipulation and retention–release comparison address a different empirical question.
+
 The formal causal-abstraction literature also separates intervention agreement from unrestricted claims about explanations [18](#ref-18). The non-identifiability analyses of Méloux et al. [19](#ref-19) and alignment-map limitations studied by Sutter et al. [20](#ref-20) concern different mathematical settings; our channel-patching experiment neither proves nor resolves those problems. We make no unique-mechanism claim.
 
 ### 2.4 What this paper adds relative to these precedents
@@ -44,10 +48,10 @@ The formal causal-abstraction literature also separates intervention agreement f
 | Fixed/combined spatial filters [5–7] | Learn useful predictors with fixed structured or random filters and downstream mixing | Diagnose fixed-feature readout limitations; do not equate a short-run deficit with representation capacity |
 | First-layer statistics [8–9] | Explain or infer low-level data properties from filter weights | Keep low-level appearance/spectrum separate from object concept and intervention outcomes |
 | Unit concepts and interventions [10–15] | Quantify semantics, build concept-aligned representations or examine causal concept/unit roles | Measure these quantities while manipulating a template prior rather than training a concept bottleneck |
-| Patching methods [16–17] | Show methodological and granularity sensitivity of circuit localization | Show a retention-versus-release comparison reversing across channel budgets in small vision models |
+| Patching methods [16–17, 21] | Show methodological and granularity sensitivity of circuit localization | Show a retention-versus-release comparison reversing across channel budgets in small vision models |
 | Causal abstraction and identifiability [18–20] | Formalize causal explanations and their limitations | Restrict the claim to the measured finite interventions, without a general identification theorem |
 
-The distinguishing contribution is the **combination of intervention-controlled training comparisons and the observed budget-dependent reversal**, not any component in isolation. Relative to the reviewed sources, this is a specific empirical extension at the intersection of structured filters and patching evaluation. The comparison does not establish that no unreviewed paper contains the same experiment. The [source-by-source evidence map](literature_comparison.md) records what was inspected and what each comparison can support.
+The reviewed representation–influence and concept-measurement precedents [22–23] further constrain novelty: this study does not introduce independent concept assessment or selected-versus-control patching. The distinguishing contribution is the **combination of intervention-controlled training comparisons and the observed budget-dependent reversal**, not any component in isolation. Relative to the reviewed sources, this is a specific empirical extension at the intersection of structured filters and patching evaluation. The comparison does not establish that no unreviewed paper contains the same experiment. The [source-by-source evidence map](literature_comparison.md) records what was inspected and what each comparison can support.
 
 ## 3. Methods
 
@@ -261,6 +265,8 @@ These results do not supersede the earlier study's four inconclusive corrected t
 - The current result audit checks stored evidence rather than independently reproducing all model evaluations. Solver termination flags are not guarantees of representation optimality.
 - Broader normalization/rank/spectrum controls from the earlier study were not crossed with the release schedule. Runtime comparisons are not analyzed.
 
+Our random-channel baseline is not matched on activation variance or patch magnitude. Sharma and Le use controls addressing these alternatives in their SAE setting [23](#ref-23). Stage A initialization spectrum matching does not supply such an intervention control. Whether the retention–release ordering survives that comparison remains untested.
+
 ## 7. Scope and future work
 
 The present evidence supports a scoped empirical account of learning dynamics and measurement sensitivity in small CNNs. It does not justify automatically launching confirmation of a broad “release helps shallow and harms deeper causal usefulness” claim, because that claim changes with the measurement.
@@ -285,7 +291,7 @@ The [supplement](supplementary_results.md) contains all condition means and the 
 
 ## References
 
-The reusable [BibTeX bibliography](../literature/references.bib) and [citation-key map](citation_keys.md) support later LaTeX conversion. References identify versions in the supplied corpus; filenames are retrieval keys, not proof of publication year or venue. See the [bibliography review](../literature/BIBLIOGRAPHY_REVIEW.md) for verified publication metadata and version differences. Final venue-specific formatting remains editorial work.
+The reusable [BibTeX bibliography](../literature/references.bib) and [citation-key map](citation_keys.md) support later LaTeX conversion. References identify versions in the supplied corpus; filenames are retrieval keys, not proof of publication year or venue. See the [bibliography review](../literature/BIBLIOGRAPHY_REVIEW.md) for verified publication metadata and version differences. For LaTeX conversion, use the selected venue template; the current TMLR target uses its official `tmlr.bst`, not the numbered Markdown display.
 
 <a id="ref-1"></a>
 
@@ -366,3 +372,15 @@ The reusable [BibTeX bibliography](../literature/references.bib) and [citation-k
 <a id="ref-20"></a>
 
 [20] Sutter, D., Minder, J., Hofmann, T., and Pimentel, T. **The Non-Linear Representation Dilemma: Is Causal Abstraction Enough for Mechanistic Interpretability?.** [Parsed paper](../literature/extracted/sutter_2025_causal-abstraction-limits.md) · [PDF](../literature/pdf/sutter_2025_causal-abstraction-limits.pdf).
+
+<a id="ref-21"></a>
+
+[21] Miller, Joseph and Chughtai, Bilal and Saunders, William. **Transformer Circuit Faithfulness Metrics Are Not Robust.** First Conference on Language Modeling (2024). [Supplied text](../literature/extracted/miller_2024_transformer_faithfulness_metrics_not_robust.md) · [Publication](https://openreview.net/forum?id=zSf8PJyQb2).
+
+<a id="ref-22"></a>
+
+[22] Nicolson, Angus and Schut, Lisa and Noble, Alison J. and Gal, Yarin. **Explaining Explainability: Recommendations for Effective Use of Concept Activation Vectors.** Transactions on Machine Learning Research (2025). [Supplied text](../literature/extracted/nicolson_2025_explaining_explainability.md) · [Publication](https://openreview.net/forum?id=7CUluLpLxV).
+
+<a id="ref-23"></a>
+
+[23] Sharma, Aarushi and Le, Phong. **Encoding Without Influence: Dissociating Demographic Representation from Causal Effect in Large Language Models.** Transactions on Machine Learning Research (2026). [Supplied text](../literature/extracted/sharma_2026_encoding_wo_influence.md) · [Publication](https://openreview.net/forum?id=TQbXHsI3Lm).

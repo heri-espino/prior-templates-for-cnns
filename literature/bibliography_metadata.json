@@ -33,15 +33,19 @@
       "doi": "10.1073/pnas.1907375117"
     },
     "bruna_2013_scattering-networks": {
-      "ENTRYTYPE": "misc",
+      "ENTRYTYPE": "article",
       "title": "Invariant Scattering Convolution Networks",
       "author": "Bruna, Joan and Mallat, Stéphane",
-      "year": "2012",
+      "year": "2013",
       "eprint": "1203.1513v2",
       "archivePrefix": "arXiv",
-      "url": "https://arxiv.org/abs/1203.1513v2",
-      "howpublished": "arXiv preprint",
-      "file": "literature/pdf/bruna_2013_scattering-networks.pdf"
+      "url": "https://doi.org/10.1109/TPAMI.2012.230",
+      "file": "literature/pdf/bruna_2013_scattering-networks.pdf",
+      "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "volume": "35",
+      "number": "8",
+      "pages": "1872--1886",
+      "doi": "10.1109/TPAMI.2012.230"
     },
     "chen_2019_protopnet": {
       "ENTRYTYPE": "inproceedings",
@@ -114,15 +118,19 @@
       "pages": "193--202"
     },
     "gaudio_2023_fixed-filters": {
-      "ENTRYTYPE": "misc",
+      "ENTRYTYPE": "article",
       "title": "ExplainFix: Explainable Spatially Fixed Deep Networks",
       "author": "Gaudio, Alex and Faloutsos, Christos and Smailagic, Asim and Costa, Pedro and Campilho, Aurélio",
       "year": "2023",
       "eprint": "2303.10408v1",
       "archivePrefix": "arXiv",
-      "url": "https://arxiv.org/abs/2303.10408v1",
-      "howpublished": "arXiv preprint",
-      "file": "literature/pdf/gaudio_2023_fixed-filters.pdf"
+      "url": "https://doi.org/10.1002/widm.1483",
+      "file": "literature/pdf/gaudio_2023_fixed-filters.pdf",
+      "journal": "WIREs Data Mining and Knowledge Discovery",
+      "volume": "13",
+      "number": "2",
+      "pages": "e1483",
+      "doi": "10.1002/widm.1483"
     },
     "gavrikov_2023_random-convolutions": {
       "ENTRYTYPE": "misc",
@@ -336,15 +344,16 @@
       "booktitle": "Advances in Neural Information Processing Systems"
     },
     "poeta_2025_concept-xai-survey": {
-      "ENTRYTYPE": "misc",
+      "ENTRYTYPE": "article",
       "title": "Concept-based Explainable Artificial Intelligence: A Survey",
       "author": "Poeta, Eleonora and Ciravegna, Gabriele and Pastor, Eliana and Cerquitelli, Tania and Baralis, Elena",
-      "year": "2023",
+      "year": "2025",
       "eprint": "2312.12936v1",
       "archivePrefix": "arXiv",
-      "url": "https://arxiv.org/abs/2312.12936v1",
-      "howpublished": "arXiv preprint",
-      "file": "literature/pdf/poeta_2025_concept-xai-survey.pdf"
+      "url": "https://doi.org/10.1145/3774643",
+      "file": "literature/pdf/poeta_2025_concept-xai-survey.pdf",
+      "journal": "ACM Computing Surveys",
+      "doi": "10.1145/3774643"
     },
     "prisma_2025_vision-mechanistic-interpretability": {
       "ENTRYTYPE": "misc",
@@ -378,15 +387,18 @@
       "url": "https://www.ijcai.org/proceedings/2021/147"
     },
     "wang_2024_learnable-gabor": {
-      "ENTRYTYPE": "misc",
+      "ENTRYTYPE": "article",
       "title": "Learnable Gabor kernels in convolutional neural networks for seismic interpretation tasks",
       "author": "Wang, Fu and Alkhalifah, Tariq",
-      "year": "2023",
+      "year": "2024",
       "eprint": "2308.05202v1",
       "archivePrefix": "arXiv",
-      "url": "https://arxiv.org/abs/2308.05202v1",
-      "howpublished": "arXiv preprint",
-      "file": "literature/pdf/wang_2024_learnable-gabor.pdf"
+      "url": "https://doi.org/10.1109/TGRS.2024.3365910",
+      "file": "literature/pdf/wang_2024_learnable-gabor.pdf",
+      "journal": "IEEE Transactions on Geoscience and Remote Sensing",
+      "volume": "62",
+      "pages": "1--9",
+      "doi": "10.1109/TGRS.2024.3365910"
     },
     "zarlenga_2022_concept-embeddings": {
       "ENTRYTYPE": "inproceedings",
@@ -447,20 +459,44 @@
       "pages": "32--39",
       "doi": "10.1016/j.neucom.2019.11.075",
       "url": "https://doi.org/10.1016/j.neucom.2019.11.075"
+    },
+    "miller_2024_circuit-faithfulness": {
+      "ENTRYTYPE": "inproceedings",
+      "author": "Miller, Joseph and Chughtai, Bilal and Saunders, William",
+      "title": "Transformer Circuit Faithfulness Metrics Are Not Robust",
+      "booktitle": "First Conference on Language Modeling",
+      "year": "2024",
+      "url": "https://openreview.net/forum?id=zSf8PJyQb2"
+    },
+    "nicolson_2025_explaining-explainability": {
+      "ENTRYTYPE": "article",
+      "author": "Nicolson, Angus and Schut, Lisa and Noble, Alison J. and Gal, Yarin",
+      "title": "Explaining Explainability: Recommendations for Effective Use of Concept Activation Vectors",
+      "journal": "Transactions on Machine Learning Research",
+      "year": "2025",
+      "url": "https://openreview.net/forum?id=7CUluLpLxV"
+    },
+    "sharma_2026_encoding-without-influence": {
+      "ENTRYTYPE": "article",
+      "author": "Sharma, Aarushi and Le, Phong",
+      "title": "Encoding Without Influence: Dissociating Demographic Representation from Causal Effect in Large Language Models",
+      "journal": "Transactions on Machine Learning Research",
+      "year": "2026",
+      "url": "https://openreview.net/forum?id=TQbXHsI3Lm"
     }
   },
   "metadata_sources": {
     "barton_2026_concept-whitening": "https://openaccess.thecvf.com/content/CVPR2026W/XAI4CV/html/Barton_Multi-Granularity_Concept_Whitening_for_Neural_Network_Interpretability_CVPRW_2026_paper.html; supplied PDF for title/authors/version.",
     "bau_2017_network-dissection": "https://openaccess.thecvf.com/content_cvpr_2017/html/Bau_Network_Dissection_Quantifying_CVPR_2017_paper.html; supplied PDF for title/authors/version.",
     "bau_2020_causal-units": "Crossref exact title match, DOI 10.1073/pnas.1907375117; supplied PDF for title/authors/version.",
-    "bruna_2013_scattering-networks": "Supplied PDF first page; exact arXiv version where present.",
+    "bruna_2013_scattering-networks": "https://doi.org/10.1109/TPAMI.2012.230; final publication metadata verified; local file remains the supplied preprint.",
     "chen_2019_protopnet": "Supplied PDF first page; exact arXiv version where present.",
     "chen_2020_concept-whitening": "Crossref exact title match, DOI 10.1038/s42256-020-00265-z; supplied PDF for title/authors/version.",
     "chowers_2023_first-layer-filters": "https://proceedings.mlr.press/v202/chowers23a.html; supplied PDF for title/authors/version.",
     "conceptxai_2024_concept-xai-survey": "Supplied PDF first page; exact arXiv version where present.",
     "debot_2025_accuracy-interpretability": "Supplied PDF first page; exact arXiv version where present.",
     "fukushima_1980_neocognitron": "Supplied PDF first page; exact arXiv version where present.",
-    "gaudio_2023_fixed-filters": "Supplied PDF first page; exact arXiv version where present.",
+    "gaudio_2023_fixed-filters": "https://doi.org/10.1002/widm.1483; final publication metadata verified; local file remains the supplied preprint.",
     "gavrikov_2023_random-convolutions": "Supplied PDF first page; exact arXiv version where present.",
     "geiger_2025_causal-abstraction": "https://www.jmlr.org/papers/v26/23-0058.html; supplied PDF for title/authors/version.",
     "ghorbani_2019_automatic-concepts": "Supplied PDF first page; exact arXiv version where present.",
@@ -479,16 +515,19 @@
     "molaei_2020_gabor-filter-structure": "Supplied PDF first page; exact arXiv version where present.",
     "ozbulak_2018_gabor-initialization": "Crossref DOI record 10.1109/SIU.2018.8404757; supplied PDF for title/authors/version.",
     "parchami-araghi_2025_faithful-concept-traces": "Supplied PDF first page; exact arXiv version where present.",
-    "poeta_2025_concept-xai-survey": "Supplied PDF first page; exact arXiv version where present.",
+    "poeta_2025_concept-xai-survey": "https://doi.org/10.1145/3774643; final publication metadata verified; local file remains the supplied preprint.",
     "prisma_2025_vision-mechanistic-interpretability": "Supplied PDF first page; exact arXiv version where present.",
     "sutter_2025_causal-abstraction-limits": "Supplied PDF first page; exact arXiv version where present.",
     "varshneya_2021_concept-groups": "Supplied PDF first page; exact arXiv version where present.",
-    "wang_2024_learnable-gabor": "Supplied PDF first page; exact arXiv version where present.",
+    "wang_2024_learnable-gabor": "https://doi.org/10.1109/TGRS.2024.3365910; final publication metadata verified; local file remains the supplied preprint.",
     "zarlenga_2022_concept-embeddings": "Supplied PDF first page; exact arXiv version where present.",
     "zhang_2018_interpretable-cnns": "https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_Interpretable_Convolutional_Neural_CVPR_2018_paper.html; supplied PDF for title/authors/version.",
     "zhang_2024_activation-patching": "https://arxiv.org/abs/2309.16042 (ICLR 2024 comment); supplied PDF for title/authors/version.",
     "zhou_2018_interpretable-basis": "https://openaccess.thecvf.com/content_ECCV_2018/html/Antonio_Torralba_Interpretable_Basis_Decomposition_ECCV_2018_paper.html; supplied PDF for title/authors/version.",
     "zhu_2023_gabor-texture": "Supplied PDF first page; exact arXiv version where present.",
-    "ma_2020_predefined-filters": "https://www.sciencedirect.com/science/article/pii/S0925231219316789 (publisher metadata and author biographies); no local PDF."
+    "ma_2020_predefined-filters": "https://www.sciencedirect.com/science/article/pii/S0925231219316789 (publisher metadata and author biographies); no local PDF.",
+    "miller_2024_circuit-faithfulness": "https://openreview.net/forum?id=zSf8PJyQb2; full supplied Docling text read at commit 566123d (see TECHNICAL_COMPARISON.md).",
+    "nicolson_2025_explaining-explainability": "https://openreview.net/forum?id=7CUluLpLxV; full supplied Docling text read at commit 566123d (see TECHNICAL_COMPARISON.md).",
+    "sharma_2026_encoding-without-influence": "https://openreview.net/forum?id=TQbXHsI3Lm; full supplied Docling text read at commit 566123d (see TECHNICAL_COMPARISON.md)."
   }
 }

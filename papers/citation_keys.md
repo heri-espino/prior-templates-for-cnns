@@ -7,7 +7,7 @@ Use `../literature/references.bib` from a LaTeX document in `papers/`. Keys pres
 | [1] | `ozbulak_2018_gabor-initialization` | 2018 |
 | [2] | `molaei_2020_gabor-filter-structure` | 2020 |
 | [3] | `ma_2020_predefined-filters` | 2020 |
-| [4] | `wang_2024_learnable-gabor` | 2023 |
+| [4] | `wang_2024_learnable-gabor` | 2024 |
 | [5] | `linse_2024_predefined-filters` | 2023 |
 | [6] | `gaudio_2023_fixed-filters` | 2023 |
 | [7] | `gavrikov_2023_random-convolutions` | 2023 |
@@ -24,3 +24,6 @@ Use `../literature/references.bib` from a LaTeX document in `papers/`. Keys pres
 | [18] | `geiger_2025_causal-abstraction` | 2025 |
 | [19] | `meloux_2025_mechanistic-identifiability` | 2025 |
 | [20] | `sutter_2025_causal-abstraction-limits` | 2025 |
+| [21] | `miller_2024_circuit-faithfulness` | 2024 |
+| [22] | `nicolson_2025_explaining-explainability` | 2025 |
+| [23] | `sharma_2026_encoding-without-influence` | 2026 |
