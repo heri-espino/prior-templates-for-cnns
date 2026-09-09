@@ -24,6 +24,8 @@ Gabor initialization is a direct antecedent: Özbulak and Ekenel initialize a CN
 
 Fixed filters need not preclude strong prediction. Linse, Barth and Martinetz keep spatial filters fixed and learn pointwise combinations in PFCNNs [5](#ref-5). ExplainFix studies spatially fixed initialization, steering and pruning [6](#ref-6). Gavrikov and Keuper show the capacity of trainable combinations of random convolutions [7](#ref-7). These works make downstream adaptation an essential alternative explanation for poor frozen performance. Our fixed-feature classifier diagnostic is evidence of a training gap in the tested shallow models, not a claim that fixed filters generally fail or succeed. Nor do our small-model experiments establish a speed or accuracy improvement over those architectures.
 
+Orozco-Solis et al. study parameterized Gabor filters on MNIST and Fashion-MNIST and propose using inter-filter correlation distance to identify when Gabor-layer training should stop [24](#ref-24). Their other convolutional layers remain frozen during these experiments. This is a direct precedent for monitoring filter degradation during learning, but differs from releasing a soft template-retention penalty while continuing training. Their proposed explanation involving the fully connected layers is speculative; it does not establish the causal mechanism in our models.
+
 ### 2.2 What kernel appearance and concept measurements establish
 
 Chowers and Weiss analyze first-layer energy profiles and connect their consistency, including under random labels, to image statistics [8](#ref-8). Jorgenson et al. examine how properties such as sharpness, noise and color leave signatures in early filters [9](#ref-9). These results caution against treating recognizable kernel structure as sufficient evidence of semantic function. Our spectrum controls address some low-level properties, while renderer labels provide a distinct semantic measurement; neither removes every alternative explanation.
@@ -384,3 +386,7 @@ The reusable [BibTeX bibliography](../literature/references.bib) and [citation-k
 <a id="ref-23"></a>
 
 [23] Sharma, Aarushi and Le, Phong. **Encoding Without Influence: Dissociating Demographic Representation from Causal Effect in Large Language Models.** Transactions on Machine Learning Research (2026). [Supplied text](../literature/extracted/sharma_2026_encoding_wo_influence.md) · [Publication](https://openreview.net/forum?id=TQbXHsI3Lm).
+
+<a id="ref-24"></a>
+
+[24] Orozco-Solis, C., et al. **Learnable Gabor Filters in CNNs: Avoiding Filter Degeneration via Early Stopping Based on Similarity Metrics.** Pattern Recognition, LNCS 14755, 387–396 (2024). [PDF](../literature/pdf/orozco-solis_2024_learnable-gabor-filters.pdf).

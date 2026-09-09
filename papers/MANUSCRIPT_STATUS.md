@@ -17,3 +17,5 @@ The final independent reproducibility review is **not complete or claimed comple
 Choose venue and author information; finish venue-specific reference metadata/formatting; complete the deferred review and human scientific review. The present manuscript has a focused comparison against reviewed sources, not an exhaustive proof of priority. No additional training is scheduled by this revision.
 
 Bibliography follow-up: integrated three technically reviewed additions, with final-version corrections and explicit reading limits in literature/TECHNICAL_COMPARISON.md. This does not complete the deferred experimental review.
+
+Plain article LaTeX version started on 9 September 2026: main.tex, compiled main.pdf, build_paper.sh and LATEX_README.md. Uses plainnat provisionally at owner request for simple article formatting; journal-specific style is deferred. Orozco-Solis (2024) added after reading the supplied PDF/text.

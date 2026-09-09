@@ -683,3 +683,7 @@
   - 2.2 Sparse Autoencoders and Causal Interpretability
   - 2.3 Contributions
   - 3 Data
+
+## Additional supplied source (9 September 2026)
+
+- Orozco-Solis et al. (2024): [PDF](pdf/orozco-solis_2024_learnable-gabor-filters.pdf), [supplied text](extracted/orozco-solis_2024_learnable-gabor-filters.md). The two attachments are two formats of one article. PCFNet full text remains unavailable.

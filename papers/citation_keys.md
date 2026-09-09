@@ -27,3 +27,4 @@ Use `../literature/references.bib` from a LaTeX document in `papers/`. Keys pres
 | [21] | `miller_2024_circuit-faithfulness` | 2024 |
 | [22] | `nicolson_2025_explaining-explainability` | 2025 |
 | [23] | `sharma_2026_encoding-without-influence` | 2026 |
+| [24] | `orozco-solis_2024_learnable-gabor-filters` | 2024 |

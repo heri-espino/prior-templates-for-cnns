@@ -41,3 +41,7 @@ These are proposed tests, not completed work:
 PCFNet remains unavailable in full text: the new commit contains no PCFNet text/PDF. Publisher previews support only the existing limited description. The earlier GO-CNN preprint by the same authors has a different title and is not a substitute for the final PCFNet article.
 
 The final independent experimental submission audit remains deferred.
+
+## Orozco-Solis et al. (2024) follow-up
+
+Supplied ten-page publisher PDF and corresponding user text added on 9 September. Sections 4 and 6 describe freezing the other convolutional layers, monitoring pairwise Gabor-filter distances, and proposing correlation-distance-based stopping of Gabor-layer training. Their fully connected-layer explanation is explicitly speculative. This is a filter-degradation/early-stopping precedent, not evidence for our causal intervention outcomes. Main reference 24 records the comparison.
