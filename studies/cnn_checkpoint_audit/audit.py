@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import math
 import platform
 import sys
 from pathlib import Path
@@ -99,12 +98,19 @@ class AuditNetwork(nn.Module):
 
 @torch.inference_mode()
 def collect(model,x,batch=128):
- maps=[];logits=[];pooled=[]
+ """Return first-layer maps, first-layer global-max activations, and logits.
+
+ Stage B concept ranking/AUROC is explicitly defined on the first-layer
+ representation even for TwoLayerCNN. Keeping this quantity distinct from the
+ downstream pooled tail representation is part of the audit specification.
+ """
+ maps=[];first_pooled=[];logits=[]
  for st in range(0,len(x),batch):
   h=model.features(torch.from_numpy(x[st:st+batch]))
+  z=h.amax((2,3))
   p=model.tail_features(h)
-  maps.append(h);pooled.append(p);logits.append(model.classifier(p))
- return torch.cat(maps),torch.cat(pooled),torch.cat(logits)
+  maps.append(h);first_pooled.append(z);logits.append(model.classifier(p))
+ return torch.cat(maps),torch.cat(first_pooled),torch.cat(logits)
 
 
 def auc(y,score):
@@ -193,14 +199,14 @@ def recompute(task,arch,block,condition,epoch):
  val,val_path=load_split(task,block,'val');test,test_path=load_split(task,block,'test')
  saved=torch.load(checkpoint,map_location='cpu',weights_only=True)
  model=AuditNetwork(arch);model.load_state_dict(saved['model']);model.eval()
- hv,pv,lv=collect(model,val['x']);ht,pt,lt=collect(model,test['x'])
- orders,signs,effects=concept_orders(pv.numpy(),val['concepts'])
+ hv,zv,lv=collect(model,val['x']);ht,zt,lt=collect(model,test['x'])
+ orders,signs,effects=concept_orders(zv.numpy(),val['concepts'])
 
- # Independent semantic AUROC.
+ # Independent semantic AUROC on first-layer global-max activations.
  sem=[]
  for concept in range(orders.shape[0]):
   ch=int(orders[concept,0])
-  sem.append(auc(test['concepts'][:,concept],pt[:,ch].numpy()*signs[concept,ch]))
+  sem.append(auc(test['concepts'][:,concept],zt[:,ch].numpy()*signs[concept,ch]))
 
  # Independent validation-selected localization.
  thrs=np.quantile(hv.numpy(),.95,axis=(0,2,3));ious=[]
