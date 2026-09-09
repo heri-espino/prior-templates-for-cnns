@@ -10,7 +10,7 @@
 #   WORKERS=8
 #   THREADS_PER_WORKER=2
 #   BATCH_SIZE=256
-#   OUTPUT_ROOT=/path/to/results/exhaustive_robustness_001
+#   OUTPUT_ROOT=results/exhaustive_robustness_001
 #   TORCH_INDEX_URL=https://download.pytorch.org/whl/cu128
 
 set -e
@@ -25,7 +25,9 @@ DEVICE="${DEVICE:-cuda}"
 WORKERS="${WORKERS:-8}"
 THREADS_PER_WORKER="${THREADS_PER_WORKER:-2}"
 BATCH_SIZE="${BATCH_SIZE:-256}"
-OUTPUT_ROOT="${OUTPUT_ROOT:-$REPO_ROOT/results/exhaustive_robustness_001}"
+# Keep the default relative. This works both with POSIX Python and with a
+# Windows conda.exe invoked from Git-Bash/WSL because the repository is CWD.
+OUTPUT_ROOT="${OUTPUT_ROOT:-results/exhaustive_robustness_001}"
 CNN_ENV_NAME="${CNN_ENV_NAME:-prior-templates-cnns}"
 
 if [[ "$DEVICE" != "cuda" && "$DEVICE" != "cpu" ]]; then
@@ -66,7 +68,6 @@ cnn_python - \
   "$BATCH_SIZE" <<'PY'
 import hashlib
 import json
-import os
 import platform
 import sys
 from datetime import datetime, timezone
