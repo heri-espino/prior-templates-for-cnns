@@ -47,6 +47,11 @@ if ! command -v "$PYTHON_BIN" >/dev/null 2>&1; then
   exit 2
 fi
 
+if ! command -v git >/dev/null 2>&1; then
+  print -u2 "git is required to record the frozen protocol provenance."
+  exit 2
+fi
+
 if [[ "$INSTALL_DEPS" == "1" ]]; then
   "$PYTHON_BIN" -m pip install -r studies/cnn_release_experiment/requirements.txt
 fi
@@ -79,13 +84,12 @@ mkdir -p "$OUTPUT_ROOT"
 # protocol commit is the commit that last changed PROTOCOL.md, not current HEAD.
 REPO_HEAD="$(git rev-parse HEAD)"
 PROTOCOL_COMMIT="$(git log -n 1 --format=%H -- "$PROTOCOL")"
-PROTOCOL_SHA256="$(git hash-object "$PROTOCOL")"
+PROTOCOL_GIT_BLOB="$(git hash-object "$PROTOCOL")"
 
-"$PYTHON_BIN" - "$MANIFEST" "$REPO_HEAD" "$PROTOCOL_COMMIT" "$PROTOCOL_SHA256" "$DEVICE" "$BATCH_SIZE" "$THREADS" <<'PY'
+"$PYTHON_BIN" - "$MANIFEST" "$REPO_HEAD" "$PROTOCOL_COMMIT" "$PROTOCOL_GIT_BLOB" "$DEVICE" "$BATCH_SIZE" "$THREADS" <<'PY'
 import hashlib
 import json
 import platform
-import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
