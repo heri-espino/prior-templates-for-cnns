@@ -1,0 +1,29 @@
+name: budget-confirmation-static
+
+on:
+  push:
+    branches: [paper_suggestions]
+    paths:
+      - 'studies/cnn_budget_confirmation/**'
+      - '.github/workflows/budget_confirmation_static.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install zsh
+        run: sudo apt-get update -qq && sudo apt-get install -y zsh
+      - name: Validate zsh syntax
+        run: zsh -n studies/cnn_budget_confirmation/run_confirmation.zsh
+      - name: Compile confirmation analysis
+        run: python -m py_compile studies/cnn_budget_confirmation/analyze.py
+      - name: Verify frozen protocol is present
+        run: test -s studies/cnn_budget_confirmation/PROTOCOL.md
