@@ -621,3 +621,65 @@
   - 3.3. Learnable Gabor Filter Parameters
   - 3.4. Statistical Feature Extractor
   - 3.5. Region Selection Gate
+
+
+### Transformer Circuit Faithfulness Metrics Are Not Robust
+
+- Markdown: `extracted/miller_2024_transformer_faithfulness_metrics_not_robust.md`
+- PDF: `pdf/miller_2024_transformer_faithfulness_metrics_not_robust.pdf`
+- Assets: `assets/miller_2024_transformer_faithfulness_metrics_not_robust/`
+- Extraction: `hybrid`
+- Quality: `excellent` (108.0)
+- Visual fallback: 4 table(s), 20 informative figure(s)
+- References: `references/miller_2024_transformer_faithfulness_metrics_not_robust.references.md`
+- Sections:
+  - Abstract
+  - 1 Introduction
+  - 2 Related Work
+  - 3 Measuring Faithfulness
+  - 3.1 Ablation Methodology
+  - 3.1.1 Circuit Granularity
+  - 3.1.2 Ablation Component Type (and Associated Model Views)
+  - 3.1.3 Ablation Value
+  - 3.1.4 Token Positions
+
+
+### Explaining Explainability: Recommendations for Effective Use of Concept Activation Vectors
+
+- Markdown: `extracted/nicolson_2025_explaining_explainability.md`
+- PDF: `pdf/nicolson_2025_explaining_explainability.pdf`
+- Assets: `assets/nicolson_2025_explaining_explainability/`
+- Extraction: `hybrid`
+- Quality: `excellent` (108.0)
+- Visual fallback: 3 table(s), 47 informative figure(s)
+- References: `references/nicolson_2025_explaining_explainability.references.md`
+- Sections:
+  - Angus Nicolson
+  - Lisa Schut
+  - Alison J. Noble
+  - Yarin Gal
+  - Abstract
+  - 1 Introduction
+  - 2 Background: Concept Activation Vectors
+  - 3 CAV Hypotheses
+  - 3.1 Layer Consistency
+
+### Encoding Without Influence: Dissociating Demographic Representation from Causal Effect in Large Language Models
+
+- Markdown: `extracted/sharma_2026_encoding_wo_influence.md`
+- PDF: `pdf/sharma_2026_encoding_wo_influence.pdf`
+- Assets: `assets/sharma_2026_encoding_wo_influence/`
+- Extraction: `hybrid`
+- Quality: `excellent` (108.0)
+- Visual fallback: 19 table(s), 15 informative figure(s)
+- References: `references/sharma_2026_encoding_wo_influence.references.md`
+- Sections:
+  - Aarushi Sharma
+  - Phong Le
+  - Abstract
+  - 1 Introduction
+  - 2 Related Work and Contributions
+  - 2.1 Demographic Conditioning and LLM Opinions
+  - 2.2 Sparse Autoencoders and Causal Interpretability
+  - 2.3 Contributions
+  - 3 Data
