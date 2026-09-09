@@ -7,7 +7,7 @@
 #
 # Optional environment variables:
 #   CNN_ENV_NAME=prior-templates-cnns
-#   OUTPUT_ROOT=/absolute/or/relative/path
+#   OUTPUT_ROOT=results/budget_confirmation_001
 #   DEVICE=cuda
 #   BATCH_SIZE=64
 #   THREADS=2
@@ -21,7 +21,8 @@ SCRIPT_DIR="${0:A:h}"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
 
-OUTPUT_ROOT="${OUTPUT_ROOT:-$REPO_ROOT/results/budget_confirmation_001}"
+# Relative by default so Windows conda.exe also works when launched from WSL.
+OUTPUT_ROOT="${OUTPUT_ROOT:-results/budget_confirmation_001}"
 DEVICE="${DEVICE:-cuda}"
 BATCH_SIZE="${BATCH_SIZE:-64}"
 THREADS="${THREADS:-2}"
