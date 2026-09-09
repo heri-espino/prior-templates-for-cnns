@@ -21,3 +21,5 @@ Bibliography follow-up: integrated three technically reviewed additions, with fi
 Plain article LaTeX version started on 9 September 2026: main.tex, compiled main.pdf, build_paper.sh and LATEX_README.md. Uses plainnat provisionally at owner request for simple article formatting; journal-specific style is deferred. Orozco-Solis (2024) added after reading the supplied PDF/text.
 
 TMLR formatting supersedes the provisional plain article: main.tex uses the official anonymous review style and bibliography; all supplementary comparisons are included after references. See TMLR_ADAPTATION.md. This is not an experimental audit or a submission/acceptance claim.
+
+Kernel morphology follow-up: existing Stage B checkpoints now support nearest and one-to-one comparisons, fixed-block galleries and complete endpoint matching appendix. 200 models/2000 checkpoints; saved alignment reproduced exactly. Exploratory derived evidence only; audit remains pending. Scripts and reading notes: analysis/kernel_similarity/.

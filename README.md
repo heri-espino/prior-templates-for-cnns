@@ -71,3 +71,7 @@ Historical study directories retain their names and internal organization delibe
 - No publication novelty, general causal identifiability or universal negative effect is claimed.
 
 For reproducibility, consult each study's README and protocol. Check imported file integrity with `python3 scripts/verify_import.py`. AI collaborators should read [AGENTS.md](AGENTS.md), then [.ai_handoff/START_HERE.md](.ai_handoff/START_HERE.md). No license is assigned yet; ownership/licensing of the original input needs review before choosing one.
+
+## Kernel matching from existing checkpoints
+
+Run `bash run_kernel_analysis.sh` (WSL/Linux/macOS) or `./run_kernel_analysis.ps1` (PowerShell) in the experiment environment. No retraining or GPU is needed. [Instructions](analysis/kernel_similarity/README.md), [analysis plan](analysis/kernel_similarity/PLAN.md), and [completed results](analysis/kernel_similarity/results/REPORT.md). The analysis compares every first-layer kernel against every template and contrasts nearest with one-to-one assignment; it does not measure human interpretability.

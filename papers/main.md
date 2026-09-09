@@ -245,6 +245,14 @@ In TwoLayerCNN, contrast and AUROC retain negative k4 differences. Validation-pa
 
 The figure shows relative U and absolute counterfactual-accuracy differences separately. U compares selected-channel reconstruction with a same-size random baseline, so its change can reflect either component. Because those baselines also change with k, a sign reversal in ΔU does not alone prove that causal information has become more distributed. It establishes that the comparative conclusion depends on intervention budget. Diagnosing concentration, redundancy or channel interactions requires additional analysis beyond ranking singleton effects.
 
+### 4.7 Exploratory one-to-one kernel matching
+
+A follow-up reads all 200 Stage B models at initialization and nine scheduled epochs (2,000 checkpoints), without new training or forward evaluations. Every learned kernel is compared with all 16 original templates using centered, unit-norm signed cosine. Maximum-weight one-to-one assignment complements the existing mean nearest-template score; it prevents template reuse but does not establish human interpretability. Distances use sqrt(2 − 2 cosine). The rank-10 bank limits semantic-diversity interpretations. All blocks contribute to means/SD; illustrative galleries use fixed block 2000. Endpoint associations with saved concept and behavioral metrics are descriptive within condition, not causal tests.
+
+The original alignment is reproduced exactly for all 1,800 post-training evaluations. At epoch 200, constant retention has mean assignment similarity 0.9468–0.9999 and a gap from nearest matching of zero to four decimals. Release has assignment similarity 0.5743–0.9425, with gaps 0.0000–0.0054. Random-condition gaps are 0.0241–0.0335. The retained alignment therefore survives the restriction against template reuse; it still does not imply superior behavioral outcomes. On two_concepts/TinyCNN, constant retention versus release has assignment similarity 0.9468 versus 0.5743, accuracy 98.01% versus 99.22%, and four-channel U 0.657 versus 0.718.
+
+[Complete derived analysis and figures](../analysis/kernel_similarity/results/REPORT.md); [analysis plan and limitations](../analysis/kernel_similarity/PLAN.md). LaTeX includes the kernel gallery and full matching appendix. This does not complete the independent submission audit.
+
 ## 5. Interpretation
 
 The motivating early-advantage/late-constraint hypothesis receives partial, conditional support. Templates can provide an early advantage, as in single_shape / TwoLayerCNN, but do not generally do so. Template initialization alone catches up on the shallow compositional task. Constant retention leaves a residual fixed-budget cost, and release alleviates that cost. Thus initialization and persistent constraint must be distinguished before attributing late performance to templates themselves.

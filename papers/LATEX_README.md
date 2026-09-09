@@ -15,3 +15,5 @@ The appendix is `supplementary_results.tex`, included after the references. It t
 Edit LaTeX directly. The Markdown counterparts remain historical editorial sources, not automatically synchronized exports. The default PDF is anonymous: no author/affiliation block, acknowledgments or identifying project URL. The template's “Under review” header denotes formatting mode; it does not mean the paper has been submitted.
 
 Formatting adaptation is complete; scientific submission sign-off is separate. See `TMLR_ADAPTATION.md` for the changes, verification and remaining author actions. In particular, the independent checkpoint audit remains deferred and an anonymous code/checkpoint supplementary ZIP has not been assembled.
+
+Kernel follow-up: main.tex contains the exploratory matching methods/results and gallery; kernel_matching_results.tex adds all matching endpoint means and figures after the existing supplementary appendix. Regenerate these derived figures with the root run_kernel_analysis script before compiling if they are absent.

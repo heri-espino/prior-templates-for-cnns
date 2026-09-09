@@ -615,6 +615,40 @@ outcomes. No new confirmatory family or equivalence margin is
 retroactively assigned. Shared contexts, targets, rankings, epochs and
 methods do not increase the number of independent blocks.
 
+\subsection{Exploratory kernel matching on saved checkpoints}\label{kernel-matching-methods}
+After the preceding analyses, we compared the first-layer weights of all
+200 Stage B models at initialization and nine scheduled checkpoints
+through epoch 200 (2,000 checkpoint states). No additional models were
+trained and no new forward evaluations were performed. For centered,
+unit-norm kernels and templates, let $S_{ij}=\langle\widehat W_i,
+\widehat T_j\rangle$. The existing alignment is
+$A_{\mathrm{nearest}}=16^{-1}\sum_i\max_j S_{ij}$.
+We additionally compute
+\[
+ A_{\mathrm{assignment}}=\frac{1}{16}\max_{\pi\in\mathfrak S_{16}}
+ \sum_{i=1}^{16}S_{i,\pi(i)},\qquad
+ G=A_{\mathrm{nearest}}-A_{\mathrm{assignment}}.
+\]
+A maximum-weight bipartite assignment finds the permutation; unlike row
+maxima, it cannot reuse a template. We retain signed similarity because
+polarity changes can affect ReLU activations. The associated normalized
+Euclidean distance is $d_{ij}=\sqrt{\max(0,2-2S_{ij})}$; distances describe
+the cosine-optimal assignment rather than a separate distance-optimal
+matching. We also record distinct nearest templates, inter-kernel
+redundancy, raw norms and same-index drift from initialization. A matching
+gap is a property of this bank, not a measure of human readability or
+independent semantic coverage, especially given its rank-10 redundancy.
+
+Quantitative summaries include all ten blocks, with sample SD.
+Illustrations use block 2000, the lowest planned block, for every condition.
+Kernel panels share a centered/unit-norm colour scale; row reordering is
+performed independently, so a column does not track a persistent channel.
+We join saved concept AUROC, localization, accuracy, U and counterfactual
+accuracy at the same checkpoint. Within-condition endpoint Spearman
+associations use ten blocks, are descriptive, and are not treated as causal
+or multiplicity-controlled evidence. This follow-up is exploratory and
+adds no independent training replication.
+
 \section{Results}\label{results}
 
 \subsection{Prospective alignment tests and the readout
@@ -728,7 +762,7 @@ include zero. Thus even the direction of the early difference depends on
 task and architecture. The normalized random control reduces the
 apparent benefit relative to default random.
 
-\begin{figure}
+\begin{figure}[p]
 \centering
 \pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/early_learning.png}}
 \caption{Mean validation accuracy over the first 20 epochs, by
@@ -758,7 +792,7 @@ mean final-20-epoch validation-loss slope is negative. Continued
 improvement does not guarantee eventual equality, but it precludes
 treating the observed training horizon as a proven asymptote.
 
-\begin{figure}
+\begin{figure}[p]
 \centering
 \pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/learning.png}}
 \caption{Learning and alignment trajectories over the complete
@@ -814,7 +848,7 @@ the optimization path after \(\lambda\) reaches zero. This does not
 isolate alignment as the cause of any accuracy difference; the schedule
 changes the learned representation and downstream adaptation jointly.
 
-\begin{figure}
+\begin{figure}[p]
 \centering
 \pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/release_effects.png}}
 \caption{Paired final release-minus-constant effects with
@@ -884,7 +918,7 @@ to enact the intended change. This could reflect distributed coding, the
 channel-ranking rule or downstream nonlinear interaction, rather than
 absence of causal information.
 
-\begin{figure}
+\begin{figure}[p]
 \centering
 \pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/concepts.png}}
 \caption{Concept and intervention measurements across recorded
@@ -964,7 +998,7 @@ conclusion also depends on the measurement. These marginal intervals
 describe the observed sensitivity; they are not separate confirmatory
 discoveries.
 
-\begin{figure}
+\begin{figure}[p]
 \centering
 \pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/main_paper/all_robustness.png}}
 \caption{Release-minus-constant differences in U (top) and
@@ -985,6 +1019,43 @@ distributed. It establishes that the comparative conclusion depends on
 intervention budget. Diagnosing concentration, redundancy or channel
 interactions requires additional analysis beyond ranking singleton
 effects.
+
+\subsection{One-to-one matching preserves the retained-kernel contrast}\label{kernel-matching-results}
+The recomputed nearest-template alignment agrees with all 1,800 saved
+post-training evaluations to the reported numerical precision (maximum
+absolute difference zero in this execution). At epoch 200,
+$A_{\mathrm{assignment}}$ for constant retention ranges from 0.9468 to
+0.9999 across the four settings, with zero matching gap to four decimal
+places. The release means range from 0.5743 to 0.9425; their gaps range
+from 0.0000 to 0.0054. Thus the high retained alignment is not explained
+by the reuse of the same nearest template in this comparison.
+For the random and normalized-random conditions, mean gaps range from
+0.0241 to 0.0335 and mean distinct nearest-template counts from 8.3 to 9.7,
+compared with 16 for constant retention. These are bank-specific
+morphology measurements, not evidence of less useful random features.
+Appendix~\ref{app:kernel-matching} reports all endpoint means and trajectories.
+
+The change of matching rule does not erase the previously observed
+separation from behavioral measures. For example, on two\_concepts/TinyCNN,
+constant retention has assignment similarity 0.9468 versus 0.5743 for
+release, while saved accuracy is 98.01\% versus 99.22\% and four-channel
+U is 0.657 versus 0.718. This comparison neither establishes that lowering
+similarity causes improvement nor makes the intervention ordering
+independent of channel budget. Figure~\ref{fig:kernel-gallery} displays
+the underlying filters; no human readability experiment was performed.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{../analysis/kernel_similarity/results/kernels_two_concepts_TinyCNN.png}
+\caption{Original templates and saved first-layer kernels on two\_concepts/TinyCNN,
+block 2000. Every condition is shown at epochs 0 and 200. Rows are independently
+ordered by maximum-weight one-to-one matching to the original bank; columns
+therefore indicate assigned templates, not persistent channel identity.
+Centering, unit normalization and a shared colour scale expose shape while
+removing raw amplitude. This fixed-block illustration is not a human
+interpretability test; numerical summaries use all blocks.}
+\label{fig:kernel-gallery}
+\end{figure}
 
 \section{Interpretation}\label{interpretation}
 
@@ -1130,5 +1201,7 @@ checkpoint-based reproducibility review remains outstanding.
 \clearpage
 \appendix
 \input{supplementary_results.tex}
+\clearpage
+\input{kernel_matching_results.tex}
 
 \end{document}
