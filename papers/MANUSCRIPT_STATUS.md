@@ -19,3 +19,5 @@ Choose venue and author information; finish venue-specific reference metadata/fo
 Bibliography follow-up: integrated three technically reviewed additions, with final-version corrections and explicit reading limits in literature/TECHNICAL_COMPARISON.md. This does not complete the deferred experimental review.
 
 Plain article LaTeX version started on 9 September 2026: main.tex, compiled main.pdf, build_paper.sh and LATEX_README.md. Uses plainnat provisionally at owner request for simple article formatting; journal-specific style is deferred. Orozco-Solis (2024) added after reading the supplied PDF/text.
+
+TMLR formatting supersedes the provisional plain article: main.tex uses the official anonymous review style and bibliography; all supplementary comparisons are included after references. See TMLR_ADAPTATION.md. This is not an experimental audit or a submission/acceptance claim.

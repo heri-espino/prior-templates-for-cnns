@@ -1,6 +1,6 @@
-# Plain article manuscript
+# TMLR review manuscript
 
-`main.tex` is the editable LaTeX article; `main.pdf` is its compiled preview. It includes the existing methods, results, figures, limitations and 24 cited references. It is an editorial manuscript, not certification that the deferred experimental audit has passed. Author names and affiliations remain to be supplied.
+`main.tex` is the editable TMLR manuscript and `main.pdf` its compiled preview. It uses the unmodified supplied `tmlr.sty` in anonymous review mode and `tmlr.bst` for author–year citations. The class is `article`, 10pt; the official style controls margins, headings and spacing. Do not add `accepted` or `preprint` for an initial submission.
 
 Run from the repository root:
 
@@ -8,6 +8,10 @@ Run from the repository root:
 bash papers/build_paper.sh
 ```
 
-Requires a TeX distribution with LuaLaTeX and BibTeX. No Python, Pandoc or experiments are required to compile. The source uses standard article typography, tables, equations, figures and author–year citations with `plainnat`; no journal template is imposed. If TMLR is selected for submission, switch to its official template and bibliography style then.
+Requires pdfLaTeX and BibTeX (a standard TeX distribution). No Pandoc, Python or experiment execution is required. The build script locates the supplied style files under `tmlr/tmlr-style-file-main`, prioritizes our local manuscript over the template's example `main.tex`, and writes auxiliary files under `build/`.
 
-Edit `main.tex` directly. `main.md` is the earlier Markdown counterpart; edits are not synchronized automatically. Figures are read from the existing analysis folders; bibliography from `literature/references.bib`. Keep both versions scientifically consistent until the Markdown counterpart is retired. Supplementary results remain in `supplementary_results.md`.
+The appendix is `supplementary_results.tex`, included after the references. It transcribes all existing supplementary tables; no new statistical tests were performed. Figures are loaded from existing analysis folders and citations from `../literature/references.bib`. Compile from the repository rather than uploading main.tex alone to an online editor.
+
+Edit LaTeX directly. The Markdown counterparts remain historical editorial sources, not automatically synchronized exports. The default PDF is anonymous: no author/affiliation block, acknowledgments or identifying project URL. The template's “Under review” header denotes formatting mode; it does not mean the paper has been submitted.
+
+Formatting adaptation is complete; scientific submission sign-off is separate. See `TMLR_ADAPTATION.md` for the changes, verification and remaining author actions. In particular, the independent checkpoint audit remains deferred and an anonymous code/checkpoint supplementary ZIP has not been assembled.

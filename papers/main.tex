@@ -1,87 +1,18 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-\documentclass[
-  11pt,
-]{article}
-\usepackage{xcolor}
-\usepackage[margin=1in]{geometry}
+% TMLR anonymous review version. Official style files are unmodified.
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tmlr}
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{5}
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{longtable,booktabs,array}
-\usepackage{caption}
-\captionsetup[table]{skip=6pt}
-\newcounter{none} % for unnumbered tables
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
 \usepackage{graphicx}
-\makeatletter
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox{\pandoc@box}%
-  \fi%
-}
-% Set default figure placement to htbp
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage[]{natbib}
-\bibliographystyle{plainnat}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
-% fallback for those not using the hyperref driver hyperxmp:
-\makeatletter
-\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
-\makeatother
-\hypersetup{
-  pdftitle={Template Priors in Small CNNs: Learning Dynamics and the Measurement Dependence of Causal Usefulness},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+\usepackage{xurl}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\pandocbounded}[1]{#1}
+\bibliographystyle{tmlr}
+\hypersetup{pdfauthor={},pdftitle={Template Priors in Small CNNs: Learning Dynamics and the Measurement Dependence of Causal Usefulness}}
 
 \title{Template Priors in Small CNNs: Learning Dynamics and the
 Measurement Dependence of Causal Usefulness}
@@ -291,12 +222,14 @@ nor resolves those problems. We make no unique-mechanism claim.
 \subsection{What this paper adds relative to these
 precedents}\label{what-this-paper-adds-relative-to-these-precedents}
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\caption{Relationship to the reviewed literature}\label{tab:main-1}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Closest line of work
@@ -309,25 +242,25 @@ Specific role of the present study
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Structured initialization and preservation {[}1--4{]} & Insert
+Structured initialization and preservation \citep{ozbulak_2018_gabor-initialization,molaei_2020_gabor-filter-structure,ma_2020_predefined-filters,wang_2024_learnable-gabor} & Insert
 task-related filter structure and preserve a parameterized family &
 Compare soft retention and release with independent concept measures and
 matched interventions \\
-Fixed/combined spatial filters {[}5--7{]} & Learn useful predictors with
+Fixed/combined spatial filters \citep{linse_2024_predefined-filters,gaudio_2023_fixed-filters,gavrikov_2023_random-convolutions} & Learn useful predictors with
 fixed structured or random filters and downstream mixing & Diagnose
 fixed-feature readout limitations; do not equate a short-run deficit
 with representation capacity \\
-First-layer statistics {[}8--9{]} & Explain or infer low-level data
+First-layer statistics \citep{chowers_2023_first-layer-filters,jorgenson26ajorgenson_2026_early-cnn-filters} & Explain or infer low-level data
 properties from filter weights & Keep low-level appearance/spectrum
 separate from object concept and intervention outcomes \\
-Unit concepts and interventions {[}10--15{]} & Quantify semantics, build
+Unit concepts and interventions \citep{bau_2017_network-dissection,bau_2020_causal-units,chen_2020_concept-whitening,debot_2025_accuracy-interpretability,parchami-araghi_2025_faithful-concept-traces,goyal_2019_causal-concept-effect} & Quantify semantics, build
 concept-aligned representations or examine causal concept/unit roles &
 Measure these quantities while manipulating a template prior rather than
 training a concept bottleneck \\
-Patching methods {[}16--17, 21{]} & Show methodological and granularity
+Patching methods \citep{zhang_2024_activation-patching,heimersheim_2024_activation-patching,miller_2024_circuit-faithfulness} & Show methodological and granularity
 sensitivity of circuit localization & Show a retention-versus-release
 comparison reversing across channel budgets in small vision models \\
-Causal abstraction and identifiability {[}18--20{]} & Formalize causal
+Causal abstraction and identifiability \citep{geiger_2025_causal-abstraction,meloux_2025_mechanistic-identifiability,sutter_2025_causal-abstraction-limits} & Formalize causal
 explanations and their limitations & Restrict the claim to the measured
 finite interventions, without a general identification theorem \\
 \end{longtable}
@@ -335,7 +268,7 @@ finite interventions, without a general identification theorem \\
 }
 
 The reviewed representation--influence and concept-measurement
-precedents {[}22--23{]} further constrain novelty: this study does not
+precedents \citep{nicolson_2025_explaining-explainability,sharma_2026_encoding-without-influence} further constrain novelty: this study does not
 introduce independent concept assessment or selected-versus-control
 patching. The distinguishing contribution is the \textbf{combination of
 intervention-controlled training comparisons and the observed
@@ -351,13 +284,15 @@ and what each comparison can support.
 \subsection{Experimental stages and inferential
 roles}\label{experimental-stages-and-inferential-roles}
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\caption{Experimental stages and inferential roles}\label{tab:main-2}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Stage
@@ -424,7 +359,7 @@ intervention pair.
 Each task/block contains 512 training, 256 validation and 256 test
 images. These correspond to 128, 64 and 64 independently generated
 nuisance contexts, respectively, each rendered in all four balanced
-states. Images are 32(\times)32 grayscale. Stored data include labels,
+states. Images are 32\(\times\)32 grayscale. Stored data include labels,
 renderer concept indicators, visible masks, matched nuisance variants
 and context metadata. All splits use separate seed namespaces. Each
 training stage contains 20,480 main images shared across model
@@ -440,7 +375,7 @@ retaining the other.
 
 Rendering varies angle from 0 to \(\pi\)/4, width from 0.8 to 1.6, scale
 from 0.85 to 1.15, translation, and Gaussian noise with standard
-deviation sampled between 0 and 0.05. A 5(\times)5 occluder occurs with
+deviation sampled between 0 and 0.05. A 5\(\times\)5 occluder occurs with
 probability 0.1. Threefold antialiasing is used. Matched counterfactual
 images share nuisance context; separate nuisance images change
 translation and noise while preserving identities and the other sampled
@@ -448,10 +383,10 @@ settings. This controlled distribution is not a natural-image benchmark.
 
 \subsection{Models and priors}\label{models-and-priors}
 
-\textbf{TinyCNN} uses a 1(\to)16 convolution with 9(\times)9 kernels,
+\textbf{TinyCNN} uses a 1\(\to\)16 convolution with 9\(\times\)9 kernels,
 padding 4 and no bias, followed by ReLU, global max pooling and a
 four-class linear head (1,364 parameters). \textbf{TwoLayerCNN} adds a
-trainable 16(\to)16 convolution with 3(\times)3 kernels and ReLU before
+trainable 16\(\to\)16 convolution with 3\(\times\)3 kernels and ReLU before
 pooling (3,668 parameters). Both are small architectures; the comparison
 isolates added depth within this family, not broad architectural
 generalization.
@@ -463,12 +398,14 @@ redundancies remain. Stage B does not include Stage A's spectrum
 controls, so it cannot isolate every geometric confound in this new
 schedule comparison.
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\caption{Initialization and retention schedules}\label{tab:main-3}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Condition
@@ -503,7 +440,7 @@ conditions therefore cannot be evidence for a release effect.
 recording}\label{optimization-and-recording}
 
 The loss is cross-entropy plus
-\(\lambda\)‖W-W\_\allowbreak anchor‖²\_\allowbreak F/‖W\_\allowbreak anchor‖²\_\allowbreak F, applied only to the first
+\(\lambda\lVert W-W_{\mathrm{anchor}}\rVert_F^2/\lVert W_{\mathrm{anchor}}\rVert_F^2\), applied only to the first
 convolution. All template anchors have squared norm 16. Adam uses
 learning rate 0.003 and batch size 128; four optimizer steps per epoch
 give 800 steps per model. There is no learning-rate scheduler, early
@@ -595,7 +532,7 @@ censoring.
 Paired differences use ten blocks per setting. We provide marginal 95\%
 Student-t intervals, assuming reasonably behaved block differences. For
 paired differences \(d_1,\ldots,d_{10}\), these are mean(d) ±
-\(t_{0.975,9}\) SD(d)/√10. A difference between two subgroup point
+\(t_{0.975,9}\) SD(d)/\(\sqrt{10}\). A difference between two subgroup point
 estimates is not itself a tested architecture interaction. The release
 schedule and training design were saved before execution; the present
 contrasts, displays and statistical analysis were assembled after
@@ -688,14 +625,16 @@ but establishes no corrected U improvement. Differences below are
 template\_\allowbreak retention\_\allowbreak 1 minus template\_\allowbreak init after 40 epochs, not release
 effects.
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}@{}}
+\caption{Prospective alignment tests at 40 epochs}\label{tab:main-4}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Setting
@@ -747,14 +686,16 @@ report.
 \subsection{Early template advantages depend on the
 setting}\label{early-template-advantages-depend-on-the-setting}
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}@{}}
+\caption{Mean validation accuracy over epochs 1--10}\label{tab:main-5}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Task / model
@@ -789,12 +730,12 @@ apparent benefit relative to default random.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Early learning}]{../analysis/retention_release_001/early_learning.png}}
-\caption{Early learning}
+\pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/early_learning.png}}
+\caption{Mean validation accuracy over the first 20 epochs, by
+task, architecture and condition.}
 \end{figure}
 
-\textbf{Figure 1.} Mean validation accuracy over the first 20 epochs, by
-task, architecture and condition.
+
 
 Time-to-threshold and early area are not interchangeable. On
 single\_\allowbreak shape / TinyCNN, template\_\allowbreak init has a lower early average but
@@ -819,24 +760,26 @@ treating the observed training horizon as a proven asymptote.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Learning, loss and alignment}]{../analysis/retention_release_001/learning.png}}
-\caption{Learning, loss and alignment}
+\pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/learning.png}}
+\caption{Learning and alignment trajectories over the complete
+training horizon; bands show block standard deviations.}
 \end{figure}
 
-\textbf{Figure 2.} Learning and alignment trajectories over the complete
-training horizon; bands show block standard deviations.
+
 
 \subsection{Release improves compositional accuracy but sacrifices
 alignment}\label{release-improves-compositional-accuracy-but-sacrifices-alignment}
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}@{}}
+\caption{Release-minus-retention contrasts across tasks and architectures}\label{tab:main-6}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Setting
@@ -873,24 +816,27 @@ changes the learned representation and downstream adaptation jointly.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Paired release effects}]{../analysis/retention_release_001/release_effects.png}}
-\caption{Paired release effects}
+\pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/release_effects.png}}
+\caption{Paired final release-minus-constant effects with
+exploratory marginal 95\% intervals.}
 \end{figure}
 
-\textbf{Figure 3.} Paired final release-minus-constant effects with
-exploratory marginal 95\% intervals.
 
+
+\clearpage
 \subsection{Independent concept and causal outcomes do not move
 uniformly}\label{independent-concept-and-causal-outcomes-do-not-move-uniformly}
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1579}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2105}}@{}}
+\caption{Concept and intervention measurements across tasks and architectures}\label{tab:main-7}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Setting
@@ -940,12 +886,12 @@ absence of causal information.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Concept and causal trajectories}]{../analysis/retention_release_001/concepts.png}}
-\caption{Concept and causal trajectories}
+\pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/retention_release_001/concepts.png}}
+\caption{Concept and intervention measurements across recorded
+checkpoints; bands show block standard deviations.}
 \end{figure}
 
-\textbf{Figure 4.} Concept and intervention measurements across recorded
-checkpoints; bands show block standard deviations.
+
 
 \subsection{The causal contrast depends on intervention size and
 selection}\label{the-causal-contrast-depends-on-intervention-size-and-selection}
@@ -964,8 +910,9 @@ two\_\allowbreak concepts. The corresponding results for both tasks, including
 absolute counterfactual accuracy, are retained in the complete paired
 table.
 
-{\def\LTcaptype{none} % do not increment counter
+{
 \small
+\setlength{\tabcolsep}{2.5pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1364}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1364}}
@@ -973,6 +920,7 @@ table.
   >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1818}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1818}}
   >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1818}}@{}}
+\caption{Measurement sensitivity across channel budgets}\label{tab:main-8}\\
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Architecture
@@ -1018,15 +966,15 @@ discoveries.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={All tasks, architectures, channel rankings and sizes}]{../analysis/main_paper/all_robustness.png}}
-\caption{All tasks, architectures, channel rankings and sizes}
-\end{figure}
-
-\textbf{Figure 5.} Release-minus-constant differences in U (top) and
+\pandocbounded{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{../analysis/main_paper/all_robustness.png}}
+\caption{Release-minus-constant differences in U (top) and
 counterfactual accuracy (bottom), with identical vertical scales within
 each row. All four settings and all four sizes are shown. Intervals are
-marginal and exploratory; see Supplement S3 for all 96 numerical
-contrasts.
+marginal and exploratory; see Appendix~\ref{complete-measurement-robustness-contrasts} for all 96 numerical
+contrasts.}
+\end{figure}
+
+
 
 The figure shows relative U and absolute counterfactual-accuracy
 differences separately. U compares selected-channel reconstruction with
@@ -1107,7 +1055,7 @@ presented as additional independent replication.
   source and target images are matched. Fidelity is tied to probability
   outputs, confidence and the chosen ranking/layer. Probability
   saturation and negative-component sensitivity are known issues
-  {[}16--17{]}; this study has not established robustness to logit- or
+  \citep{zhang_2024_activation-patching,heimersheim_2024_activation-patching}; this study has not established robustness to logit- or
   divergence-based alternatives. Full/no-op identities are checks, not
   discoveries.
 \item
@@ -1169,37 +1117,18 @@ is a controlled characterization of these dependencies, with clearly
 bounded scope and exploratory uncertainty.
 
 \section{Data and code availability}\label{data-and-code-availability}
-
-\begin{itemize}
-\item
-  Original uploaded result provenance and saved design.
-\item
-  Runner and evaluation code.
-\item
-  Analysis script, consistency audit, per-run endpoints, means/SDs, and
-  paired marginal intervals.
-\item
-  From the repository root, run
-  \texttt{python\ analysis/retention\_\allowbreak release\_\allowbreak 001/analyze.py} in an
-  environment with the study dependencies. It reads imported evidence
-  and writes separate derived outputs, leaving the upload unchanged.
-  Narrative text is reviewed prose and is not automatically rewritten by
-  the plotting script.
-\item
-  GPU robustness protocol, uploaded GPU results, and review/audit.
-\item
-  Robustness analysis code regenerates the sensitivity figure and paired
-  tables; run \texttt{bash\ review\_\allowbreak robustness.sh} from the repository
-  root. All historical and uploaded evidence remains unchanged.
-\end{itemize}
-
-The supplement contains all condition means and the complete robustness
-comparison family. The editorial status distinguishes completed
-manuscript work from the deferred final reproducibility review. Citation
-links below resolve to the provided primary-paper corpus wherever
-available; extraction defects are not treated as authoritative
-equations.
+The experiments use procedurally rendered synthetic images. The existing
+research artifacts comprise renderer and training code, saved checkpoints,
+per-run metrics, and analysis scripts. Appendix~\ref{app:complete-results}
+includes the complete primary contrasts, endpoint condition means, and
+measurement-robustness comparison family. An anonymized code and checkpoint
+archive has not yet been assembled for this review version. The independent
+checkpoint-based reproducibility review remains outstanding.
 
 \bibliography{../literature/references.bib}
+
+\clearpage
+\appendix
+\input{supplementary_results.tex}
 
 \end{document}
