@@ -1,10 +1,12 @@
-name: budget-confirmation-static
+name: prospective-studies-static
 
 on:
   push:
     branches: [paper_suggestions]
     paths:
+      - 'scripts/use_conda_env.zsh'
       - 'studies/cnn_budget_confirmation/**'
+      - 'studies/cnn_exhaustive_robustness/**'
       - '.github/workflows/budget_confirmation_static.yml'
   workflow_dispatch:
 
@@ -22,8 +24,17 @@ jobs:
       - name: Install zsh
         run: sudo apt-get update -qq && sudo apt-get install -y zsh
       - name: Validate zsh syntax
-        run: zsh -n studies/cnn_budget_confirmation/run_confirmation.zsh
-      - name: Compile confirmation analysis
-        run: python -m py_compile studies/cnn_budget_confirmation/analyze.py
-      - name: Verify frozen protocol is present
-        run: test -s studies/cnn_budget_confirmation/PROTOCOL.md
+        run: |
+          zsh -n scripts/use_conda_env.zsh
+          zsh -n studies/cnn_budget_confirmation/run_confirmation.zsh
+          zsh -n studies/cnn_exhaustive_robustness/run_exhaustive.zsh
+      - name: Compile prospective and robustness Python
+        run: |
+          python -m py_compile studies/cnn_budget_confirmation/analyze.py
+          python -m py_compile studies/cnn_exhaustive_robustness/train_grid.py
+          python -m py_compile studies/cnn_exhaustive_robustness/evaluate_grid.py
+          python -m py_compile studies/cnn_exhaustive_robustness/analyze_grid.py
+      - name: Verify frozen protocols are present
+        run: |
+          test -s studies/cnn_budget_confirmation/PROTOCOL.md
+          test -s studies/cnn_exhaustive_robustness/PROTOCOL.md
