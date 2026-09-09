@@ -4,11 +4,45 @@
 
 ## Abstract
 
-Structured convolutional priors can constrain kernel appearance, but the relationship between that appearance, learning dynamics and causal use of features remains unclear. We investigate this relationship in small CNNs on two controlled rendering tasks. A 400-run experiment with a locally fixed prospective protocol increases template alignment without establishing an improvement in selected-channel intervention fidelity under four Holm-corrected primary tests. A subsequent 200-run experiment extends training and gradually releases the retention penalty. Template initialization does not uniformly accelerate learning and eventually matches normalization-matched random accuracy on the shallow compositional task. Releasing retention improves compositional accuracy relative to constant retention while reducing alignment. At the original four-channel intervention, its relative causal-usefulness difference is positive in TinyCNN and negative in TwoLayerCNN. A GPU reanalysis of 80 existing final checkpoints tests three validation-only channel rankings and four intervention sizes. On two_concepts in TinyCNN, all rankings yield negative release effects at one or two channels and positive effects at four or eight; deeper-model outcomes also depend on ranking and size. We therefore characterize a measurement-dependent ordering of retained versus released representations, rather than a universal interpretability benefit. The contribution is a controlled empirical connection between template constraints, optimization and intervention design. Later comparisons are exploratory, and these synthetic results do not establish general human interpretability or causal identifiability.
+Template alignment reveals what a convolutional kernel resembles, but does
+not establish how the network uses its features. We study this distinction between kernel
+appearance and causal usefulness in small CNNs on two controlled rendering
+tasks. A 400-run experiment increases template alignment but does not
+establish an improvement in selected-channel intervention fidelity under
+four Holm-corrected primary tests. A subsequent 200-run experiment extends
+training and gradually releases the retention penalty. Template initialization
+does not uniformly accelerate learning. Releasing retention improves
+compositional accuracy relative to constant retention while reducing
+alignment. However, the relative causal-usefulness difference depends on
+how it is measured. A reanalysis of 80 existing final checkpoints tests
+three validation-only channel rankings and four intervention sizes. On
+two_concepts in TinyCNN, every ranking yields negative release effects at
+one or two channels and positive effects at four or eight; TwoLayerCNN
+outcomes also depend on ranking and size. A further analysis of 2,000 saved
+checkpoint states shows that the retained-kernel contrast persists under
+one-to-one kernel matching. We connect template constraints, learning
+dynamics and intervention design: a preserved kernel shape and a single
+patching score are insufficient to establish an interpretability benefit.
+The later comparisons are exploratory, and the results do not establish
+general human interpretability or causal identifiability.
 
 ## 1. Motivation and research questions
 
-Visual structure in a convolutional kernel is an attractive source of prior knowledge: an edge, corner or ring can be specified before training and recognized afterward. However, recognizing the filter's shape does not establish which concept its activation distinguishes, how the network uses it, or whether a small intervention can change the network's decision appropriately. Prior research already provides ways to initialize, parameterize or freeze filters, as well as tools for measuring concept alignment and intervening on units. The question here is how these measurements behave together when a template constraint is strengthened and subsequently released.
+An edge, corner or ring can remain recognizable in a convolutional kernel
+after training. What does that appearance tell us about the network's
+computation? Template alignment answers a question about the weights;
+concept selectivity and activation patching ask different questions about
+the features and their effects on predictions. The distinction matters
+when structured convolutional priors are used to make learned features
+easier to inspect.
+
+Prior research provides methods to initialize, parameterize or freeze
+filters, as well as methods for measuring concept alignment and intervening
+on units. We study what happens when a template constraint is retained or
+gradually released during training. Our central finding is that the
+retention–release comparison can reverse when the intervention size changes,
+even though the difference in kernel appearance persists. This makes the
+choice of measurement part of the interpretation of the result.
 
 We ask whether greater retained template alignment accompanies independently measured concepts and useful matched interventions, whether an early learning advantage persists with longer optimization, and whether a comparative causal conclusion survives changes in selection and intervention size. We operationalize these questions using two related rendering tasks with known concepts and matched counterfactuals. Low-level kernel alignment is kept distinct from object-level concept selectivity and localization.
 

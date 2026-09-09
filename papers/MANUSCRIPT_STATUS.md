@@ -23,3 +23,5 @@ Plain article LaTeX version started on 9 September 2026: main.tex, compiled main
 TMLR formatting supersedes the provisional plain article: main.tex uses the official anonymous review style and bibliography; all supplementary comparisons are included after references. See TMLR_ADAPTATION.md. This is not an experimental audit or a submission/acceptance claim.
 
 Kernel morphology follow-up: existing Stage B checkpoints now support nearest and one-to-one comparisons, fixed-block galleries and complete endpoint matching appendix. 200 models/2000 checkpoints; saved alignment reproduced exactly. Exploratory derived evidence only; audit remains pending. Scripts and reading notes: analysis/kernel_similarity/.
+
+Final copyediting pass: clearer abstract/opening, original technical terminology retained, wide appendix tables rotated, and availability status clarified. See EDITORIAL_REVIEW.md. Ready for coauthor reading; journal submission sign-off remains pending the independent audit and anonymous supporting artifacts.
