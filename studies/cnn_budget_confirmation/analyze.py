@@ -5,7 +5,9 @@ The primary test is fixed in PROTOCOL.md and is not selected from these outcomes
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -17,6 +19,23 @@ KS=(1,2,4,8)
 METHODS=('contrast','auroc','validation_patch')
 ARCHS=('TinyCNN','TwoLayerCNN')
 CONDITIONS=('template_retention_1','template_release')
+
+
+def sha256(path):
+ return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def git_commit_for(path):
+ """Return the commit that most recently changed path, if Git metadata exists."""
+ try:
+  root=Path(__file__).resolve().parents[2]
+  rel=Path(path).resolve().relative_to(root)
+  return subprocess.check_output(
+   ['git','log','-n','1','--format=%H','--',str(rel)],
+   cwd=root,text=True,stderr=subprocess.DEVNULL,
+  ).strip() or None
+ except (OSError,subprocess.CalledProcessError,ValueError):
+  return None
 
 
 def interval(x):
@@ -66,6 +85,7 @@ def treatment_contrasts(df,metric):
     a=s[(s.condition=='template_release')&(s.k==k)].set_index('block')[metric]
     b=s[(s.condition=='template_retention_1')&(s.k==k)].set_index('block')[metric]
     d=(a-b).sort_index();assert len(d)==20
+    assert np.isfinite(d.to_numpy(dtype=float)).all(),(arch,method,k,metric)
     q=interval(d.values)
     rec.append(dict(architecture=arch,method=method,k=k,metric=metric,**q))
     for block,value in d.items():per_block.append(dict(architecture=arch,method=method,k=k,metric=metric,block=block,delta=value))
@@ -89,7 +109,16 @@ def budget_contrasts(per_block):
 def main():
  p=argparse.ArgumentParser();p.add_argument('root');p.add_argument('--out',default='analysis/budget_confirmation');args=p.parse_args()
  root=Path(args.root).resolve();out=Path(args.out).resolve();out.mkdir(parents=True,exist_ok=True)
+ protocol=Path(__file__).with_name('PROTOCOL.md')
+ protocol_hash=sha256(protocol);protocol_commit=git_commit_for(protocol)
+ analysis_hash=sha256(Path(__file__))
+
  patch,checks,patch_files=load_patch_rows(root);verify_design(patch,patch_files)
+ assert patch.selection_valid.dtype==bool or set(patch.selection_valid.dropna().unique()).issubset({True,False})
+ primary_rows=patch[(patch.architecture=='TinyCNN')&(patch.method=='contrast')]
+ assert primary_rows.selection_valid.all(),'Primary contrast ranking must be defined in every planned run.'
+ assert primary_rows.fidelity.notna().all(),'Primary selected fidelity is undefined in at least one planned run.'
+
  energy,matching,energy_files=load_energy_rows(root)
  if len(energy):verify_design(energy,energy_files)
  assert float(checks.full_patch_max_error.max())<=2e-5
@@ -126,6 +155,9 @@ def main():
  lines=[
  '# Prospective intervention-budget confirmation', '',
  'Protocol: `studies/cnn_budget_confirmation/PROTOCOL.md` was committed before blocks 4000–4019 were generated.', '',
+ f"- protocol SHA-256: `{protocol_hash}`",
+ f"- protocol commit: `{protocol_commit or 'unavailable (no Git metadata)'}`",
+ f"- analysis source SHA-256: `{analysis_hash}`", '',
  f"Planned final checkpoint evaluations: **80**; loaded: **{len(patch_files)}**.", '',
  '## Primary test', '',
  'The single primary test is the pre-specified TinyCNN / contrast-ranking selected-fidelity budget contrast', '',
@@ -152,8 +184,19 @@ def main():
  'This confirmation is independent in renderer blocks, not in task family or codebase. It does not establish a unique mechanism, human interpretability, or natural-image generalization.'
  ]
  (out/'REPORT.md').write_text('\n'.join(lines)+'\n')
- (out/'decision.json').write_text(json.dumps(dict(primary_pass=primary_pass,primary=primary.to_dict(),patch_files=len(patch_files),energy_files=len(energy_files)),indent=2)+'\n')
+ decision=dict(
+  primary_pass=primary_pass,
+  primary=primary.to_dict(),
+  patch_files=len(patch_files),
+  energy_files=len(energy_files),
+  protocol_sha256=protocol_hash,
+  protocol_commit=protocol_commit,
+  analysis_sha256=analysis_hash,
+ )
+ (out/'decision.json').write_text(json.dumps(decision,indent=2)+'\n')
  print('PRIMARY CONFIRMATION:',primary_pass)
+ print('PROTOCOL COMMIT:',protocol_commit or 'unavailable')
+ print('PROTOCOL SHA256:',protocol_hash)
  print('REPORT:',out/'REPORT.md')
 
 
