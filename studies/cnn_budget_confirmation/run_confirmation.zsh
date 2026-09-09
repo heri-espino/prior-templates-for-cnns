@@ -1,19 +1,17 @@
 #!/usr/bin/env zsh
 # Run the frozen prospective intervention-budget confirmation end to end.
+# Uses a user-space Conda environment; no administrator privileges are needed.
 #
-# Usage from anywhere inside/outside the repository:
+# Usage:
 #   zsh studies/cnn_budget_confirmation/run_confirmation.zsh
 #
 # Optional environment variables:
-#   PYTHON_BIN=python3
+#   CNN_ENV_NAME=prior-templates-cnns
 #   OUTPUT_ROOT=/absolute/or/relative/path
-#   DEVICE=cuda                 # cuda or cpu, evaluation only
+#   DEVICE=cuda
 #   BATCH_SIZE=64
-#   THREADS=2                   # deterministic Stage-B-style CPU training
-#   INSTALL_DEPS=0              # set to 1 to pip-install the frozen requirements
-#
-# The trainer and evaluators are resumable. Re-running this script with the same
-# OUTPUT_ROOT resumes/skips completed work under the same frozen design.
+#   THREADS=2
+#   TORCH_INDEX_URL=https://download.pytorch.org/whl/cu128
 
 set -e
 set -u
@@ -23,12 +21,24 @@ SCRIPT_DIR="${0:A:h}"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
 
-PYTHON_BIN="${PYTHON_BIN:-python3}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-$REPO_ROOT/results/budget_confirmation_001}"
 DEVICE="${DEVICE:-cuda}"
 BATCH_SIZE="${BATCH_SIZE:-64}"
 THREADS="${THREADS:-2}"
-INSTALL_DEPS="${INSTALL_DEPS:-0}"
+CNN_ENV_NAME="${CNN_ENV_NAME:-prior-templates-cnns}"
+
+if [[ "$DEVICE" != "cuda" && "$DEVICE" != "cpu" ]]; then
+  print -u2 "DEVICE must be 'cuda' or 'cpu'; got: $DEVICE"
+  exit 2
+fi
+if ! command -v git >/dev/null 2>&1; then
+  print -u2 "git is required to record the frozen protocol provenance."
+  exit 2
+fi
+
+# Find/create the user's Conda environment and expose cnn_python. This avoids
+# shell activation and does not require administrator privileges.
+source "$REPO_ROOT/scripts/use_conda_env.zsh"
 
 TRAIN_ROOT="$OUTPUT_ROOT/training"
 PATCH_ROOT="$OUTPUT_ROOT/patch_eval"
@@ -37,56 +47,12 @@ ANALYSIS_ROOT="$OUTPUT_ROOT/analysis/budget_confirmation"
 MANIFEST="$OUTPUT_ROOT/execution_manifest.json"
 PROTOCOL="studies/cnn_budget_confirmation/PROTOCOL.md"
 
-if [[ "$DEVICE" != "cuda" && "$DEVICE" != "cpu" ]]; then
-  print -u2 "DEVICE must be 'cuda' or 'cpu'; got: $DEVICE"
-  exit 2
-fi
-
-if ! command -v "$PYTHON_BIN" >/dev/null 2>&1; then
-  print -u2 "Python executable not found: $PYTHON_BIN"
-  exit 2
-fi
-
-if ! command -v git >/dev/null 2>&1; then
-  print -u2 "git is required to record the frozen protocol provenance."
-  exit 2
-fi
-
-if [[ "$INSTALL_DEPS" == "1" ]]; then
-  "$PYTHON_BIN" -m pip install -r studies/cnn_release_experiment/requirements.txt
-fi
-
-# Fail before producing planned outcomes when required imports / CUDA are absent.
-"$PYTHON_BIN" - "$DEVICE" <<'PY'
-import sys
-import numpy
-import pandas
-import scipy
-import torch
-from PIL import Image
-
-device=sys.argv[1]
-if device == 'cuda' and not torch.cuda.is_available():
-    raise SystemExit(
-        'DEVICE=cuda but torch.cuda.is_available() is False. '
-        'Install a CUDA-enabled PyTorch build or rerun with DEVICE=cpu.'
-    )
-print('Python:', sys.version.split()[0])
-print('PyTorch:', torch.__version__)
-print('CUDA available:', torch.cuda.is_available())
-if torch.cuda.is_available():
-    print('GPU:', torch.cuda.get_device_name(0))
-PY
-
 mkdir -p "$OUTPUT_ROOT"
-
-# Record the exact frozen protocol and code state before training starts. The
-# protocol commit is the commit that last changed PROTOCOL.md, not current HEAD.
 REPO_HEAD="$(git rev-parse HEAD)"
 PROTOCOL_COMMIT="$(git log -n 1 --format=%H -- "$PROTOCOL")"
 PROTOCOL_GIT_BLOB="$(git hash-object "$PROTOCOL")"
 
-"$PYTHON_BIN" - "$MANIFEST" "$REPO_HEAD" "$PROTOCOL_COMMIT" "$PROTOCOL_GIT_BLOB" "$DEVICE" "$BATCH_SIZE" "$THREADS" <<'PY'
+cnn_python - "$MANIFEST" "$REPO_HEAD" "$PROTOCOL_COMMIT" "$PROTOCOL_GIT_BLOB" "$DEVICE" "$BATCH_SIZE" "$THREADS" <<'PY'
 import hashlib
 import json
 import platform
@@ -109,6 +75,7 @@ files=[
     Path('studies/cnn_patch_energy_control/evaluate_gpu.py'),
     Path('studies/cnn_budget_confirmation/analyze.py'),
     Path('studies/cnn_budget_confirmation/run_confirmation.zsh'),
+    Path('scripts/use_conda_env.zsh'),
 ]
 sha=lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 record={
@@ -121,6 +88,7 @@ record={
     'batch_size': int(batch_size),
     'training_threads': int(threads),
     'python': sys.version,
+    'python_executable': sys.executable,
     'platform': platform.platform(),
     'torch': torch.__version__,
     'numpy': numpy.__version__,
@@ -147,23 +115,20 @@ if manifest.exists():
     immutable=['protocol_commit','protocol_sha256','device','batch_size','training_threads','source_sha256','frozen_design']
     changed=[k for k in immutable if old.get(k)!=record.get(k)]
     if changed:
-        raise SystemExit(
-            'Existing execution manifest is incompatible with this run ('
-            + ', '.join(changed)
-            + '). Use a new OUTPUT_ROOT instead of mixing designs/code states.'
-        )
+        raise SystemExit('Existing execution manifest is incompatible ('+', '.join(changed)+'). Use a new OUTPUT_ROOT.')
 else:
     tmp=manifest.with_suffix('.tmp')
     tmp.write_text(json.dumps(record,indent=2)+'\n')
     tmp.replace(manifest)
-print('Execution manifest:', manifest)
-print('Protocol commit:', protocol_commit)
-print('Protocol SHA-256:', record['protocol_sha256'])
+print('Execution manifest:',manifest)
+print('Protocol commit:',protocol_commit)
+print('Conda Python:',sys.executable)
+print('Protocol SHA-256:',record['protocol_sha256'])
 PY
 
 print ""
 print "[1/4] Training 80 fresh models on blocks 4000-4019..."
-"$PYTHON_BIN" studies/cnn_release_experiment/experiment.py \
+cnn_python studies/cnn_release_experiment/experiment.py \
   --output "$TRAIN_ROOT" \
   --epochs 200 \
   --blocks 20 \
@@ -178,7 +143,7 @@ print "[1/4] Training 80 fresh models on blocks 4000-4019..."
 
 print ""
 print "[2/4] Evaluating selected fidelity, random-control U, rankings, and k={1,2,4,8}..."
-"$PYTHON_BIN" studies/cnn_patch_robustness/evaluate_gpu.py \
+cnn_python studies/cnn_patch_robustness/evaluate_gpu.py \
   --input "$TRAIN_ROOT" \
   --output "$PATCH_ROOT" \
   --device "$DEVICE" \
@@ -187,7 +152,7 @@ print "[2/4] Evaluating selected fidelity, random-control U, rankings, and k={1,
 
 print ""
 print "[3/4] Evaluating validation-energy-matched controls..."
-"$PYTHON_BIN" studies/cnn_patch_energy_control/evaluate_gpu.py \
+cnn_python studies/cnn_patch_energy_control/evaluate_gpu.py \
   --input "$TRAIN_ROOT" \
   --output "$ENERGY_ROOT" \
   --device "$DEVICE" \
@@ -196,7 +161,7 @@ print "[3/4] Evaluating validation-energy-matched controls..."
 
 print ""
 print "[4/4] Applying the frozen prospective analysis and decision rule..."
-"$PYTHON_BIN" studies/cnn_budget_confirmation/analyze.py \
+cnn_python studies/cnn_budget_confirmation/analyze.py \
   "$OUTPUT_ROOT" \
   --out "$ANALYSIS_ROOT"
 
