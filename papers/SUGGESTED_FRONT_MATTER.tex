@@ -1,0 +1,53 @@
+% Suggested front-matter replacement for papers/main.tex.
+% This file is intentionally not included by the build. It is a review artifact
+% on the paper_suggestions branch so the authors can accept/reject the wording.
+
+% Suggested title
+\title{Template Priors in Small CNNs: Kernel Alignment, Learning Dynamics,
+and Intervention-Budget Sensitivity}
+
+% Suggested abstract
+\begin{abstract}
+Recognizable first-layer kernels are often treated as evidence of
+interpretability, but weight-space resemblance does not establish how a
+network uses its features. We test this distinction in two controlled
+rendering tasks and two small CNNs using template initialization, continued
+template retention, and gradual release. In an initial factorial study,
+retention strongly increases alignment to edge, corner and ring templates,
+but does not yield a Holm-corrected improvement in four prespecified
+selected-channel patching contrasts. With longer training, template
+initialization is not uniformly faster, and releasing retention improves
+compositional accuracy relative to constant retention while reducing kernel
+alignment. Reanalysis of the final checkpoints shows that the
+release-minus-retention difference in selected-channel patching depends on
+intervention budget: for TinyCNN on the compositional task it is negative
+when one or two channels are patched and positive when four or eight are
+patched under all three validation-only rankings; TwoLayerCNN is also
+ranking- and budget-sensitive. One-to-one template matching across saved
+checkpoint states preserves the morphology contrast, ruling out repeated
+nearest-template reuse as its explanation. These results separate kernel
+morphology from unit selectivity and intervention behavior, and show that
+conclusions about a template prior can depend on how functional use is
+operationalized. The budget analysis is exploratory and does not establish
+human interpretability, causal identifiability, or generality beyond the
+tested models and synthetic tasks.
+\end{abstract}
+
+% Suggested replacement for the final contribution paragraph in the Introduction.
+% The intent is to make the claim ladder explicit and reduce defensive repetition.
+
+Our contributions are threefold. First, we separate weight-space template
+alignment from independently evaluated single-unit concept selectivity,
+localization and matched internal interventions in a controlled setting.
+Second, we distinguish initialization from persistent constraint by comparing
+continued retention with gradual release over a longer optimization horizon.
+Third, we show that the retention--release comparison under selected-channel
+patching is not invariant to intervention budget: on the compositional task,
+the shallow-model difference reverses between small and larger channel sets
+under three validation-only rankings. The morphology contrast persists under
+one-to-one kernel matching. Within the tested setting, these results establish
+that retained template structure and functional intervention measurements can
+diverge. The budget-dependent patching result is exploratory; we do not claim
+that release redistributes causal information, that retained kernels are
+human-interpretable by construction, or that the measured intervention
+identifies a unique mechanism.
