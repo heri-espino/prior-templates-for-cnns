@@ -4,15 +4,25 @@ This directory contains the pre-specified independent-block confirmation of the 
 
 The inferential contract is frozen in [`PROTOCOL.md`](PROTOCOL.md). The planned data are renderer blocks 4000–4019, which are disjoint from the earlier stages. The primary quantity is selected-channel fidelity, not the baseline-relative score `U`.
 
-## One-command execution
+## Windows 11: recommended one-command execution
 
-From the repository root:
+The Windows launcher uses the user's Miniconda installation, creates the project environment if needed, and runs through `conda run`. It does not require administrator privileges or `conda activate`.
+
+From PowerShell:
+
+```powershell
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\studies\cnn_budget_confirmation\run_confirmation.ps1
+```
+
+The repository root also contains `run_paper_experiments.cmd`, which is the simplest Windows entry point when running both the confirmation and exhaustive stages.
+
+## Cross-platform Zsh alternative
 
 ```zsh
 zsh studies/cnn_budget_confirmation/run_confirmation.zsh
 ```
 
-The script performs, in order:
+Both launchers perform, in order:
 
 1. deterministic Stage-B-style training for 80 fresh models (`two_concepts`, two architectures, retention/release, 20 blocks);
 2. standard patch robustness evaluation for all three rankings and `k={1,2,4,8}`;
@@ -44,44 +54,25 @@ results/budget_confirmation_001/
 
 `execution_manifest.json` records the protocol commit/hash, repository head at launch, source SHA-256 hashes, environment, GPU, and exact frozen design.
 
-## Environment variables
+## Windows configuration overrides
 
-The defaults are intended for a CUDA-capable local environment:
+PowerShell parameters can be supplied directly, for example:
 
-```zsh
-PYTHON_BIN=python3 \
-DEVICE=cuda \
-BATCH_SIZE=64 \
-THREADS=2 \
-zsh studies/cnn_budget_confirmation/run_confirmation.zsh
+```powershell
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\studies\cnn_budget_confirmation\run_confirmation.ps1 `
+  -Device cuda `
+  -BatchSize 64 `
+  -Threads 2 `
+  -CondaEnv prior-templates-cnns
 ```
 
-To use an existing conda environment, activate it first and leave `PYTHON_BIN=python`, or point `PYTHON_BIN` at that environment's Python.
+The Conda helper searches `LOCALAPPDATA\miniconda3`, `LOCALAPPDATA\anaconda3`, user-profile installs, `CONDA_EXE`, and Conda already on `PATH`.
 
-To install the study dependencies before execution:
-
-```zsh
-INSTALL_DEPS=1 zsh studies/cnn_budget_confirmation/run_confirmation.zsh
-```
-
-To evaluate on CPU instead of CUDA:
-
-```zsh
-DEVICE=cpu zsh studies/cnn_budget_confirmation/run_confirmation.zsh
-```
-
-Training deliberately reuses the original deterministic Stage B implementation and remains CPU-based; `DEVICE` controls the checkpoint patch evaluations. This avoids changing the training implementation solely for the confirmation study.
-
-To use a different output directory:
-
-```zsh
-OUTPUT_ROOT="$PWD/results/budget_confirmation_local" \
-zsh studies/cnn_budget_confirmation/run_confirmation.zsh
-```
+Training deliberately reuses the original deterministic Stage B implementation and remains CPU-based; `Device` controls the checkpoint patch evaluations. This avoids changing the training implementation solely for the confirmation study.
 
 ## Resume semantics
 
-The workflow is safe to rerun with the same `OUTPUT_ROOT` under the same code/design state:
+The workflow is safe to rerun with the same output root under the same code/design state:
 
 - training resumes from atomic epoch checkpoints;
 - completed model runs are skipped;
