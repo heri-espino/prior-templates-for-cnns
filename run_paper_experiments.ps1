@@ -11,23 +11,27 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $RepoRoot = $PSScriptRoot
+$LocalResultsRoot = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'prior-templates-cnns\results'
+$ConfirmationRoot = Join-Path $LocalResultsRoot 'budget_confirmation_001'
+$ExhaustiveRoot = Join-Path $LocalResultsRoot 'exhaustive_robustness_001'
+
 Push-Location $RepoRoot
 try {
     Write-Host '=== Stage D: frozen prospective confirmation (blocks 4000-4019) ==='
     & (Join-Path $RepoRoot 'studies\cnn_budget_confirmation\run_confirmation.ps1') `
-        -Device $Device -CondaEnv $CondaEnv -BatchSize $ConfirmationBatchSize -Threads $ConfirmationThreads
-    if ($LASTEXITCODE -ne 0) { throw "Confirmation stage failed with exit code $LASTEXITCODE" }
+        -OutputRoot $ConfirmationRoot -Device $Device -CondaEnv $CondaEnv `
+        -BatchSize $ConfirmationBatchSize -Threads $ConfirmationThreads
 
     Write-Host ''
     Write-Host '=== Stage E: separate exhaustive robustness map (blocks 5000-5049) ==='
     & (Join-Path $RepoRoot 'studies\cnn_exhaustive_robustness\run_exhaustive.ps1') `
-        -Device $Device -CondaEnv $CondaEnv -Workers $Workers -ThreadsPerWorker $ThreadsPerWorker -BatchSize $ExhaustiveBatchSize
-    if ($LASTEXITCODE -ne 0) { throw "Exhaustive stage failed with exit code $LASTEXITCODE" }
+        -OutputRoot $ExhaustiveRoot -Device $Device -CondaEnv $CondaEnv `
+        -Workers $Workers -ThreadsPerWorker $ThreadsPerWorker -BatchSize $ExhaustiveBatchSize
 
     Write-Host ''
     Write-Host 'All planned paper experiments finished.'
-    Write-Host 'Primary confirmation report: results\budget_confirmation_001\analysis\budget_confirmation\REPORT.md'
-    Write-Host 'Exhaustive robustness report: results\exhaustive_robustness_001\analysis\REPORT.md'
+    Write-Host "Primary confirmation report: $(Join-Path $ConfirmationRoot 'analysis\budget_confirmation\REPORT.md')"
+    Write-Host "Exhaustive robustness report: $(Join-Path $ExhaustiveRoot 'analysis\REPORT.md')"
 }
 finally {
     Pop-Location
