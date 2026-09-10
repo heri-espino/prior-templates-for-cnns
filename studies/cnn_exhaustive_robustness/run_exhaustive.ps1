@@ -1,5 +1,5 @@
 param(
-    [string]$OutputRoot = $(if ($env:OUTPUT_ROOT) { $env:OUTPUT_ROOT } else { 'results\exhaustive_robustness_001' }),
+    [string]$OutputRoot = $(if ($env:OUTPUT_ROOT) { $env:OUTPUT_ROOT } else { Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'prior-templates-cnns\results\exhaustive_robustness_001' }),
     [ValidateSet('cuda','cpu')][string]$Device = $(if ($env:DEVICE) { $env:DEVICE } else { 'cuda' }),
     [int]$Workers = $(if ($env:WORKERS) { [int]$env:WORKERS } else { 8 }),
     [int]$ThreadsPerWorker = $(if ($env:THREADS_PER_WORKER) { [int]$env:THREADS_PER_WORKER } else { 2 }),
@@ -29,6 +29,7 @@ try {
     $Manifest = Join-Path $OutputRoot 'execution_manifest.json'
     $Protocol = 'studies/cnn_exhaustive_robustness/PROTOCOL.md'
 
+    Write-Host "Output root: $OutputRoot"
     New-Item -ItemType Directory -Force -Path $OutputRoot | Out-Null
 
     $repoHead = (& git rev-parse HEAD).Trim()
@@ -90,7 +91,6 @@ try {
     Write-Host "Protocol SHA-256: $protocolSha"
     Write-Host "Workers: $Workers x $ThreadsPerWorker threads"
 
-    # Prevent BLAS oversubscription inside the process pool.
     $env:OMP_NUM_THREADS = '1'
     $env:MKL_NUM_THREADS = '1'
     $env:OPENBLAS_NUM_THREADS = '1'
