@@ -32,9 +32,15 @@ try {
     Write-Host "Output root: $OutputRoot"
     New-Item -ItemType Directory -Force -Path $OutputRoot | Out-Null
 
+    function Get-GitBlobId([string]$Path) {
+        $value = (& git rev-parse "HEAD:$Path").Trim()
+        if ($LASTEXITCODE -ne 0 -or -not $value) { throw "Could not resolve committed Git blob for: $Path" }
+        return $value
+    }
+
     $repoHead = (& git rev-parse HEAD).Trim()
     $protocolCommit = (& git log -n 1 --format=%H -- $Protocol).Trim()
-    $protocolSha = (Get-FileHash $Protocol -Algorithm SHA256).Hash.ToLowerInvariant()
+    $protocolBlob = Get-GitBlobId $Protocol
     $sources = @(
         $Protocol,
         'studies/cnn_exhaustive_robustness/train_grid.py',
@@ -44,8 +50,8 @@ try {
         'studies/cnn_release_experiment/core.py',
         'scripts/use_conda_env.ps1'
     )
-    $sourceHashes = [ordered]@{}
-    foreach ($p in $sources) { $sourceHashes[$p] = (Get-FileHash $p -Algorithm SHA256).Hash.ToLowerInvariant() }
+    $sourceGitBlobs = [ordered]@{}
+    foreach ($p in $sources) { $sourceGitBlobs[$p] = Get-GitBlobId $p }
 
     $design = [ordered]@{
         blocks = @(5000..5049)
@@ -63,32 +69,32 @@ try {
         created_utc = [DateTime]::UtcNow.ToString('o')
         repo_head_at_launch = $repoHead
         protocol_commit = $protocolCommit
-        protocol_sha256 = $protocolSha
+        protocol_git_blob = $protocolBlob
         device = $Device
         workers = $Workers
         threads_per_worker = $ThreadsPerWorker
         evaluation_batch_size = $BatchSize
         conda_environment = $CondaEnv
-        source_sha256 = $sourceHashes
+        source_git_blobs = $sourceGitBlobs
         frozen_design = $design
     }
 
     if (Test-Path $Manifest) {
         $old = Get-Content $Manifest -Raw | ConvertFrom-Json
-        if ($old.protocol_commit -ne $protocolCommit -or $old.protocol_sha256 -ne $protocolSha -or
+        if ($old.protocol_commit -ne $protocolCommit -or $old.protocol_git_blob -ne $protocolBlob -or
             $old.device -ne $Device -or [int]$old.threads_per_worker -ne $ThreadsPerWorker -or
             [int]$old.evaluation_batch_size -ne $BatchSize -or $old.conda_environment -ne $CondaEnv) {
             throw 'Existing exhaustive manifest is incompatible. Use a new OutputRoot instead of mixing runs.'
         }
         foreach ($p in $sources) {
-            if ($old.source_sha256.$p -ne $sourceHashes[$p]) { throw "Source changed since this run started: $p. Use a new OutputRoot." }
+            if ($old.source_git_blobs.$p -ne $sourceGitBlobs[$p]) { throw "Source changed since this run started: $p. Use a new OutputRoot." }
         }
     } else {
         $record | ConvertTo-Json -Depth 8 | Set-Content -Encoding utf8 $Manifest
     }
 
     Write-Host "Protocol commit: $protocolCommit"
-    Write-Host "Protocol SHA-256: $protocolSha"
+    Write-Host "Protocol Git blob: $protocolBlob"
     Write-Host "Workers: $Workers x $ThreadsPerWorker threads"
 
     $env:OMP_NUM_THREADS = '1'
