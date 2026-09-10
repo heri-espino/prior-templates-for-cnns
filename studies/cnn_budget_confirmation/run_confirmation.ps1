@@ -1,5 +1,5 @@
 param(
-    [string]$OutputRoot = $(if ($env:OUTPUT_ROOT) { $env:OUTPUT_ROOT } else { 'results\budget_confirmation_001' }),
+    [string]$OutputRoot = $(if ($env:OUTPUT_ROOT) { $env:OUTPUT_ROOT } else { Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'prior-templates-cnns\results\budget_confirmation_001' }),
     [ValidateSet('cuda','cpu')][string]$Device = $(if ($env:DEVICE) { $env:DEVICE } else { 'cuda' }),
     [int]$BatchSize = $(if ($env:BATCH_SIZE) { [int]$env:BATCH_SIZE } else { 64 }),
     [int]$Threads = $(if ($env:THREADS) { [int]$env:THREADS } else { 2 }),
@@ -27,6 +27,7 @@ try {
     $Manifest = Join-Path $OutputRoot 'execution_manifest.json'
     $Protocol = 'studies/cnn_budget_confirmation/PROTOCOL.md'
 
+    Write-Host "Output root: $OutputRoot"
     New-Item -ItemType Directory -Force -Path $OutputRoot | Out-Null
 
     $repoHead = (& git rev-parse HEAD).Trim()
