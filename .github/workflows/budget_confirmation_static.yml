@@ -5,7 +5,10 @@ on:
     branches: [paper_suggestions]
     paths:
       - 'run_paper_experiments.zsh'
+      - 'run_paper_experiments.ps1'
+      - 'run_paper_experiments.cmd'
       - 'scripts/use_conda_env.zsh'
+      - 'scripts/use_conda_env.ps1'
       - 'studies/cnn_budget_confirmation/**'
       - 'studies/cnn_exhaustive_robustness/**'
       - '.github/workflows/budget_confirmation_static.yml'
@@ -30,6 +33,25 @@ jobs:
           zsh -n scripts/use_conda_env.zsh
           zsh -n studies/cnn_budget_confirmation/run_confirmation.zsh
           zsh -n studies/cnn_exhaustive_robustness/run_exhaustive.zsh
+      - name: Validate PowerShell syntax
+        shell: pwsh
+        run: |
+          $files = @(
+            'run_paper_experiments.ps1',
+            'scripts/use_conda_env.ps1',
+            'studies/cnn_budget_confirmation/run_confirmation.ps1',
+            'studies/cnn_exhaustive_robustness/run_exhaustive.ps1'
+          )
+          foreach ($file in $files) {
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($file, [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              $errors | ForEach-Object { Write-Error "$file: $_" }
+              exit 1
+            }
+          }
+          if (-not (Test-Path 'run_paper_experiments.cmd')) { throw 'Missing Windows CMD wrapper.' }
       - name: Compile prospective and robustness Python
         run: |
           python -m py_compile studies/cnn_budget_confirmation/analyze.py
