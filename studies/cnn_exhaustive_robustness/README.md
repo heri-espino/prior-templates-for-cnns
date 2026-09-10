@@ -17,42 +17,49 @@ The exhaustive stage uses blocks 5000--5049, both renderer tasks, both shallow a
 
 This is 1200 models at 200 epochs. The final evaluation measures selected fidelity and random-control usefulness for every k=1..16, plus validation-energy-matched controls at k={1,2,4,8}.
 
-## No-admin Conda execution
+## Windows 11: recommended execution
 
-The launchers source `scripts/use_conda_env.zsh`. It locates the user's Conda executable, creates the named environment `prior-templates-cnns` if needed, installs dependencies inside that user environment, verifies CUDA when requested, and invokes Python through `conda run`. Shell activation and administrator privileges are not required.
+The native PowerShell launcher uses `scripts/use_conda_env.ps1`. It locates the user's Conda executable, creates the named environment `prior-templates-cnns` if needed, installs dependencies inside that user environment, verifies CUDA when requested, and invokes Python through `conda run`. Shell activation and administrator privileges are not required.
 
 Run from the repository checkout:
 
+```powershell
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\studies\cnn_exhaustive_robustness\run_exhaustive.ps1
+```
+
+The defaults are tuned for the RTX 4500 Ada / 24-core workstation:
+
+```text
+Device = cuda
+Workers = 8
+ThreadsPerWorker = 2
+BatchSize = 256
+CondaEnv = prior-templates-cnns
+```
+
+Override them with ordinary PowerShell parameters when needed:
+
+```powershell
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\studies\cnn_exhaustive_robustness\run_exhaustive.ps1 `
+  -Device cuda `
+  -Workers 8 `
+  -ThreadsPerWorker 2 `
+  -BatchSize 256
+```
+
+The Conda helper searches the existing Windows user installation under `LOCALAPPDATA`, user-profile Miniconda/Anaconda installs, `CONDA_EXE`, and Conda already on `PATH`. No administrator install is attempted.
+
+## Cross-platform Zsh alternative
+
 ```zsh
 zsh studies/cnn_exhaustive_robustness/run_exhaustive.zsh
-```
-
-Recommended defaults for the RTX 4500 Ada / 24-core workstation are already encoded:
-
-```zsh
-DEVICE=cuda WORKERS=8 THREADS_PER_WORKER=2 BATCH_SIZE=256 \
-  zsh studies/cnn_exhaustive_robustness/run_exhaustive.zsh
-```
-
-To change the Conda environment name:
-
-```zsh
-CNN_ENV_NAME=prior-templates-cnns \
-  zsh studies/cnn_exhaustive_robustness/run_exhaustive.zsh
-```
-
-If the default PyTorch CUDA wheel index is unsuitable on a future machine, override it without changing the experimental design:
-
-```zsh
-TORCH_INDEX_URL=https://download.pytorch.org/whl/cu128 \
-  zsh studies/cnn_exhaustive_robustness/run_exhaustive.zsh
 ```
 
 ## Resume behavior
 
 Training saves `latest.pt` atomically for every model. Re-running the same launcher skips completed models and resumes interrupted ones. The evaluator likewise skips completed checkpoint JSONs.
 
-An existing output root is rejected if its frozen source/configuration manifest differs from the current run. To intentionally run modified code or settings, choose a new `OUTPUT_ROOT`.
+An existing output root is rejected if its frozen source/configuration manifest differs from the current run. To intentionally run modified code or settings, choose a new output root.
 
 ## Outputs
 
