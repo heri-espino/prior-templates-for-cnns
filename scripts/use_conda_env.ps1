@@ -22,12 +22,15 @@ function Find-UserConda {
     if (-not $cmd) { $cmd = Get-Command conda -ErrorAction SilentlyContinue }
     if ($cmd) { return $cmd.Source }
 
-    $candidates = @(
-        (Join-Path $env:LOCALAPPDATA 'miniconda3\Scripts\conda.exe'),
-        (Join-Path $env:LOCALAPPDATA 'anaconda3\Scripts\conda.exe'),
-        (Join-Path $env:USERPROFILE 'miniconda3\Scripts\conda.exe'),
-        (Join-Path $env:USERPROFILE 'anaconda3\Scripts\conda.exe')
-    )
+    $candidates = @()
+    if ($env:LOCALAPPDATA) {
+        $candidates += (Join-Path $env:LOCALAPPDATA 'miniconda3\Scripts\conda.exe')
+        $candidates += (Join-Path $env:LOCALAPPDATA 'anaconda3\Scripts\conda.exe')
+    }
+    if ($env:USERPROFILE) {
+        $candidates += (Join-Path $env:USERPROFILE 'miniconda3\Scripts\conda.exe')
+        $candidates += (Join-Path $env:USERPROFILE 'anaconda3\Scripts\conda.exe')
+    }
     foreach ($candidate in $candidates) {
         if (Test-Path $candidate) { return (Resolve-Path $candidate).Path }
     }
@@ -36,45 +39,99 @@ function Find-UserConda {
 
 $script:CondaExe = Find-UserConda
 
+# Windows PowerShell 5.1 turns stderr written by native programs into ErrorRecord
+# objects. With ErrorActionPreference=Stop, an expected non-zero probe (for
+# example, checking whether an environment exists) can therefore terminate the
+# script before $LASTEXITCODE is inspected. Keep native Conda calls under
+# ErrorActionPreference=Continue and decide success explicitly from exit codes.
+function Test-CondaCommand {
+    param([Parameter(Mandatory=$true)][string[]]$Arguments)
+
+    $previousPreference = $ErrorActionPreference
+    $code = 1
+    try {
+        $ErrorActionPreference = 'Continue'
+        & $script:CondaExe @Arguments 1>$null 2>$null
+        $code = $LASTEXITCODE
+    }
+    catch {
+        $code = 1
+    }
+    finally {
+        $ErrorActionPreference = $previousPreference
+    }
+    return ($code -eq 0)
+}
+
+function Invoke-CondaChecked {
+    param(
+        [Parameter(Mandatory=$true)][string[]]$Arguments,
+        [string]$Description = 'Conda command'
+    )
+
+    $previousPreference = $ErrorActionPreference
+    $code = 1
+    try {
+        $ErrorActionPreference = 'Continue'
+        & $script:CondaExe @Arguments
+        $code = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $previousPreference
+    }
+    if ($code -ne 0) {
+        throw "$Description failed with exit code $code."
+    }
+}
+
 function Invoke-CnnPython {
     param([Parameter(ValueFromRemainingArguments=$true)][string[]]$Arguments)
-    & $script:CondaExe run --no-capture-output -n $script:CnnEnvName python @Arguments
-    if ($LASTEXITCODE -ne 0) { throw "Python command failed with exit code $LASTEXITCODE" }
+    $condaArgs = @('run','--no-capture-output','-n',$script:CnnEnvName,'python') + $Arguments
+    Invoke-CondaChecked -Arguments $condaArgs -Description 'Python command'
 }
 
 function Invoke-CnnPip {
     param([Parameter(ValueFromRemainingArguments=$true)][string[]]$Arguments)
-    & $script:CondaExe run --no-capture-output -n $script:CnnEnvName python -m pip @Arguments
-    if ($LASTEXITCODE -ne 0) { throw "pip command failed with exit code $LASTEXITCODE" }
+    $condaArgs = @('run','--no-capture-output','-n',$script:CnnEnvName,'python','-m','pip') + $Arguments
+    Invoke-CondaChecked -Arguments $condaArgs -Description 'pip command'
 }
 
-# Create the named user environment when absent or incompatible.
-& $script:CondaExe run -n $script:CnnEnvName python -c "import sys; assert sys.version_info[:2] == (3, 11)" *> $null
-if ($LASTEXITCODE -ne 0) {
+Write-Host "Conda executable: $script:CondaExe"
+Write-Host "Project environment: $script:CnnEnvName"
+
+# Create the named user environment when absent or incompatible. This probe is
+# intentionally allowed to fail and therefore must go through Test-CondaCommand.
+$python311Probe = @('run','-n',$script:CnnEnvName,'python','-c','import sys; assert sys.version_info[:2] == (3, 11)')
+if (-not (Test-CondaCommand -Arguments $python311Probe)) {
     Write-Host "Creating user Conda environment: $script:CnnEnvName"
-    & $script:CondaExe create -y -n $script:CnnEnvName python=3.11 pip
-    if ($LASTEXITCODE -ne 0) { throw 'Conda environment creation failed.' }
+    Invoke-CondaChecked -Arguments @('create','-y','-n',$script:CnnEnvName,'python=3.11','pip') -Description 'Conda environment creation'
 }
 
 # Install scientific dependencies only when missing.
 $depsCheck = 'import numpy, pandas, scipy, matplotlib, PIL, psutil'
-& $script:CondaExe run -n $script:CnnEnvName python -c $depsCheck *> $null
-if ($LASTEXITCODE -ne 0) {
+$depsProbe = @('run','-n',$script:CnnEnvName,'python','-c',$depsCheck)
+if (-not (Test-CondaCommand -Arguments $depsProbe)) {
     Write-Host "Installing project dependencies into Conda environment: $script:CnnEnvName"
-    Invoke-CnnPip install --upgrade pip
-    Invoke-CnnPip install 'numpy>=1.26,<3' 'pandas>=2.1,<4' 'scipy>=1.11,<2' 'matplotlib>=3.8,<4' 'Pillow>=10,<13' 'psutil>=5.9,<8'
+    Invoke-CnnPip 'install' '--upgrade' 'pip'
+    Invoke-CnnPip 'install' 'numpy>=1.26,<3' 'pandas>=2.1,<4' 'scipy>=1.11,<2' 'matplotlib>=3.8,<4' 'Pillow>=10,<13' 'psutil>=5.9,<8'
 }
 
 # Require a CUDA-visible PyTorch wheel whenever GPU evaluation is requested.
 if ($script:CnnDevice -eq 'cuda') {
-    & $script:CondaExe run -n $script:CnnEnvName python -c "import torch; assert torch.cuda.is_available()" *> $null
-    if ($LASTEXITCODE -ne 0) {
+    $cudaProbe = @('run','-n',$script:CnnEnvName,'python','-c','import torch; assert torch.cuda.is_available()')
+    if (-not (Test-CondaCommand -Arguments $cudaProbe)) {
         Write-Host "Installing CUDA-enabled PyTorch into $script:CnnEnvName from $script:TorchIndexUrl"
-        Invoke-CnnPip install --upgrade torch --index-url $script:TorchIndexUrl
+        Invoke-CnnPip 'install' '--upgrade' 'torch' '--index-url' $script:TorchIndexUrl
     }
-} else {
-    & $script:CondaExe run -n $script:CnnEnvName python -c "import torch" *> $null
-    if ($LASTEXITCODE -ne 0) { Invoke-CnnPip install --upgrade torch }
+    if (-not (Test-CondaCommand -Arguments $cudaProbe)) {
+        throw 'CUDA was requested but PyTorch cannot access the GPU after installation.'
+    }
+}
+else {
+    $torchProbe = @('run','-n',$script:CnnEnvName,'python','-c','import torch')
+    if (-not (Test-CondaCommand -Arguments $torchProbe)) {
+        Invoke-CnnPip 'install' '--upgrade' 'torch'
+    }
 }
 
 $probe = @'
@@ -88,10 +145,11 @@ if torch.cuda.is_available():
     print('GPU:', torch.cuda.get_device_name(0))
     print('GPU VRAM GiB:', round(p.total_memory / 2**30, 2))
 '@
-$probe | & $script:CondaExe run --no-capture-output -n $script:CnnEnvName python -
-if ($LASTEXITCODE -ne 0) { throw 'Conda/PyTorch probe failed.' }
-
-if ($script:CnnDevice -eq 'cuda') {
-    & $script:CondaExe run -n $script:CnnEnvName python -c "import torch; assert torch.cuda.is_available()"
-    if ($LASTEXITCODE -ne 0) { throw 'CUDA was requested but PyTorch cannot access the GPU.' }
+$probeFile = Join-Path ([System.IO.Path]::GetTempPath()) ("cnn_probe_{0}.py" -f [guid]::NewGuid().ToString('N'))
+try {
+    [System.IO.File]::WriteAllText($probeFile, $probe, [System.Text.Encoding]::UTF8)
+    Invoke-CnnPython $probeFile
+}
+finally {
+    Remove-Item $probeFile -Force -ErrorAction SilentlyContinue
 }
