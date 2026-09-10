@@ -6,7 +6,7 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-if ($script:CnnCondaHelperLoaded) { return }
+if (Get-Variable -Name CnnCondaHelperLoaded -Scope Script -ErrorAction SilentlyContinue) { return }
 $script:CnnCondaHelperLoaded = $true
 
 $script:CnnEnvName = if ($env:CNN_ENV_NAME) { $env:CNN_ENV_NAME } else { 'prior-templates-cnns' }
