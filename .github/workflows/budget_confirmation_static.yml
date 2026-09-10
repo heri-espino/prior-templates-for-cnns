@@ -47,7 +47,7 @@ jobs:
             $errors = $null
             [System.Management.Automation.Language.Parser]::ParseFile($file, [ref]$tokens, [ref]$errors) | Out-Null
             if ($errors.Count -gt 0) {
-              $errors | ForEach-Object { Write-Error "$file: $_" }
+              $errors | ForEach-Object { Write-Error "${file}: $_" }
               exit 1
             }
           }
