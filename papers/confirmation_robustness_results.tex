@@ -1,0 +1,199 @@
+\section{Prospective confirmation and exhaustive robustness details}\label{app:confirmation}
+
+This appendix reports the fresh-data stages added after the exploratory Stage-C decomposition. Stage D was frozen before any block 4000--4019 outcome was generated. Stage E was separately frozen before any block 5000--5049 outcome was generated and is secondary to Stage D. Complete machine-readable tables are retained under \texttt{analysis/budget\_confirmation\_001/} and \texttt{analysis/exhaustive\_robustness\_001/}.
+
+\subsection{Stage-D selected-fidelity treatment effects}\label{app:stage-d-full}
+
+All entries are release minus constant-retention selected fidelity at epoch 200, paired over 20 fresh blocks. Only TinyCNN/contrast supplies the single primary test; the remaining rows are predeclared secondary analyses.
+
+{
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrcc}
+\caption{Stage-D release-minus-retention selected-fidelity effects.}\label{tab:stage-d-full}\\
+\toprule
+Architecture & Ranking & $k$ & Mean $\Delta F$ & 95\% $t$ interval \\
+\midrule
+\endfirsthead
+\toprule
+Architecture & Ranking & $k$ & Mean $\Delta F$ & 95\% $t$ interval \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+TinyCNN & contrast & 1 & -0.3459 & [-0.4033, -0.2885] \\
+TinyCNN & contrast & 2 & -0.3317 & [-0.4082, -0.2552] \\
+TinyCNN & contrast & 4 & -0.0221 & [-0.0424, -0.0019] \\
+TinyCNN & contrast & 8 & +0.0065 & [+0.0037, +0.0093] \\
+TinyCNN & AUROC & 1 & -0.3040 & [-0.3662, -0.2418] \\
+TinyCNN & AUROC & 2 & -0.3237 & [-0.3988, -0.2485] \\
+TinyCNN & AUROC & 4 & -0.0332 & [-0.0696, +0.0032] \\
+TinyCNN & AUROC & 8 & +0.0058 & [+0.0026, +0.0091] \\
+TinyCNN & validation patch & 1 & -0.2856 & [-0.3191, -0.2520] \\
+TinyCNN & validation patch & 2 & -0.1733 & [-0.2068, -0.1399] \\
+TinyCNN & validation patch & 4 & -0.0052 & [-0.0202, +0.0098] \\
+TinyCNN & validation patch & 8 & +0.0073 & [+0.0047, +0.0098] \\
+TwoLayerCNN & contrast & 1 & -0.0117 & [-0.0202, -0.0032] \\
+TwoLayerCNN & contrast & 2 & -0.0378 & [-0.0493, -0.0263] \\
+TwoLayerCNN & contrast & 4 & -0.1313 & [-0.1645, -0.0980] \\
+TwoLayerCNN & contrast & 8 & -0.0020 & [-0.0493, +0.0453] \\
+TwoLayerCNN & AUROC & 1 & -0.0141 & [-0.0224, -0.0058] \\
+TwoLayerCNN & AUROC & 2 & -0.0438 & [-0.0565, -0.0311] \\
+TwoLayerCNN & AUROC & 4 & -0.1319 & [-0.1614, -0.1025] \\
+TwoLayerCNN & AUROC & 8 & +0.0104 & [-0.0402, +0.0611] \\
+TwoLayerCNN & validation patch & 1 & -0.0256 & [-0.0380, -0.0131] \\
+TwoLayerCNN & validation patch & 2 & -0.0760 & [-0.1048, -0.0473] \\
+TwoLayerCNN & validation patch & 4 & -0.0883 & [-0.1401, -0.0365] \\
+TwoLayerCNN & validation patch & 8 & +0.0100 & [-0.0015, +0.0214] \\
+\end{longtable}
+\normalsize
+}
+
+\subsection{Stage-D budget contrasts}\label{app:stage-d-b}
+
+For every architecture/ranking pair,
+\[
+B=\frac{\Delta F(4)+\Delta F(8)}{2}-\frac{\Delta F(1)+\Delta F(2)}{2}.
+\]
+The TinyCNN/contrast row is the single frozen primary test. All other rows are secondary and do not alter the primary decision.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{llccc}
+\toprule
+Architecture & Ranking & Mean $B$ & 95\% CI & two-sided $p$ \\
+\midrule
+TinyCNN & contrast & +0.33098 & [0.27368, 0.38827] & $2.28\times10^{-10}$ \\
+TinyCNN & AUROC & +0.30014 & [0.24866, 0.35162] & $1.95\times10^{-10}$ \\
+TinyCNN & validation patch & +0.23050 & [0.20442, 0.25658] & $1.31\times10^{-13}$ \\
+TwoLayerCNN & contrast & -0.04189 & [-0.07010, -0.01367] & 0.00580 \\
+TwoLayerCNN & AUROC & -0.03179 & [-0.05830, -0.00529] & 0.02126 \\
+TwoLayerCNN & validation patch & +0.01162 & [-0.00949, 0.03273] & 0.26368 \\
+\bottomrule
+\end{tabular}
+\caption{Stage-D budget contrasts. The first row alone is confirmatory.}
+\label{tab:stage-d-b}
+\end{table}
+
+\subsection{Stage-D absolute counterfactual accuracy}\label{app:stage-d-cf}
+
+Absolute selected-patch counterfactual accuracy was retained to prevent a relative fidelity score from obscuring the direction of intervention correctness. For the primary TinyCNN/contrast setting, release minus retention is $-0.2009$ at $k=1$, $-0.3626$ at $k=2$, $-0.0241$ at $k=4$, and $+0.0140$ at $k=8$. The corresponding 95\% intervals are $[-0.2551,-0.1466]$, $[-0.4400,-0.2852]$, $[-0.0524,0.0042]$, and $[0.0086,0.0193]$.
+
+The same qualitative small-versus-larger-budget separation appears under AUROC and validation-patch rankings. These are secondary outcomes and were not used to define confirmation.
+
+\subsection{Energy-matched control}\label{app:energy-control}
+
+The validation-energy-matched control selects eight same-size alternative channel sets with replacement energy closest to the selected set, using validation data only. For TinyCNN/contrast, release-minus-retention $U_{\mathrm{energy}}$ is -0.2980 at $k=1$, -0.1887 at $k=2$, +0.1310 at $k=4$, and +0.0696 at $k=8$. Matching quality is not uniform: singleton alternatives can be poorly matched, whereas $k=4$ and $k=8$ are generally much tighter. The control therefore supports sensitivity of relative scores to intervention size but is not substituted for selected fidelity in the primary analysis.
+
+\subsection{Stage-E default-release replication across settings}\label{app:stage-e-default}
+
+Stage E uses 50 fresh blocks per task/architecture/profile combination. Table~\ref{tab:stage-e-default} reports the predeclared budget contrast for default release minus constant retention under the original contrast ranking. Holm adjustment is over the five non-reference profiles within each task/architecture/ranking family.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{llccc}
+\toprule
+Task & Architecture & Mean $B$ & 95\% CI & Holm $p$ \\
+\midrule
+\texttt{single\_shape} & TinyCNN & +0.07189 & [0.05444, 0.08934] & $1.43\times10^{-10}$ \\
+\texttt{single\_shape} & TwoLayerCNN & -0.01018 & [-0.02290, 0.00254] & 0.4569 \\
+\texttt{two\_concepts} & TinyCNN & +0.28619 & [0.25389, 0.31850] & $1.95\times10^{-22}$ \\
+\texttt{two\_concepts} & TwoLayerCNN & -0.04156 & [-0.06983, -0.01329] & 0.0144 \\
+\bottomrule
+\end{tabular}
+\caption{Stage-E default-release robustness results under contrast ranking.}
+\label{tab:stage-e-default}
+\end{table}
+
+\subsection{Stage-E full profile map under contrast ranking}\label{app:stage-e-profiles}
+
+{
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{longtable}{lllccl}
+\caption{Stage-E budget contrasts for every non-reference profile under contrast ranking.}\label{tab:stage-e-profiles}\\
+\toprule
+Task & Architecture & Profile vs. retention 1 & Mean $B$ & 95\% CI & Holm $p$ \\
+\midrule
+\endfirsthead
+\toprule
+Task & Architecture & Profile vs. retention 1 & Mean $B$ & 95\% CI & Holm $p$ \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+single shape & TinyCNN & template init & +0.06804 & [0.05343, 0.08264] & $6.91\times10^{-12}$ \\
+single shape & TinyCNN & retention 0.1 & +0.03871 & [0.02525, 0.05218] & $5.13\times10^{-7}$ \\
+single shape & TinyCNN & release early & +0.06855 & [0.05228, 0.08482] & $1.11\times10^{-10}$ \\
+single shape & TinyCNN & release default & +0.07189 & [0.05444, 0.08934] & $1.43\times10^{-10}$ \\
+single shape & TinyCNN & release late & +0.07955 & [0.06404, 0.09505] & $3.61\times10^{-13}$ \\
+single shape & TwoLayerCNN & template init & +0.00762 & [-0.00793, 0.02317] & 0.9885 \\
+single shape & TwoLayerCNN & retention 0.1 & +0.00031 & [-0.01053, 0.01116] & 1.0000 \\
+single shape & TwoLayerCNN & release early & +0.00003 & [-0.01500, 0.01506] & 1.0000 \\
+single shape & TwoLayerCNN & release default & -0.01018 & [-0.02290, 0.00254] & 0.4569 \\
+single shape & TwoLayerCNN & release late & -0.01237 & [-0.02194, -0.00279] & 0.0621 \\
+two concepts & TinyCNN & template init & +0.34557 & [0.31797, 0.37317] & $5.61\times10^{-29}$ \\
+two concepts & TinyCNN & retention 0.1 & +0.16626 & [0.14002, 0.19251] & $3.71\times10^{-17}$ \\
+two concepts & TinyCNN & release early & +0.32245 & [0.28415, 0.36074] & $1.26\times10^{-21}$ \\
+two concepts & TinyCNN & release default & +0.28619 & [0.25389, 0.31850] & $1.95\times10^{-22}$ \\
+two concepts & TinyCNN & release late & +0.19342 & [0.16432, 0.22253] & $1.20\times10^{-17}$ \\
+two concepts & TwoLayerCNN & template init & -0.00583 & [-0.03214, 0.02049] & 0.6583 \\
+two concepts & TwoLayerCNN & retention 0.1 & -0.01413 & [-0.03880, 0.01054] & 0.5104 \\
+two concepts & TwoLayerCNN & release early & -0.04199 & [-0.06889, -0.01509] & 0.0116 \\
+two concepts & TwoLayerCNN & release default & -0.04156 & [-0.06983, -0.01329] & 0.0144 \\
+two concepts & TwoLayerCNN & release late & -0.04523 & [-0.06854, -0.02192] & 0.00147 \\
+\end{longtable}
+\normalsize
+}
+
+\subsection{Stage-E endpoint morphology and prediction}\label{app:stage-e-endpoints}
+
+Table~\ref{tab:stage-e-endpoints} gives the endpoint comparison most directly related to the main narrative. Values are means over 50 fresh blocks.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{llrr}
+\toprule
+Setting & Profile & Test accuracy & Alignment \\
+\midrule
+single shape / TinyCNN & retention 1 & 99.98\% & 0.958 \\
+single shape / TinyCNN & release default & 99.99\% & 0.682 \\
+single shape / TwoLayerCNN & retention 1 & 99.98\% & 1.000 \\
+single shape / TwoLayerCNN & release default & 99.99\% & 0.942 \\
+two concepts / TinyCNN & retention 1 & 98.05\% & 0.944 \\
+two concepts / TinyCNN & release default & 99.45\% & 0.574 \\
+two concepts / TwoLayerCNN & retention 1 & 99.11\% & 0.999 \\
+two concepts / TwoLayerCNN & release default & 99.26\% & 0.896 \\
+\bottomrule
+\end{tabular}
+\caption{Stage-E endpoint prediction and first-layer alignment for default release versus constant retention.}
+\label{tab:stage-e-endpoints}
+\end{table}
+
+\subsection{Independent checkpoint audit}\label{app:audit}
+
+The frozen audit protocol specified 32 Stage-B checkpoint evaluations. All 32 completed after correcting an audit-only implementation error that initially ranked post-second-layer rather than first-layer activations in TwoLayerCNN. The corrected implementation did not alter the frozen audit protocol and passed every tolerance.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcc}
+\toprule
+Metric & Maximum absolute discrepancy & Tolerance \\
+\midrule
+ordinary accuracy & 0 & $10^{-12}$ \\
+alignment & $2.22\times10^{-16}$ & $10^{-6}$ \\
+concept AUROC & 0 & $10^{-9}$ \\
+localization IoU & 0 & $10^{-9}$ \\
+selected fidelity & $2.39\times10^{-7}$ & $2\times10^{-6}$ \\
+random fidelity & $1.14\times10^{-7}$ & $2\times10^{-6}$ \\
+causal usefulness & $2.19\times10^{-7}$ & $2\times10^{-6}$ \\
+counterfactual accuracy & 0 & $10^{-12}$ \\
+\bottomrule
+\end{tabular}
+\caption{Independent checkpoint-audit discrepancies. Full-patch and no-op probability errors were both zero.}
+\label{tab:audit}
+\end{table}
