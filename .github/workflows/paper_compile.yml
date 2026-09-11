@@ -1,0 +1,37 @@
+name: paper-compile
+
+on:
+  push:
+    branches: [paper_suggestions]
+    paths:
+      - 'papers/**'
+      - 'analysis/exhaustive_robustness_001/selected_fidelity_budget_curves.png'
+      - 'analysis/retention_release_001/**'
+      - 'analysis/kernel_similarity/results/**'
+      - 'literature/references.bib'
+      - '.github/workflows/paper_compile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra
+      - name: Compile manuscript
+        run: bash papers/build_paper.sh
+      - name: Upload compiled PDF and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: revised-paper
+          path: |
+            papers/main.pdf
+            papers/build/main.log
+          if-no-files-found: warn
