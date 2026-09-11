@@ -1,27 +1,24 @@
 # Main manuscript status
 
-Current paper: [main.md](main.md). Complete numerical tables: [supplementary_results.md](supplementary_results.md). Literature evidence: [literature_comparison.md](literature_comparison.md).
+Editable submission manuscript: [`main.tex`](main.tex). Historical Markdown sources are not automatically synchronized with the LaTeX manuscript. The new fresh-data appendix is [`confirmation_robustness_results.tex`](confirmation_robustness_results.tex); earlier Stage A--C numerical appendices remain in [`supplementary_results.tex`](supplementary_results.tex), and the kernel-matching appendix remains in [`kernel_matching_results.tex`](kernel_matching_results.tex).
 
-## Completed in this revision
+## Current scientific status
 
-1. Integrated the 400-run alignment experiment, 200-run retention-release experiment and 80-checkpoint GPU robustness analysis as sequential evidence in one paper. Robustness is in the abstract, methods, results, figure, discussion and conclusion, not an appended correction.
-2. Compared the specific contribution with the closest structured-filter, concept and activation-patching work in the provided corpus. Original PDFs were consulted where extraction/metadata was incomplete. The paper states the novelty boundary and avoids an unsupported first-of-its-kind claim.
-3. Distinguished four locally prospective Holm-adjusted tests from later exploratory comparisons. The manuscript/supplement retain all tasks, conditions, rankings and channel sizes. Plots label SD bands versus marginal paired intervals; no exploratory interval is promoted to a corrected confirmation.
+The manuscript has been rewritten around the final evidential hierarchy rather than the earlier exploratory `U` reversal.
 
-## Explicitly deferred by the owner
+- **Stage A:** 400-model alignment/control experiment. Persistent retention strongly increases template alignment, but the four locally prospective `U` tests do not survive Holm correction.
+- **Stage B:** 200-model, 200-epoch retention/release experiment. Template initialization does not uniformly accelerate learning; release reduces alignment and improves compositional accuracy relative to constant retention.
+- **Stage C:** post hoc 80-checkpoint measurement analysis. Decomposition shows that the positive TinyCNN `k=4` release effect in `U_random` is substantially baseline-driven. Selected fidelity is strongly negative at small budgets, near zero/slightly negative at `k=4`, and slightly positive at `k=8`.
+- **Stage D:** frozen prospective confirmation on 80 newly trained models from blocks 4000--4019. The single primary `two_concepts / TinyCNN / contrast` selected-fidelity budget statistic is **CONFIRMED**: mean `B=+0.330976`, 95% CI `[+0.273680,+0.388273]`, `p=2.2819e-10` over 20 fresh blocks.
+- **Stage E:** separately frozen 1,200-model robustness map on blocks 5000--5049. The default-release budget contrast is positive for TinyCNN on both tasks (`+0.07189` single_shape; `+0.28619` two_concepts), but not for TwoLayerCNN (`-0.01018` and `-0.04156`, respectively). Full `k=1..16` curves and all six prior profiles are retained.
+- **Independent checkpoint audit:** 32/32 fixed Stage-B checkpoint evaluations completed and passed all frozen tolerances after correcting an audit-only first-layer selection bug. Maximum selected-fidelity discrepancy is `2.39e-7`; full/no-op probability errors are zero.
 
-The final independent reproducibility review is **not complete or claimed complete**. It should recompute a representative subset, investigate discrepancies, and reconcile submission code/artifacts. Preliminary work from an interrupted earlier pass is not a submission sign-off and is excluded from this manuscript revision.
+## Current paper claim
+
+The supported claim is narrow: **within the tested small-CNN renderer setting, the release-minus-retention treatment effect on selected first-layer intervention fidelity depends strongly on intervention budget, and that dependence is architecture-sensitive.**
+
+The manuscript does **not** claim that release redistributes causal information, identifies a unique mechanism, yields human-interpretable filters by construction, or generalizes to natural images.
 
 ## Remaining submission preparation
 
-Choose venue and author information; finish venue-specific reference metadata/formatting; complete the deferred review and human scientific review. The present manuscript has a focused comparison against reviewed sources, not an exhaustive proof of priority. No additional training is scheduled by this revision.
-
-Bibliography follow-up: integrated three technically reviewed additions, with final-version corrections and explicit reading limits in literature/TECHNICAL_COMPARISON.md. This does not complete the deferred experimental review.
-
-Plain article LaTeX version started on 9 September 2026: main.tex, compiled main.pdf, build_paper.sh and LATEX_README.md. Uses plainnat provisionally at owner request for simple article formatting; journal-specific style is deferred. Orozco-Solis (2024) added after reading the supplied PDF/text.
-
-TMLR formatting supersedes the provisional plain article: main.tex uses the official anonymous review style and bibliography; all supplementary comparisons are included after references. See TMLR_ADAPTATION.md. This is not an experimental audit or a submission/acceptance claim.
-
-Kernel morphology follow-up: existing Stage B checkpoints now support nearest and one-to-one comparisons, fixed-block galleries and complete endpoint matching appendix. 200 models/2000 checkpoints; saved alignment reproduced exactly. Exploratory derived evidence only; audit remains pending. Scripts and reading notes: analysis/kernel_similarity/.
-
-Final copyediting pass: clearer abstract/opening, original technical terminology retained, wide appendix tables rotated, and availability status clarified. See EDITORIAL_REVIEW.md. Ready for coauthor reading; journal submission sign-off remains pending the independent audit and anonymous supporting artifacts.
+The experimental confirmation and internal audit are complete. Remaining work is submission packaging rather than new outcome-driven experimentation: compile and visually inspect the revised TMLR PDF, perform coauthor/human scientific review, prepare an anonymous artifact if required, and decide whether to archive that artifact with a DOI. The current public working repository should not be linked from the anonymous manuscript because it identifies the authors.
