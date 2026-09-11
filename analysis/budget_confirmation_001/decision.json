@@ -1,0 +1,20 @@
+{
+  "primary_pass": true,
+  "primary": {
+    "architecture": "TinyCNN",
+    "method": "contrast",
+    "metric": "budget_contrast_B",
+    "t_stat": 12.090488106723056,
+    "p_two_sided": 2.2819196468894228e-10,
+    "n": 20,
+    "mean": 0.3309763089061296,
+    "sd": 0.12242442474171772,
+    "ci_low": 0.2736799144293345,
+    "ci_high": 0.38827270338292474
+  },
+  "patch_files": 80,
+  "energy_files": 80,
+  "protocol_sha256": "94ba401db09f8a0a0102fde5a214640d7ba66c40b03916f1f5b42927f745baea",
+  "protocol_commit": "2b142fb3a9c9883fc12b7606512de7bb2ec44a35",
+  "analysis_sha256": "8ad422e87942ad54ad6582fcb05af4cd14bcd68958b812fc8472a060432cea21"
+}
