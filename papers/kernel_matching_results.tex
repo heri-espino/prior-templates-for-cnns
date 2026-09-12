@@ -1,10 +1,9 @@
 \begin{landscape}
-\section{Complete kernel-matching follow-up}\label{app:kernel-matching}
-All values below are endpoint means $\pm$ sample SD across ten blocks.
-The nearest and one-to-one scores use signed cosines. Coverage counts
-nearest-template identities, not independent semantic concepts. The analysis
-uses only saved Stage B checkpoints; no spectrum or frozen conditions from
-Stage A were added. These descriptive comparisons are exploratory.
+\section{Complete kernel-matching table}\label{app:kernel-matching}
+
+The main Results section now contains the three visual summaries of this exploratory Stage-B follow-up: the matching trajectories, the complete fixed-block similarity matrices, and the matched kernel gallery. This appendix keeps only the complete endpoint numerical table so that the visual argument is not repeated at the end of the paper.
+
+All values below are endpoint means $\pm$ sample SD across ten blocks. The nearest and one-to-one scores use signed cosines. Coverage counts nearest-template identities, not independent semantic concepts. The analysis uses only saved Stage-B checkpoints; no spectrum or frozen conditions from Stage A were added. These descriptive comparisons are exploratory.
 
 {\small
 \setlength{\tabcolsep}{3pt}
@@ -39,21 +38,3 @@ two\_\allowbreak concepts / TwoLayerCNN & template\_\allowbreak retention\_\allo
 \end{longtable}}
 
 \end{landscape}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\linewidth]{../analysis/kernel_similarity/results/matching_trajectories.png}
-\caption{Nearest-template alignment, maximum-weight one-to-one alignment, and
-their gap over all saved epochs. All five conditions and four settings are
-shown. Bands are sample SD over ten blocks, not confidence intervals.}
-\end{figure}
-\begin{figure}[p]
-\centering
-\includegraphics[width=\linewidth]{../analysis/kernel_similarity/results/matrices_two_concepts_TinyCNN.png}
-\caption{All 256 signed kernel/template similarities for each condition at
-initialization and epoch 200, two\_concepts/TinyCNN, fixed block 2000.
-Rows retain original channel indices, columns retain template indices;
-black crosses mark the optimal one-to-one assignment. Values range from
-$-1$ to $1$. Matrices and galleries for all settings are retained in the
-derived analysis artifacts.}
-\end{figure}
