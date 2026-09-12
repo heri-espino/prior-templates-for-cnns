@@ -1,6 +1,6 @@
 \section{Prospective confirmation and exhaustive robustness details}\label{app:confirmation}
 
-This appendix reports the fresh-data stages added after the exploratory Stage-C decomposition. Stage D was frozen before any block 4000--4019 outcome was generated. Stage E was separately frozen before any block 5000--5049 outcome was generated and is secondary to Stage D. Complete machine-readable tables are retained under \texttt{analysis/budget\_confirmation\_001/} and \texttt{analysis/exhaustive\_robustness\_001/}.
+This appendix contains the complete numerical support for the fresh-data stages summarized in the main text. Stage D was frozen before any block 4000--4019 outcome was generated. Stage E was separately frozen before any block 5000--5049 outcome was generated and remains secondary to Stage D. The main paper now carries the headline Stage-D curve, the default-release Stage-E architecture comparison, and the full budget-curve figure; this appendix retains the complete ranking/profile breakdowns, secondary controls, and audit details. Machine-readable tables are retained under \texttt{analysis/budget\_confirmation\_001/} and \texttt{analysis/exhaustive\_robustness\_001/}.
 
 \subsection{Stage-D selected-fidelity treatment effects}\label{app:stage-d-full}
 
@@ -86,28 +86,9 @@ The same qualitative small-versus-larger-budget separation appears under AUROC a
 
 The validation-energy-matched control selects eight same-size alternative channel sets with replacement energy closest to the selected set, using validation data only. For TinyCNN/contrast, release-minus-retention $U_{\mathrm{energy}}$ is -0.2980 at $k=1$, -0.1887 at $k=2$, +0.1310 at $k=4$, and +0.0696 at $k=8$. Matching quality is not uniform: singleton alternatives can be poorly matched, whereas $k=4$ and $k=8$ are generally much tighter. The control therefore supports sensitivity of relative scores to intervention size but is not substituted for selected fidelity in the primary analysis.
 
-\subsection{Stage-E default-release replication across settings}\label{app:stage-e-default}
-
-Stage E uses 50 fresh blocks per task/architecture/profile combination. Table~\ref{tab:stage-e-default} reports the predeclared budget contrast for default release minus constant retention under the original contrast ranking. Holm adjustment is over the five non-reference profiles within each task/architecture/ranking family.
-
-\begin{table}[h]
-\centering
-\small
-\begin{tabular}{llccc}
-\toprule
-Task & Architecture & Mean $B$ & 95\% CI & Holm $p$ \\
-\midrule
-\texttt{single\_shape} & TinyCNN & +0.07189 & [0.05444, 0.08934] & $1.43\times10^{-10}$ \\
-\texttt{single\_shape} & TwoLayerCNN & -0.01018 & [-0.02290, 0.00254] & 0.4569 \\
-\texttt{two\_concepts} & TinyCNN & +0.28619 & [0.25389, 0.31850] & $1.95\times10^{-22}$ \\
-\texttt{two\_concepts} & TwoLayerCNN & -0.04156 & [-0.06983, -0.01329] & 0.0144 \\
-\bottomrule
-\end{tabular}
-\caption{Stage-E default-release robustness results under contrast ranking.}
-\label{tab:stage-e-default}
-\end{table}
-
 \subsection{Stage-E full profile map under contrast ranking}\label{app:stage-e-profiles}
+
+The four default-release rows that delimit the architecture effect are promoted to Table~\ref{tab:stage-e-main} in the main paper. The table below gives the complete five-profile-versus-retention family for each task/architecture setting. Holm adjustment is performed within each task/architecture/ranking family, exactly as predeclared.
 
 {
 \small
@@ -150,7 +131,7 @@ two concepts & TwoLayerCNN & release late & -0.04523 & [-0.06854, -0.02192] & 0.
 
 \subsection{Stage-E endpoint morphology and prediction}\label{app:stage-e-endpoints}
 
-Table~\ref{tab:stage-e-endpoints} gives the endpoint comparison most directly related to the main narrative. Values are means over 50 fresh blocks.
+The endpoint comparison below complements the main intervention-budget results by showing ordinary prediction and first-layer alignment. Values are means over 50 fresh blocks.
 
 \begin{table}[h]
 \centering
