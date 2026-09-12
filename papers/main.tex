@@ -72,7 +72,7 @@ The first-layer template bank contains 16 centered, unit-norm filters: eight edg
 \[
 A=\frac{1}{16}\sum_i\max_j\langle \widehat W_i,\widehat T_j\rangle.
 \]
-A separate exploratory one-to-one assignment analysis prevents reuse of the same template and is reported in the appendix; it does not change the behavioral conclusions.
+A separate exploratory one-to-one assignment analysis prevents reuse of the same template and is reported alongside the morphology results; it does not change the behavioral conclusions.
 
 \subsection{Template retention and release}\label{sec:retention}
 
@@ -109,19 +109,20 @@ where the baseline averages eight deterministic same-size random channel sets. A
 
 \begin{table}[t]
 \centering
-\small
-\begin{tabular}{p{0.08\linewidth}p{0.45\linewidth}p{0.17\linewidth}p{0.22\linewidth}}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{0.46\linewidth}p{0.44\linewidth}@{}}
 \toprule
-Stage & Scope & Blocks & Statistical role \\
+Stage & Evidence generated & Inferential role \\
 \midrule
-A & 400 models, 40 epochs, 10 conditions, 2 tasks, 2 architectures & 0--9 & Four locally prospective Holm-adjusted tests; other outcomes exploratory \\
-B & 200 models, 200 epochs, 5 conditions, 2 tasks, 2 architectures & 2000--2009 & Longitudinal release study; reported contrasts exploratory \\
-C & 80 final Stage-B checkpoints, 3 rankings, $k\in\{1,2,4,8\}$ & same as B & Post hoc measurement robustness and decomposition \\
-D & 80 newly trained models, \texttt{two\_concepts}, 2 architectures, 2 conditions, 20 blocks & 4000--4019 & Frozen prospective confirmation; one primary TinyCNN test \\
-E & 1,200 newly trained models, 2 tasks, 2 architectures, 6 prior profiles, 50 blocks & 5000--5049 & Predeclared secondary robustness map \\
+A & 400 models; 40 epochs; blocks 0--9 & Four locally prospective Holm-adjusted tests; companion outcomes exploratory \\
+B & 200 models; 200 epochs; blocks 2000--2009 & Longitudinal release study; reported contrasts exploratory \\
+C & 80 saved Stage-B checkpoints; 3 rankings; $k\in\{1,2,4,8\}$ & Post hoc measurement robustness and decomposition \\
+D & 80 fresh models; \texttt{two\_concepts}; blocks 4000--4019 & Frozen prospective confirmation; one primary TinyCNN test \\
+E & 1,200 fresh models; 2 tasks; 2 architectures; 6 prior profiles; blocks 5000--5049 & Predeclared secondary robustness map \\
 \bottomrule
 \end{tabular}
-\caption{Sequential experimental stages. Stages C, D, and E were designed after earlier outcomes were known, but D and E were frozen before their own fresh blocks were generated.}
+\caption{Experimental roadmap. Stages D and E use fresh blocks under protocols frozen before their own outcomes were generated.}
 \label{tab:stages}
 \end{table}
 
@@ -217,7 +218,24 @@ The energy-matched relative score also separates small and larger budgets in Tin
 
 \subsection{A 1,200-model robustness map reproduces the shallow budget effect and exposes architecture dependence}\label{sec:exhaustive}
 
-Stage E completed all 1,200 planned final-checkpoint evaluations on 50 fresh blocks. Under the original contrast ranking and default release schedule, the predeclared budget statistic relative to constant retention is positive for TinyCNN on both tasks: $B=0.07189$ (95\% CI $[0.05444,0.08934]$, Holm $p=1.43\times10^{-10}$) on \texttt{single\_shape}, and $B=0.28619$ ($[0.25389,0.31850]$, Holm $p=1.95\times10^{-22}$) on \texttt{two\_concepts}. The corresponding TwoLayerCNN values are $-0.01018$ ($[-0.02290,0.00254]$, Holm $p=0.4569$) and $-0.04156$ ($[-0.06983,-0.01329]$, Holm $p=0.0144$).
+Stage E completed all 1,200 planned final-checkpoint evaluations on 50 fresh blocks. Under the original contrast ranking and default release schedule, the predeclared budget statistic relative to constant retention is positive for TinyCNN on both tasks and not positive for TwoLayerCNN. Table~\ref{tab:stage-e-main} puts this architecture boundary in the main paper rather than leaving it in the appendix.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Setting & Mean $B$ & 95\% CI & Holm $p$ \\
+\midrule
+\texttt{single\_shape} / TinyCNN & +0.07189 & [0.05444, 0.08934] & $1.43\times10^{-10}$ \\
+\texttt{single\_shape} / TwoLayerCNN & -0.01018 & [-0.02290, 0.00254] & 0.4569 \\
+\texttt{two\_concepts} / TinyCNN & +0.28619 & [0.25389, 0.31850] & $1.95\times10^{-22}$ \\
+\texttt{two\_concepts} / TwoLayerCNN & -0.04156 & [-0.06983, -0.01329] & 0.0144 \\
+\bottomrule
+\end{tabular}
+\caption{Stage-E default-release budget contrast relative to constant retention under the original contrast ranking. These are predeclared secondary robustness results, not additional primary tests.}
+\label{tab:stage-e-main}
+\end{table}
 
 The robustness map is not specific to the default schedule. Relative to $\lambda=1$ retention, all five alternative prior profiles have positive contrast-ranking $B$ in TinyCNN for both tasks. For \texttt{two\_concepts}/TinyCNN, the values range from $0.1663$ for constant $\lambda=0.1$ to $0.3456$ for immediate release after template initialization. By contrast, TwoLayerCNN effects are near zero on \texttt{single\_shape} and tend to be negative for released profiles on \texttt{two\_concepts}. Because release timing changes several aspects of optimization jointly, these ordered schedules are interpreted as sensitivity analysis rather than a monotone causal dose law.
 
@@ -228,18 +246,40 @@ The robustness map is not specific to the default schedule. Relative to $\lambda
 \label{fig:exhaustive-curves}
 \end{figure}
 
+Figure~\ref{fig:exhaustive-curves} is the visual robustness counterpart to the compact statistic in Table~\ref{tab:stage-e-main}. In TinyCNN, the relative ordering of released and retained profiles changes markedly as more channels are patched; in TwoLayerCNN the corresponding treatment differences do not follow the same direction. The convergence of every curve to the full-patch boundary at $k=16$ also provides a direct integrity check on the intervention implementation.
+
 Prediction is near saturation on \texttt{single\_shape} for all profiles, so the budget differences there are not consequences of large accuracy gaps. On \texttt{two\_concepts}/TinyCNN, constant retention has mean test accuracy 98.05\% and alignment 0.944, whereas default release has 99.45\% and alignment 0.574. On TwoLayerCNN the corresponding accuracies are 99.11\% and 99.26\%, while alignment changes from 0.999 to 0.896. Thus high retained alignment remains clearly separable from both ordinary accuracy and the direction of the intervention-budget statistic.
 
 \subsection{One-to-one kernel matching preserves the morphology contrast}\label{sec:matching-results}
 
-The exploratory matching analysis on the 2,000 saved Stage-B checkpoint states shows that high retained alignment is not an artifact of many learned kernels selecting the same nearest template. At epoch 200, one-to-one assignment similarity for constant retention ranges from 0.9468 to 0.9999 across the four task/architecture settings, with essentially zero nearest-versus-assignment gap, while release means range from 0.5743 to 0.9425. This result strengthens the morphology statement only: it does not establish semantic uniqueness, human readability, or the mechanism behind the patching curves.
+The exploratory matching analysis on the 2,000 saved Stage-B checkpoint states asks whether the high retained-alignment result could be produced by many learned kernels repeatedly selecting the same nearest template. Maximum-weight one-to-one assignment removes that possibility by allowing each template to be used at most once. At epoch 200, one-to-one assignment similarity for constant retention ranges from 0.9468 to 0.9999 across the four task/architecture settings, with essentially zero nearest-versus-assignment gap, while release means range from 0.5743 to 0.9425. Thus the morphology contrast survives a stricter matching rule.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../analysis/kernel_similarity/results/matching_trajectories.png}
+\caption{Nearest-template alignment, maximum-weight one-to-one alignment, and their gap over all saved Stage-B epochs. All five conditions and four task/architecture settings are shown. Bands are sample SD over ten blocks, not confidence intervals.}
+\label{fig:matching-trajectories}
+\end{figure}
+
+Figure~\ref{fig:matching-trajectories} shows when this distinction emerges during learning rather than only at the endpoint. The nearest-template curve allows template reuse; the one-to-one curve does not. Their small endpoint gap under persistent retention means the high alignment is supported by distinct channel--template assignments rather than by a few templates being reused across many channels. Release follows a lower-alignment trajectory after the constraint is relaxed, consistent with the weight-space tradeoff already seen in Figure~\ref{fig:learning}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../analysis/kernel_similarity/results/matrices_two_concepts_TinyCNN.png}
+\caption{All 256 signed kernel--template cosine similarities for \texttt{two\_concepts}/TinyCNN, fixed block 2000, at initialization and epoch 200. Rows retain original channel indices and columns retain template indices; black crosses mark the maximum-weight one-to-one assignment. Values range from $-1$ to $1$.}
+\label{fig:matching-matrices}
+\end{figure}
+
+Figure~\ref{fig:matching-matrices} opens the aggregate alignment score into the full $16\times16$ channel--template similarity structure for a fixed block. Each black cross is one pairing used by the assignment score, so the reader can see exactly which matrix entries contribute to the one-to-one summary and how those pairings change between initialization and epoch 200. This is useful as an audit of the aggregate morphology statistic: the figure displays the complete similarity information rather than only the maximum selected for each channel.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{../analysis/kernel_similarity/results/kernels_two_concepts_TinyCNN.png}
-\caption{Original templates and saved first-layer kernels for \texttt{two\_concepts}/TinyCNN, block 2000. Rows are independently reordered by maximum-weight one-to-one matching. The illustration concerns morphology, not human interpretability.}
+\caption{Original templates and saved first-layer kernels for \texttt{two\_concepts}/TinyCNN, block 2000. Rows are independently reordered by maximum-weight one-to-one matching so that the paired template and learned kernel can be compared directly. The illustration concerns morphology, not human interpretability.}
 \label{fig:kernel-gallery}
 \end{figure}
+
+The gallery in Figure~\ref{fig:kernel-gallery} complements the trajectory and matrix views by showing the filters themselves after assignment. Together, Figures~\ref{fig:matching-trajectories}--\ref{fig:kernel-gallery} support only a morphology statement: persistent retention preserves a bank of kernels that remains close to distinct predefined templates, whereas release permits larger drift. They do not establish semantic uniqueness, human readability, or the mechanism behind the patching curves. The complete endpoint matching table is retained in Appendix~\ref{app:kernel-matching}.
 
 \section{Interpretation}\label{sec:interpretation}
 
@@ -280,6 +320,8 @@ The experiments use procedurally rendered synthetic images. The research artifac
 
 \clearpage
 \appendix
+\noindent\textbf{Appendix organization.} Appendix~\ref{app:confirmation} contains the complete fresh-data confirmation and robustness details; Appendix~\ref{app:historical} preserves the earlier exploratory stages that motivated the confirmatory estimand; Appendix~\ref{app:kernel-matching} retains the complete endpoint kernel-matching table corresponding to the morphology figures promoted to the main Results section.
+
 \input{confirmation_robustness_results.tex}
 \clearpage
 \input{supplementary_results.tex}
