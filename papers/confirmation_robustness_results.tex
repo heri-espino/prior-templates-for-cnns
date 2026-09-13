@@ -49,13 +49,13 @@ TwoLayerCNN & validation patch & 8 & +0.0100 & [-0.0015, +0.0214] \\
 \normalsize
 }
 
-\subsection{Stage-D budget contrasts}\label{app:stage-d-b}
+\subsection{Stage-D intervention-budget contrasts}\label{app:stage-d-b}
 
-For every architecture/ranking pair,
+For every architecture/ranking pair, the intervention-budget contrast is
 \[
 B=\frac{\Delta F(4)+\Delta F(8)}{2}-\frac{\Delta F(1)+\Delta F(2)}{2}.
 \]
-The TinyCNN/contrast row is the single frozen primary test. All other rows are secondary and do not alter the primary decision.
+Positive $B$ means release becomes relatively more faithful at the larger tested intervention budgets; it does not require a positive release effect at each larger $k$. The TinyCNN/contrast row is the single frozen primary test. All other rows are secondary and do not alter the primary decision.
 
 \begin{table}[h]
 \centering
@@ -72,7 +72,7 @@ TwoLayerCNN & AUROC & -0.03179 & [-0.05830, -0.00529] & 0.02126 \\
 TwoLayerCNN & validation patch & +0.01162 & [-0.00949, 0.03273] & 0.26368 \\
 \bottomrule
 \end{tabular}
-\caption{Stage-D budget contrasts. The first row alone is confirmatory.}
+\caption{Stage-D intervention-budget contrasts. The first row alone is confirmatory.}
 \label{tab:stage-d-b}
 \end{table}
 
@@ -94,7 +94,7 @@ The four default-release rows that delimit the architecture effect are promoted 
 \small
 \setlength{\tabcolsep}{3.5pt}
 \begin{longtable}{lllccl}
-\caption{Stage-E budget contrasts for every non-reference profile under contrast ranking.}\label{tab:stage-e-profiles}\\
+\caption{Stage-E intervention-budget contrasts for every non-reference profile under contrast ranking.}\label{tab:stage-e-profiles}\\
 \toprule
 Task & Architecture & Profile vs. retention 1 & Mean $B$ & 95\% CI & Holm $p$ \\
 \midrule
